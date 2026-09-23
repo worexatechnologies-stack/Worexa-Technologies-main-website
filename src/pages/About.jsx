@@ -194,17 +194,15 @@ export default function About() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          <div className="grid lg:grid-cols-12 gap-y-6 sm:gap-y-8 lg:gap-y-6 lg:gap-x-8 items-center">
             
-            {/* Left Column on Desktop / Bottom on Mobile: Narrative, 4 Value Pillars & Action Buttons */}
+            {/* 1. H1 Headline — Order 1 on mobile, Col 1-7 Row 1 on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="order-2 lg:order-1 lg:col-span-7 space-y-5 lg:space-y-6"
+              className="order-1 lg:col-span-7 lg:row-start-1 text-center lg:text-left flex flex-col items-center lg:items-start"
             >
-
-              {/* H1 Headline */}
               <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-black tracking-tight leading-[1.1] text-slate-900">
                 Your Digital Growth <br />
                 Partner in{' '}
@@ -212,86 +210,20 @@ export default function About() {
                   Bangalore
                 </span>
               </h1>
-
-              {/* Paragraph Description */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-                Worexa Technologies is a digital marketing and advertising company in Bangalore that helps businesses increase online visibility, generate qualified leads, and improve conversions. We provide SEO, Google Ads, Meta Ads, social media marketing, content marketing, and performance marketing services designed around measurable business goals.
-              </p>
-
-              {/* 4 Value Pillars Row with Dividers (Matching Reference Image) */}
-              <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-4 items-center">
-                
-                {/* Pillar 1: More Visibility */}
-                <div className="flex flex-col gap-1.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <TrendingUp size={18} />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Visibility</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Rank Higher on Google</p>
-                  </div>
-                </div>
-
-                {/* Pillar 2: More Leads */}
-                <div className="flex flex-col gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Target size={18} />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Leads</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Reach the Right Audience</p>
-                  </div>
-                </div>
-
-                {/* Pillar 3: More Customers */}
-                <div className="flex flex-col gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Users size={18} />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Customers</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Turn Clicks into Sales</p>
-                  </div>
-                </div>
-
-                {/* Pillar 4: Better Growth */}
-                <div className="flex flex-col gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Star size={18} />
-                  </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Better Growth</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Long-Term Success</p>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Action Buttons Row */}
-              <div className="pt-2 flex flex-wrap items-center gap-4">
-                {/* Primary CTA Button */}
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-sm sm:text-base font-bold px-7 py-3.5 shadow-lg shadow-orange-500/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50 cursor-pointer"
-                >
-                  <span>Work With Our Team</span>
-                  <ArrowRight size={17} />
-                </Link>
-              </div>
             </motion.div>
 
-            {/* Right Column on Desktop / Top on Mobile: Device Showcase with Video */}
+            {/* 2. Device Showcase with Video — Order 2 on mobile (after headline, before description), Col 8-12 Row 1-3 on desktop */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="order-1 lg:order-2 lg:col-span-5 relative flex items-center justify-center pt-2 sm:pt-4 lg:pt-0"
+              className="order-2 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-3 relative flex items-center justify-center pt-1 sm:pt-4 lg:pt-0"
             >
               {/* Main Device / Video Showcase Card */}
-              <div className="relative w-full max-w-[340px] xs:max-w-[380px] sm:max-w-[420px] xl:max-w-[460px] mx-auto">
+              <div className="relative w-full max-w-[330px] xs:max-w-[350px] sm:max-w-[370px] lg:max-w-[380px] xl:max-w-[400px] mx-auto">
                 
                 {/* Video Screen */}
-                <div className="relative h-[440px] xs:h-[480px] sm:h-[510px] xl:h-[530px] w-full overflow-hidden rounded-[2rem] bg-slate-950 shadow-[0_20px_50px_-15px_rgba(15,23,42,0.14)] hover:shadow-[0_25px_60px_-12px_rgba(249,115,22,0.2)] transition-all duration-500 group">
+                <div className="relative h-[510px] xs:h-[540px] sm:h-[570px] lg:h-[590px] xl:h-[610px] w-full overflow-hidden rounded-[2.25rem] bg-slate-950 shadow-[0_20px_50px_-15px_rgba(15,23,42,0.14)] hover:shadow-[0_25px_60px_-12px_rgba(249,115,22,0.2)] transition-all duration-500 group">
                   <video
                     ref={videoRef}
                     poster={image7}
@@ -300,7 +232,7 @@ export default function About() {
                     muted={isMuted}
                     loop
                     playsInline
-                    className="h-full w-full object-cover object-center cursor-pointer"
+                    className="h-full w-full object-cover cursor-pointer video-about-framed"
                     onClick={togglePlay}
                   />
 
@@ -343,6 +275,87 @@ export default function About() {
 
               </div>
 
+            </motion.div>
+
+            {/* 3. Paragraph Description — Order 3 on mobile (after video), Col 1-7 Row 2 on desktop */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.1 }}
+              className="order-3 lg:col-span-7 lg:row-start-2 text-center lg:text-left"
+            >
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal mx-auto lg:mx-0">
+                Worexa Technologies is a digital marketing and advertising company in Bangalore that helps businesses increase online visibility, generate qualified leads, and improve conversions. We provide SEO, Google Ads, Meta Ads, social media marketing, content marketing, and performance marketing services designed around measurable business goals.
+              </p>
+            </motion.div>
+
+            {/* 4. Value Pillars & Action Buttons — Order 4 on mobile (below description), Col 1-7 Row 3 on desktop */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2 }}
+              className="order-4 lg:col-span-7 lg:row-start-3 space-y-5 text-center lg:text-left flex flex-col items-center lg:items-start"
+            >
+              {/* 4 Value Pillars Row with Dividers (Matching Reference Image) */}
+              <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-4 items-center w-full">
+                
+                {/* Pillar 1: More Visibility */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
+                    <TrendingUp size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Visibility</p>
+                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Rank Higher on Google</p>
+                  </div>
+                </div>
+
+                {/* Pillar 2: More Leads */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
+                    <Target size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Leads</p>
+                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Reach the Right Audience</p>
+                  </div>
+                </div>
+
+                {/* Pillar 3: More Customers */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
+                    <Users size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Customers</p>
+                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Turn Clicks into Sales</p>
+                  </div>
+                </div>
+
+                {/* Pillar 4: Better Growth */}
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
+                    <Star size={18} />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Better Growth</p>
+                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Long-Term Success</p>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Action Buttons Row */}
+              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                {/* Primary CTA Button */}
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-sm sm:text-base font-bold px-7 py-3.5 shadow-lg shadow-orange-500/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50 cursor-pointer"
+                >
+                  <span>Work With Our Team</span>
+                  <ArrowRight size={17} />
+                </Link>
+              </div>
             </motion.div>
 
           </div>

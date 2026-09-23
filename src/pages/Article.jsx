@@ -9,7 +9,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 const getReadTime = (content) => {
@@ -19,6 +19,13 @@ const getReadTime = (content) => {
     .split(/\s+/).length;
 
   return `${Math.max(2, Math.ceil(words / 180))} min read`;
+};
+
+const formatReadTime = (article) => {
+  const raw = article.readTime || article.Readingtime || (article.content ? getReadTime(article.content) : "5 min read");
+  const match = String(raw).match(/\d+/);
+  const minutes = match ? match[0] : "5";
+  return `${minutes} MIN READ`;
 };
 
 function ContactForm({ articleTitle }) {
@@ -105,7 +112,7 @@ function ContactForm({ articleTitle }) {
         required
         value={form.name}
         onChange={handleChange}
-        className="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
       />
       <input
         type="tel"
@@ -114,7 +121,7 @@ function ContactForm({ articleTitle }) {
         required
         value={form.phone}
         onChange={handleChange}
-        className="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
       />
       <input
         type="email"
@@ -123,7 +130,7 @@ function ContactForm({ articleTitle }) {
         required
         value={form.email}
         onChange={handleChange}
-        className="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
       />
       <textarea
         name="message"
@@ -131,13 +138,13 @@ function ContactForm({ articleTitle }) {
         rows={4}
         value={form.message}
         onChange={handleChange}
-        className="w-full rounded-2xl bg-slate-50 border border-slate-200 px-4 py-2.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all resize-none"
+        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all resize-none"
       />
       {error && <p className="text-xs text-red-500">{error}</p>}
       <button
         type="submit"
         disabled={loading}
-        className="w-full rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 px-5 py-3 text-xs font-extrabold text-white shadow-md shadow-orange-500/20 transition-all disabled:opacity-60 flex items-center justify-center gap-2"
+        className="w-full rounded-xl sm:rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 px-5 py-3 text-sm sm:text-xs font-extrabold text-white shadow-md shadow-orange-500/20 transition-all disabled:opacity-60 flex items-center justify-center gap-2 cursor-pointer"
       >
         <span>{loading ? "Sending..." : "Submit Inquiry"}</span>
         <Send size={13} />
@@ -154,6 +161,107 @@ export default function Article() {
   const otherArticles = articles
     .filter((a) => a.slug !== slug)
     .slice(0, 3);
+
+  // Smoothly scroll to heading target without changing or polluting the browser URL
+  const scrollToTargetHeading = (targetId) => {
+    if (!targetId) return;
+    const decodedId = decodeURIComponent(targetId).trim();
+
+    let target = document.getElementById(decodedId);
+    if (!target) {
+      try {
+        target = document.querySelector(`[id="${CSS.escape(decodedId)}"]`);
+      } catch (e) {}
+    }
+    if (!target) {
+      try {
+        target = document.getElementById(targetId) || document.querySelector(`[id="${CSS.escape(targetId)}"]`);
+      } catch (e) {}
+    }
+    if (!target) {
+      try {
+        target = document.querySelector(`[name="${CSS.escape(decodedId)}"]`);
+      } catch (e) {}
+    }
+    if (!target) {
+      const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+      const targetNormalized = decodedId.toLowerCase().replace(/[^a-z0-9]/g, "");
+      for (const h of headings) {
+        const hText = (h.textContent || "").trim().toLowerCase().replace(/[^a-z0-9]/g, "");
+        if (hText && (hText === targetNormalized || hText.includes(targetNormalized) || targetNormalized.includes(hText))) {
+          target = h;
+          break;
+        }
+      }
+    }
+
+    if (target) {
+      const headerOffset = 95; // Account for fixed navigation bar
+      const elPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: "smooth",
+      });
+    }
+
+    // Ensure the URL address bar remains clean with NO #fragment
+    if (window.location.hash) {
+      window.history.replaceState(
+        null,
+        document.title,
+        window.location.pathname + window.location.search
+      );
+    }
+  };
+
+  // Intercept click on any Table of Contents or anchor link inside the article
+  const handleContentClick = (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const rawHref = anchor.getAttribute("href");
+    if (!rawHref || rawHref === "#") return;
+
+    // Prevent default anchor jump which writes the hash to the URL
+    e.preventDefault();
+    e.stopPropagation();
+
+    const rawId = rawHref.slice(1);
+    scrollToTargetHeading(rawId);
+  };
+
+  // On mount or slug change, if user arrived with a hash in URL, scroll to it once and immediately clean the URL
+  useEffect(() => {
+    if (window.location.hash) {
+      const rawId = window.location.hash.slice(1);
+      setTimeout(() => {
+        scrollToTargetHeading(rawId);
+      }, 100);
+
+      window.history.replaceState(
+        null,
+        document.title,
+        window.location.pathname + window.location.search
+      );
+    }
+
+    const cleanHash = () => {
+      if (window.location.hash) {
+        window.history.replaceState(
+          null,
+          document.title,
+          window.location.pathname + window.location.search
+        );
+      }
+    };
+
+    window.addEventListener("hashchange", cleanHash);
+    return () => {
+      window.removeEventListener("hashchange", cleanHash);
+    };
+  }, [slug]);
 
   if (!article) {
     return (
@@ -220,7 +328,7 @@ export default function Article() {
       </Helmet>
 
       {/* Header Section — Pure Black (#000000) */}
-      <section className="relative pt-28 sm:pt-36 pb-12 sm:pb-16 overflow-hidden bg-black border-b border-zinc-900 w-full">
+      <section className="relative pt-24 sm:pt-36 pb-8 sm:pb-16 overflow-hidden bg-black border-b border-zinc-900 w-full">
         {/* Subtle Top Warm Amber/Orange Radial Glow */}
         <div 
           className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[850px] h-[300px] pointer-events-none"
@@ -229,80 +337,88 @@ export default function Article() {
           }}
         />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <button
-            onClick={() => navigate("/articles")}
-            className="mb-6 sm:mb-8 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/90 text-zinc-300 hover:text-orange-400 hover:border-orange-500/40 px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs font-bold transition-all shadow-sm backdrop-blur-md cursor-pointer"
-          >
-            <ArrowLeft size={14} />
-            <span>Back to All Articles</span>
-          </button>
-
+        <div className="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10 w-full">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="max-w-4xl"
           >
-            <div className="mb-3.5 sm:mb-4 flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-bold text-orange-400">
-              <span className="inline-flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-2.5 py-1 rounded-full text-[11px] sm:text-xs">
-                <CalendarDays size={13} className="text-orange-500" />
-                {article.date}
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded-full text-zinc-400 text-[11px] sm:text-xs">
-                <Clock size={13} className="text-orange-400" />
-                {article.readTime || getReadTime(article.content)}
+            {/* Breadcrumb Navigation chip */}
+            <div className="flex items-center gap-2 mb-3 sm:mb-4">
+              <Link
+                to="/articles"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                <ArrowLeft size={13} />
+                <span>All Articles</span>
+              </Link>
+              <span className="text-zinc-600 text-xs">•</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-400">
+                Guide
               </span>
             </div>
 
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-black leading-tight sm:leading-tight text-white tracking-tight">
               {article.title}
             </h1>
+
+            {/* Clean, minimalist metadata bar */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs text-zinc-400 mt-4 sm:mt-5 pt-3.5 border-t border-zinc-800/80">
+              {article.date && <span className="font-medium text-zinc-300">{article.date}</span>}
+              {article.date && <span className="text-zinc-600">•</span>}
+              <span className="text-orange-400 font-bold">{formatReadTime(article)}</span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-zinc-400">By Worexa Technologies</span>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Main Article Content & Sidebar */}
       <div className="bg-slate-50/60 border-t border-slate-100 w-full">
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 pb-24 pt-6 sm:pt-12 w-full">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 pb-20 sm:pb-24 pt-4 sm:pt-10 w-full">
           <div className="grid gap-8 lg:gap-10 lg:grid-cols-[minmax(0,1fr)_380px] items-start w-full">
             <main className="min-w-0 w-full">
-              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white shadow-sm sm:shadow-lg">
-                {/* Article Hero Image */}
-                <div className="relative w-full overflow-hidden bg-slate-50/50 border-b border-slate-100 flex items-center justify-center p-2 sm:p-0">
+              <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-white shadow-xs sm:shadow-md">
+                {/* Article Hero Image - full width at top of card */}
+                <div className="relative w-full overflow-hidden bg-slate-100 border-b border-slate-100 flex items-center justify-center">
                   <img
                     src={article.image}
                     alt={article.title}
                     loading="lazy"
-                    className="article-hero-image rounded-xl sm:rounded-none"
+                    className="w-full h-auto max-h-[360px] sm:max-h-[480px] object-cover"
                   />
                 </div>
 
                 {/* HTML Content Render */}
-                <article className="px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-12">
+                <article 
+                  onClick={handleContentClick}
+                  className="px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-12"
+                >
                   <div
                     className="
                       article-content
-                      text-[15px] sm:text-[16.5px] leading-[1.78] text-slate-700
+                      text-[15.5px] sm:text-[16.5px] leading-[1.78] text-slate-700
                       [&>h3:first-child]:hidden
                       [&_p]:mb-4
                       [&_p]:sm:mb-5
-                      [&_p]:leading-[1.75]
+                      [&_p]:leading-[1.78]
                       [&_p]:text-slate-700
-                      [&_p]:text-[15px]
+                      [&_p]:text-[15.5px]
                       [&_p]:sm:text-[16.5px]
                       [&_a]:font-semibold
                       [&_a]:text-orange-600
                       [&_a]:underline-offset-4
                       [&_a:hover]:underline
                       [&_a:hover]:text-orange-700
-                      [&_h2]:mt-8
+                      [&_h2]:mt-7
                       [&_h2]:sm:mt-10
-                      [&_h2]:mb-3.5
+                      [&_h2]:mb-3
                       [&_h2]:text-xl
                       [&_h2]:sm:text-2xl
                       [&_h2]:md:text-3xl
-                      [&_h2]:font-extrabold
+                      [&_h2]:font-black
                       [&_h2]:text-slate-900
                       [&_h2]:tracking-tight
                       [&_h2]:pt-4
@@ -311,7 +427,7 @@ export default function Article() {
                       [&_h2]:border-slate-100
                       [&_h3]:mt-6
                       [&_h3]:sm:mt-8
-                      [&_h3]:mb-3
+                      [&_h3]:mb-2.5
                       [&_h3]:text-lg
                       [&_h3]:sm:text-xl
                       [&_h3]:md:text-2xl
@@ -319,8 +435,8 @@ export default function Article() {
                       [&_h3]:text-slate-900
                       [&_h3]:tracking-tight
                       [&_h3]:scroll-mt-24
-                      [&_h4]:mt-6
-                      [&_h4]:mb-2.5
+                      [&_h4]:mt-5
+                      [&_h4]:mb-2
                       [&_h4]:text-base
                       [&_h4]:sm:text-lg
                       [&_h4]:font-bold
@@ -332,39 +448,34 @@ export default function Article() {
                       [&_ul]:rounded-xl
                       [&_ul]:sm:rounded-2xl
                       [&_ul]:border
-                      [&_ul]:border-slate-200/90
-                      [&_ul]:bg-gradient-to-br
-                      [&_ul]:from-slate-50
-                      [&_ul]:via-slate-100/50
-                      [&_ul]:to-zinc-50
+                      [&_ul]:border-slate-200/80
+                      [&_ul]:bg-slate-50/70
                       [&_ul]:p-3.5
                       [&_ul]:sm:p-5
-                      [&_ul]:shadow-xs
+                      [&_ul]:shadow-2xs
                       [&_ul]:space-y-2
                       [&_ol]:my-4
                       [&_ol]:sm:my-6
                       [&_ol]:rounded-xl
                       [&_ol]:sm:rounded-2xl
                       [&_ol]:border
-                      [&_ol]:border-slate-200/90
-                      [&_ol]:bg-gradient-to-br
-                      [&_ol]:from-slate-50
-                      [&_ol]:via-slate-100/50
-                      [&_ol]:to-zinc-50
+                      [&_ol]:border-slate-200/80
+                      [&_ol]:bg-slate-50/70
                       [&_ol]:p-3.5
                       [&_ol]:sm:p-5
-                      [&_ol]:shadow-xs
+                      [&_ol]:shadow-2xs
                       [&_ol]:space-y-2
-                      [&_li]:text-[14px]
+                      [&_li]:text-[14.5px]
                       [&_li]:sm:text-[15.5px]
                       [&_li]:leading-relaxed
                       [&_li]:text-slate-700
                       [&_li]:pl-1
                       [&_blockquote]:border-l-4
                       [&_blockquote]:border-orange-500
-                      [&_blockquote]:bg-slate-100/80
+                      [&_blockquote]:bg-orange-50/30
                       [&_blockquote]:rounded-r-xl
-                      [&_blockquote]:p-4
+                      [&_blockquote]:p-3.5
+                      [&_blockquote]:sm:p-4
                       [&_blockquote]:my-5
                       [&_blockquote]:text-slate-800
                     "
@@ -385,7 +496,7 @@ export default function Article() {
               </div>
 
               {/* Related Articles DOWN at bottom of article */}
-              <div className="mt-8 sm:mt-10 rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-4 sm:p-7 shadow-sm">
+              <div className="mt-8 sm:mt-10 rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-white p-4 sm:p-7 shadow-xs sm:shadow-sm">
                 <h3 className="text-base sm:text-lg font-black text-slate-900 mb-5 flex items-center justify-between">
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-orange-500"></span>
@@ -422,7 +533,7 @@ export default function Article() {
 
             {/* Sticky Fixed Sidebar with Form */}
             <aside className="w-full lg:w-[380px] article-sidebar-sticky lg:sticky lg:top-24 lg:self-start shrink-0 z-20">
-              <div className="rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white p-4 sm:p-7 shadow-md sm:shadow-lg shadow-slate-200/50">
+              <div className="rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-white p-4 sm:p-7 shadow-sm sm:shadow-lg shadow-slate-200/50">
                 <div className="mb-4">
                   <span className="text-[10px] font-black uppercase tracking-wider text-orange-600 bg-orange-50 border border-orange-200/60 px-2 py-0.5 rounded-md inline-block mb-1.5">Quick Inquiry</span>
                   <h3 className="text-lg font-black text-slate-900 tracking-tight">Direct Message</h3>

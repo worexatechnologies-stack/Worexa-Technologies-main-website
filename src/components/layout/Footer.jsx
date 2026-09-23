@@ -79,10 +79,10 @@ export default function Footer() {
 
   return (
     <footer style={{ background: '#111111' }} className="text-zinc-300 border-t border-zinc-800/40">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-12 sm:pt-14 pb-10">
 
         {/* ── Main 4-column grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[200px_1fr_130px_270px] gap-12 lg:gap-8 pb-10 border-b border-zinc-800/40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[200px_1fr_130px_270px] gap-8 sm:gap-12 lg:gap-8 pb-10 border-b border-zinc-800/40">
 
           {/* Col 1 — Brand */}
           <div>
@@ -117,12 +117,12 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Services (2 sub-columns) */}
+          {/* Col 2 — Services (responsive sub-columns) */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-6">
               Services
             </h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 sm:gap-y-3.5">
               {/* Left sub-column */}
               <div className="flex flex-col gap-3.5">
                 {servicesCol1.map((s) => (

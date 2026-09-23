@@ -1,5 +1,5 @@
-﻿import ServiceContactForm from '../../components/ServiceContactForm';
-﻿import React, { useState } from 'react';
+import ServiceContactForm from '../../components/ServiceContactForm';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -200,7 +200,7 @@ const Website = () => {
         </script>
       </Helmet>
 
-            {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
+            {/* --- HERO BANNER  PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
       <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-14 sm:pb-16 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow (matching Image 1) */}
         <div 
@@ -217,27 +217,6 @@ const Website = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col items-center text-center space-y-6"
           >
-            {/* Breadcrumb Navigation - Sleek Dark Pill */}
-            <nav aria-label="Breadcrumb" className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-400 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-              <Link
-                to="/"
-                className="inline-flex items-center gap-1.5 text-zinc-400 hover:text-orange-400 transition-colors"
-              >
-                <Home className="w-3.5 h-3.5 text-zinc-500 hover:text-orange-400" />
-                <span>Home</span>
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-zinc-600 shrink-0" />
-              <Link
-                to="/services"
-                className="text-zinc-400 hover:text-orange-400 transition-colors"
-              >
-                Services
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-zinc-600 shrink-0" />
-              <span className="text-orange-500 font-semibold truncate">
-                Web & Mobile App Development
-              </span>
-            </nav>
 
             {/* Main Headline - Dual Tone White & Orange */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] font-black tracking-tight leading-[1.12] [text-wrap:balance]">
@@ -248,7 +227,7 @@ const Website = () => {
         </div>
       </section>
 
-      {/* --- INTRO CONTENT SECTION — CLEAN WHITE BACKGROUND --- */}
+      {/* --- INTRO CONTENT SECTION  CLEAN WHITE BACKGROUND --- */}
             {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

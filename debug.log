@@ -90,3 +90,42 @@
 [2026-09-22 13:15:15] Script started. Request Method: POST | POST keys:  | FILES keys: 
 [2026-09-22 13:15:15] Admin notification TO: worexatechnologies@gmail.com | Submitted email: john.doe@example.com | Subject: New Lead Received
 [2026-09-22 13:15:20] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 09:25:04] Script started. Request Method: GET | POST keys:  | FILES keys: 
+[2026-09-23 09:25:04] Responding with 405: {"success":false,"message":"Only POST requests are allowed."}
+[2026-09-23 09:25:28] Script started. Request Method: GET | POST keys:  | FILES keys: 
+[2026-09-23 09:25:28] Responding with 405: {"success":false,"message":"Only POST requests are allowed."}
+[2026-09-23 09:26:00] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:26:00] Responding with 422: {"success":false,"message":"Please provide a valid name, email address, and message."}
+[2026-09-23 09:26:48] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:26:48] Admin notification TO: worexatechnologies@gmail.com | Submitted email: test@gmail.com | Subject: New Lead Received
+[2026-09-23 09:26:53] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 09:30:47] Script started. Request Method:  | POST keys:  | FILES keys: 
+[2026-09-23 09:30:47] Responding with 405: {"success":false,"message":"Only POST requests are allowed."}
+[2026-09-23 09:31:25] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:31:25] Admin notification TO: worexatechnologies@gmail.com | Submitted email: worexatechnologies@gmail.com | Subject: Diagnostic Test
+[2026-09-23 09:31:34] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 09:37:10] Script started. Request Method: GET | POST keys:  | FILES keys: 
+[2026-09-23 09:37:10] Responding with 200: {"success":true,"status":"ready","message":"Worexa contact form mail backend is active and ready."}
+[2026-09-23 09:37:20] Script started. Request Method: GET | POST keys:  | FILES keys: 
+[2026-09-23 09:37:20] Responding with 200: {"success":true,"status":"ready","message":"Worexa contact form mail backend is active and ready."}
+[2026-09-23 09:37:36] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:37:36] Admin notification TO: worexatechnologies@gmail.com | Submitted email: worexatechnologies@gmail.com | Subject: Best Marketing Company Landing Page Inquiry
+[2026-09-23 09:37:41] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 09:37:54] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:37:54] Admin notification TO: worexatechnologies@gmail.com | Submitted email: worexatechnologies@gmail.com | Subject: Blog Enquiry: Test Article
+[2026-09-23 09:37:59] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 09:39:53] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 09:39:53] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: New Lead Consultation Request - sijoe t
+[2026-09-23 09:39:57] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 13:04:41] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 13:04:41] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe123@gmail.com | Subject: Best Marketing Company Landing Page Inquiry
+[2026-09-23 13:04:46] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 13:04:58] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 13:04:58] Admin notification TO: worexatechnologies@gmail.com | Submitted email: tester@example.com | Subject: New Lead Consultation Request - John Doe
+[2026-09-23 13:05:02] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 13:05:12] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 13:05:12] Admin notification TO: worexatechnologies@gmail.com | Submitted email: testuser@example.com | Subject: Blog Enquiry: Advertising Agencies in Bangalore List | Top Agencies for Business Growth
+[2026-09-23 13:05:21] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-23 13:05:21] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-23 13:05:21] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Service Inquiry: Social Media & Community Building - Tester
+[2026-09-23 13:05:30] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}

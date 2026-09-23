@@ -42,7 +42,7 @@ export default function Articles() {
       </Helmet>
 
       {/* --- HERO BANNER — PURE BLACK (#000000) --- */}
-      <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-16 sm:pb-20 border-b border-zinc-900">
+      <section className="relative overflow-hidden bg-black pt-24 sm:pt-36 pb-12 sm:pb-20 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow */}
         <div 
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[300px] pointer-events-none"
@@ -58,10 +58,10 @@ export default function Articles() {
             transition={{ duration: 0.5 }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.2] sm:leading-[1.15]">
               Digital Marketing Insights for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500">Sustainable Business Growth</span>
             </h1>
-            <p className="mt-5 text-base sm:text-lg text-zinc-300 leading-relaxed font-normal max-w-4xl mx-auto">
+            <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-zinc-300 leading-relaxed font-normal max-w-4xl mx-auto">
               Practical, expert-led insights on SEO, AEO, Google Ads, social media marketing, content strategy, branding, and digital growth, built to help businesses attract qualified customers and turn online visibility into measurable results.
             </p>
           </motion.div>
@@ -70,13 +70,13 @@ export default function Articles() {
 
       {/* Featured Article */}
       {featured && (
-        <section className="pt-8 sm:pt-14 pb-12 sm:pb-16 bg-slate-50/40">
-          <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
+        <section className="pt-6 sm:pt-14 pb-10 sm:pb-16 bg-slate-50/40">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
             <Link
               to={`/articles/${featured.slug}`}
-              className="group grid lg:grid-cols-12 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/90 bg-white shadow-sm sm:shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-xl"
+              className="group grid lg:grid-cols-12 overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-white shadow-xs sm:shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-xl"
             >
-              <div className="lg:col-span-7 relative min-h-[220px] sm:min-h-[340px] overflow-hidden bg-slate-100">
+              <div className="lg:col-span-7 relative min-h-[200px] sm:min-h-[340px] overflow-hidden bg-slate-100">
                 <img
                   src={featured.image}
                   alt={featured.title}
@@ -90,21 +90,21 @@ export default function Articles() {
 
               <div className="lg:col-span-5 p-4 sm:p-8 lg:p-10 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider mb-3">
+                  <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
                     <span className="text-slate-400">{featured.date ? featured.date.toUpperCase() : ""}</span>
                     <span className="text-orange-500 font-bold">{formatReadTime(featured)}</span>
                   </div>
 
-                  <h2 className="font-sans text-xl sm:text-3xl lg:text-4xl font-black text-slate-900 leading-snug sm:leading-tight tracking-tight group-hover:text-orange-600 transition-colors">
+                  <h2 className="font-sans text-lg sm:text-3xl lg:text-4xl font-black text-slate-900 leading-snug sm:leading-tight tracking-tight group-hover:text-orange-600 transition-colors">
                     {featured.title}
                   </h2>
 
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
+                  <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
                     Deep dive into data-backed frameworks to build sustainable search presence and maximize inbound conversion velocity.
                   </p>
                 </div>
 
-                <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-100 flex items-center justify-between">
+                <div className="mt-5 sm:mt-8 pt-4 sm:pt-6 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-xs sm:text-sm font-semibold text-slate-500 group-hover:text-orange-600 transition-colors">
                     Read article
                   </span>
@@ -119,14 +119,14 @@ export default function Articles() {
       )}
 
       {/* Remaining Posts Grid */}
-      <section className="py-12 sm:py-16 border-t border-slate-200/80 bg-slate-50/70">
-        <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
-          <div className="mb-8 sm:mb-10 flex items-center justify-between">
+      <section className="py-10 sm:py-16 border-t border-slate-200/80 bg-slate-50/70">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="mb-6 sm:mb-10 flex items-center justify-between">
             <h3 className="text-lg sm:text-2xl font-black text-slate-900 tracking-tight">All Published Guides</h3>
             <span className="text-xs text-slate-500 font-semibold bg-white border border-slate-200 px-2.5 py-1 rounded-full">{posts.length + 1} Articles</span>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7">
             {posts.map((article) => (
               <Link
                 key={article.slug}

@@ -1,0 +1,92 @@
+[2026-06-11 06:42:24] Script started. Request Method: POST | POST keys: firstName,lastName,email,phone,role,portfolio,message,subject | FILES keys: resumeFile
+[2026-06-11 06:42:34] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-11 06:44:39] Script started. Request Method: POST | POST keys: firstName,lastName,email,phone,role,portfolio,message,subject | FILES keys: resumeFile
+[2026-06-11 06:44:48] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-11 06:54:43] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-11 06:54:43] Admin TO: worexatechnologies@gmail.com | Customer TO (applicant email): worexasijoe@gmail.com | Subject: New Lead Received
+[2026-06-11 06:54:51] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-11 06:59:50] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-11 06:59:50] Admin TO: worexatechnologies@gmail.com | Customer TO (applicant email): worexasijoe@gmail.com | Subject: Job Application: Application Development
+[2026-06-11 06:59:58] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-11 07:03:33] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-11 07:03:33] Admin TO: worexatechnologies@gmail.com | Customer TO (applicant email): worexasijoe@gmail.com | Subject: Job Application: Social Media Marketing
+[2026-06-11 07:03:41] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-12 15:00:23] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-12 15:00:23] Admin TO: worexatechnologies@gmail.com | Customer TO (applicant email): w@gmail.com | Subject: Job Application: Web Developer
+[2026-06-12 15:00:31] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-12 15:01:11] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-12 15:01:11] Admin TO: worexatechnologies@gmail.com | Customer TO (applicant email): w@gmail.com | Subject: New Lead Received
+[2026-06-12 15:01:19] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-12 15:05:12] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-12 15:05:12] Admin notification TO: worexatechnologies@gmail.com | Client confirmation TO: w@gmail.com | Subject: Job Application: Web Developer
+[2026-06-12 15:05:20] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-12 15:07:41] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-12 15:07:41] Admin notification TO: worexatechnologies@gmail.com | Submitted email: w@gmail.com | Subject: Job Application: Application Development
+[2026-06-12 15:07:45] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-12 15:08:12] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-12 15:08:12] Admin notification TO: worexatechnologies@gmail.com | Submitted email: w@gmail.com | Subject: New Lead Received
+[2026-06-12 15:08:16] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-17 16:03:53] Script started. Request Method: POST | POST keys: firstName,lastName,email,phone,subject,message | FILES keys: resumeFile
+[2026-06-17 16:03:53] Admin notification TO: worexatechnologies@gmail.com | Submitted email: w@gmail.com | Subject: Job Application: Internship
+[2026-06-17 16:03:59] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-18 09:12:00] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-18 09:12:00] Admin notification TO: worexatechnologies@gmail.com | Submitted email: wiki.worexa@gmail.com | Subject: New Lead Received
+[2026-06-18 09:12:05] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-06-25 07:32:43] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-06-25 07:32:43] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: New Lead Received
+[2026-06-25 07:32:48] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-17 09:01:25] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-17 09:01:25] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gollaganesh689@gmail.com | Subject: New Lead Received
+[2026-07-17 09:01:32] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-20 14:24:39] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-20 14:24:39] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gollaganesh689@gmail.com | Subject: New Lead Received
+[2026-07-20 14:24:45] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-20 14:25:49] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-20 14:25:49] Admin notification TO: worexatechnologies@gmail.com | Submitted email: ganeshyadav8595@gmail.com | Subject: New Lead Received
+[2026-07-20 14:25:55] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-20 14:38:36] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-20 14:38:36] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gg@gmail.com | Subject: Blog Enquiry: Internet Marketing Services in Bangalore: The Complete Guide to Growing Your Business Online
+[2026-07-20 14:38:51] Responding with 500: {"success":false,"message":"SMTP STARTTLS failed: 220 2.0.0 Ready to start TLS"}
+[2026-07-20 14:38:58] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-20 14:38:58] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gg@gmail.com | Subject: Blog Enquiry: Internet Marketing Services in Bangalore: The Complete Guide to Growing Your Business Online
+[2026-07-20 14:39:09] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-20 14:42:28] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-20 14:42:28] Admin notification TO: worexatechnologies@gmail.com | Submitted email: abc@gmail.com | Subject: Blog Enquiry: Internet Marketing Services in Bangalore: The Complete Guide to Growing Your Business Online
+[2026-07-20 14:42:34] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-21 07:08:39] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-21 07:08:39] Admin notification TO: worexatechnologies@gmail.com | Submitted email: abc@gmail.com | Subject: Blog Enquiry: SEO Company in Bangalore: Why the Right SEO Partner Can Transform Your Business
+[2026-07-21 07:08:47] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-21 07:09:13] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-21 07:09:13] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gollaganesh689@gmail.com | Subject: Blog Enquiry: Advertising Agencies in Bangalore List | Top Agencies for Business Growth
+[2026-07-21 07:09:19] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-07-21 14:48:26] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-07-21 14:48:26] Admin notification TO: worexatechnologies@gmail.com | Submitted email: gollaganesh689@gmail.com | Subject: Blog Enquiry: Top Social Media Marketing Agency in Bangalore: Your Partner for Business Growth.
+[2026-07-21 14:48:32] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:07:47] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:07:47] Responding with 422: {"success":false,"message":"Please provide a valid name, email address, and message."}
+[2026-09-19 11:12:33] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:12:33] Responding with 422: {"success":false,"message":"Please provide a valid name, email address, and message."}
+[2026-09-19 11:42:43] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:42:43] Admin notification TO: worexatechnologies@gmail.com | Submitted email: noreply@example.invalid | Subject: Form Delivery Test
+[2026-09-19 11:42:47] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:44:22] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:44:22] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Service Inquiry: Social Media & Community Building - sijoe t
+[2026-09-19 11:44:26] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:44:44] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:44:44] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Blog Enquiry: Advertising Agencies in Bangalore List | Top Agencies for Business Growth
+[2026-09-19 11:44:48] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:45:02] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:45:02] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Service Inquiry: Web & Mobile App Development - sijoe t
+[2026-09-19 11:45:07] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:45:31] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:45:31] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Blog Enquiry: Best B2B Digital Marketing Agencies: How to Choose the Right Partner for Business Growth
+[2026-09-19 11:45:35] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:45:55] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:45:55] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: New Lead Received
+[2026-09-19 11:45:59] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-19 11:46:21] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-19 11:46:21] Admin notification TO: worexatechnologies@gmail.com | Submitted email: sijoe.worexa@gmail.com | Subject: Best Marketing Company Landing Page Inquiry
+[2026-09-19 11:46:25] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}
+[2026-09-22 13:15:15] Script started. Request Method: POST | POST keys:  | FILES keys: 
+[2026-09-22 13:15:15] Admin notification TO: worexatechnologies@gmail.com | Submitted email: john.doe@example.com | Subject: New Lead Received
+[2026-09-22 13:15:20] Responding with 200: {"success":true,"message":"Thank you. Your message has been sent."}

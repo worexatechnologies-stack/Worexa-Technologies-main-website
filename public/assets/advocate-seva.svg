@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 150" role="img" aria-labelledby="title desc">
+  <title id="title">Advocate Seva</title>
+  <desc id="desc">Gold Advocate Seva legal services logo.</desc>
+  <rect width="720" height="150" fill="none"/>
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7d979"/>
+      <stop offset="0.42" stop-color="#b88a2b"/>
+      <stop offset="0.78" stop-color="#ffe082"/>
+      <stop offset="1" stop-color="#8d661e"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="translate(19 10)">
+    <path d="M79 20v100"/>
+    <path d="M33 30c28 22 66 22 92 0"/>
+    <path d="M43 30l-18 58h36L43 30zM115 30L97 88h36L115 30z"/>
+    <path d="M26 89c7 16 28 16 35 0M98 89c7 16 28 16 35 0"/>
+    <path d="M80 14a12 12 0 1 0 0 .1"/>
+    <path d="M79 52l28 75-28 13-28-13 28-75z"/>
+  </g>
+  <text x="174" y="96" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="700" fill="url(#gold)" letter-spacing="3">ADVOCATE SEVA</text>
+</svg>

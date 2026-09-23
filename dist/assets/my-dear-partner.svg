@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 190" role="img" aria-labelledby="title desc">
+  <title id="title">My Dear Partner</title>
+  <desc id="desc">My Dear Partner red and pink monogram logo.</desc>
+  <rect width="250" height="190" fill="none"/>
+  <g transform="translate(8 7)">
+    <path d="M89 6h45c-26 5-27 16-27 42v106c0 15-7 24-22 24-21 0-46-11-62-32C6 123 7 92 27 72c19-20 50-23 75-6v-33c0-18-2-24-13-27z" fill="#ca1729"/>
+    <path d="M27 84c18-24 55-25 76-3v79c-48 21-96-33-76-76z" fill="#ca1729"/>
+    <path d="M127 43h101c-28 6-31 17-31 44v48c0 28-13 45-35 47 14-11 16-27 16-47V89c0-31-18-45-51-46z" fill="#ed7da4"/>
+    <path d="M128 89c31-31 76-11 78 30 1 37-31 58-68 54 29-13 37-43 23-67-8-14-21-18-33-17z" fill="#ed7da4"/>
+    <path d="M96 127c-21-29-49-10-37 21 12 29 41 36 61 36-11-13-16-34-24-57z" fill="#ca1729"/>
+    <path d="M141 127c21-29 49-10 37 21-12 29-41 36-61 36 11-13 16-34 24-57z" fill="#ed7da4"/>
+  </g>
+</svg>

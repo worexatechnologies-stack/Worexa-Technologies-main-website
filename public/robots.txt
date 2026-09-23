@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://worexatechnologies.com/sitemap.xml
+Sitemap: https://worexatechnologies.com/blogs.xml

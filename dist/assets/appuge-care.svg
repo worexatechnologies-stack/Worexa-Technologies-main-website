@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc">
+  <title id="title">Appuge Care</title>
+  <desc id="desc">Appuge Care mother and baby logo.</desc>
+  <rect width="360" height="420" fill="none"/>
+  <g transform="translate(58 28)">
+    <path d="M211 97c-25-59-97-77-149-30-49 44-59 127-20 193 38 65 116 88 175 47 47-33 58-94 26-136-19-25-42-25-59-9-19 19-11 56 18 67-56 24-105-36-74-88 13-21 33-35 83-44z" fill="#b97949"/>
+    <path d="M145 121c30 14 45 42 34 75-13 40-67 47-95 17-30-32-20-86 18-105 16-8 31 0 43 13z" fill="#f2bb8b"/>
+    <path d="M148 126c-11 15-22 27-38 37-16 10-31 11-43 5 5-34 34-64 72-56 3 3 6 8 9 14z" fill="#744225"/>
+    <path d="M82 189c18 12 40 10 56-5 17 19 43 31 69 24-6 39-41 68-84 64-43-3-76-36-78-75 12 2 25-1 37-8z" fill="#f6c39a"/>
+    <path d="M71 253c45 58 138 52 170-19 37 62-2 132-79 139-77 6-141-51-126-123 10 6 22 7 35 3z" fill="#eed4b4"/>
+    <path d="M184 183c21 33 15 72-10 99 45-2 77-33 80-76 3-43-27-86-70-101 19 24 19 53 0 78z" fill="#8e5a34"/>
+    <path d="M122 176c-10 20-35 26-50 9" fill="none" stroke="#693d24" stroke-width="6" stroke-linecap="round"/>
+    <path d="M150 170c18 30 45 41 75 31" fill="none" stroke="#693d24" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="73" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700" fill="#5a4f23" transform="rotate(8 73 382)">appuge</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" role="img" aria-labelledby="title desc">
+  <title id="title">Worexa Technologies</title>
+  <desc id="desc">Worexa Technologies black wordmark with orange flame.</desc>
+  <rect width="360" height="120" fill="none"/>
+  <g font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" fill="#111">
+    <text x="8" y="72" font-size="58" letter-spacing="-2">W</text>
+    <text x="102" y="72" font-size="58" letter-spacing="-2">REXA</text>
+  </g>
+  <g transform="translate(66 8)">
+    <path
+      fill="#f06b05"
+      d="M30 1c-16 13-26 26-30 40-6 20 2 41 18 50 13 8 30 7 44 0 9-5 16-13 20-22-6 4-13 7-20 8l-5 1 2-4 5-12c-13 8-28 3-34-10-5-9-3-19 4-29-1 6-2 10 0 13 1 3 3 3 4 0 3-12 11-18 23-24 10-6 17-13 21-24-6 3-12 7-17 10l-5 4 2-6c1-5 2-10 1-15-6 4-12 8-17 12-2 1-4 0-3-2 2-5 2-10 1-15-5 4-9 7-13 10z"
+    />
+    <text x="20" y="74" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="25" font-weight="900" fill="#111">O</text>
+  </g>
+  <text x="116" y="101" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="15" font-weight="900" fill="#111" letter-spacing=".3">TECHNOLOGIES</text>
+</svg>

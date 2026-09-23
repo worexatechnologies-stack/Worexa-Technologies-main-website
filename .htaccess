@@ -1,0 +1,72 @@
+# .htaccess for PHP and SPA routing
+# - Disables directory listing
+# - Ensures PHP files are handled
+# - Provides a fallback to index.html for frontend routes (preserves existing files like .php)
+
+Options -Indexes
+
+# Prefer index.php, then index.html
+DirectoryIndex index.php index.html
+
+<IfModule mod_mime.c>
+  # Ensure .php files are handled by PHP (common handler)
+  AddHandler application/x-httpd-php .php
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the request matches an existing file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise, route to the SPA entry (index.html)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Gzip / Brotli Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml font/woff2 font/woff application/font-woff2
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# Security and Cache headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Static assets immutable caching
+  <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg|js|css|woff|woff2)$">
+    Header set Cache-Control "max-age=31536000, public, immutable"
+  </FilesMatch>
+
+  # HTML revalidate
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Prevent access to sensitive files
+<FilesMatch "^(\.env|composer\.json|package\.json|package-lock\.json)$">
+  Require all denied
+</FilesMatch>

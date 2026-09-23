@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 220" role="img" aria-labelledby="title desc">
+  <title id="title">Indira Convent High School</title>
+  <desc id="desc">Indira Convent High School crest logo.</desc>
+  <rect width="260" height="220" fill="none"/>
+  <defs>
+    <linearGradient id="indiraRibbon" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fffba5"/>
+      <stop offset=".52" stop-color="#ece86f"/>
+      <stop offset="1" stop-color="#d4d35b"/>
+    </linearGradient>
+  </defs>
+  <path d="M62 59c35 16 100 16 136 0v87c-12 31-40 51-68 61-28-10-56-30-68-61z" fill="url(#indiraRibbon)" stroke="#b51f29" stroke-width="5"/>
+  <path d="M130 47c28 0 52 10 68 22v55c0 45-32 70-68 84-36-14-68-39-68-84V69c16-12 40-22 68-22z" fill="none" stroke="#056a45" stroke-width="6"/>
+  <path d="M44 72c-17 12-28 25-29 42 36-7 54 9 73 34l14-30C82 93 64 78 44 72zM216 72c17 12 28 25 29 42-36-7-54 9-73 34l-14-30c20-25 38-40 58-46z" fill="url(#indiraRibbon)" stroke="#056a45" stroke-width="5"/>
+  <g fill="none" stroke="#087345" stroke-width="5" stroke-linecap="round">
+    <path d="M102 83c-20 20-22 49 0 74"/>
+    <path d="M158 83c20 20 22 49 0 74"/>
+    <path d="M109 151c13 8 29 8 42 0"/>
+  </g>
+  <path d="M130 82v55M112 130h36M130 78c12 12 13 22 0 34-13-12-12-22 0-34z" fill="none" stroke="#c32026" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M103 136c18-11 36-11 54 0v17c-18-9-36-9-54 0z" fill="#fff7cf" stroke="#c32026" stroke-width="4"/>
+  <text x="130" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#333">SINCE 1997</text>
+  <text x="130" y="206" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#123c2c">INDIRA CONVENT HIGH SCHOOL</text>
+</svg>

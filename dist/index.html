@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Touch Icons for All Devices (iOS, Android, Desktop) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Non-blocking Google Fonts loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+    
+    <!-- High-Priority Preload for Hero Banner Image -->
+    <link rel="preload" as="image" href="/assets/image1.webp" type="image/webp" fetchpriority="high" />
+    
+    <title>Worexa Technologies | Premier Digital Marketing & Growth Agency</title>
+    <script type="module" crossorigin src="/assets/index-BsCBZliD.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-Ciaff7Gk.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-helmet-mN0qEYoJ.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-router-DDuXwFl4.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-motion-Bam0AIvA.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-icons-DZIrtmKK.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-my-pdsI1.css">
+  </head>
+
+  <body class="font-sans antialiased text-white bg-[#090a0f] selection:bg-orange-500 selection:text-white">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PG7KWG4"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div id="root"></div>
+
+    <!-- Google Tag Manager — non-blocking, user-interaction / idle triggered -->
+    <script>
+      (function(){
+        function loadGTM(){
+          if (window.__gtmLoaded) return;
+          window.__gtmLoaded = true;
+          var w=window,d=document,s='script',l='dataLayer',i='GTM-5PG7KWG4';
+          w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+        }
+        var events = ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'];
+        function onInteract() {
+          events.forEach(function(e){ window.removeEventListener(e, onInteract); });
+          loadGTM();
+        }
+        events.forEach(function(e){ window.addEventListener(e, onInteract, { passive: true, once: true }); });
+        setTimeout(loadGTM, 4000);
+      })();
+    </script>
+  </body>
+</html>

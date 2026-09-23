@@ -67,6 +67,6 @@ DirectoryIndex index.php index.html
 </IfModule>
 
 # Prevent access to sensitive files
-<FilesMatch "^(\.env|composer\.json|package\.json|package-lock\.json)$">
+<FilesMatch "^(\.env|smtp-config.*\.php|composer\.json|package\.json|package-lock\.json)$">
   Require all denied
 </FilesMatch>

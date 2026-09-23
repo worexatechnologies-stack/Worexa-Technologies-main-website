@@ -47,6 +47,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/send-mail.php': 'http://127.0.0.1:8000',
+      '/best-marketing-company-in-bangalore/send-mail.php': {
+        target: 'http://127.0.0.1:8000',
+        rewrite: () => '/send-mail.php',
+      },
     },
   },
 })

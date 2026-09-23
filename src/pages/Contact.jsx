@@ -25,12 +25,22 @@ export default function Contact() {
 
     const formData = new FormData(e.target);
 
+    const firstName = (formData.get("firstName") || "").toString().trim();
+    const lastName = (formData.get("lastName") || "").toString().trim();
+    const fullName = `${firstName} ${lastName}`.trim();
+    const phone = (formData.get("phone") || "").toString().trim();
+    const email = (formData.get("email") || "").toString().trim();
+    const message = (formData.get("message") || "").toString().trim();
+
     const data = {
-      firstName: formData.get("firstName"),
-      lastName: formData.get("lastName"),
-      phone: formData.get("phone"),
-      email: formData.get("email"),
-      message: formData.get("message"),
+      name: fullName,
+      firstName,
+      lastName,
+      phone,
+      email,
+      message,
+      subject: `New Lead Consultation Request - ${fullName || email}`,
+      source: "Contact Page Direct Message",
     };
 
     const controller = new AbortController();

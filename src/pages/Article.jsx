@@ -36,33 +36,52 @@ function ContactForm({ articleTitle }) {
 
     const nameParts = form.name.trim().split(" ");
     const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "-";
+    const lastName = nameParts.slice(1).join(" ") || "";
 
     const data = {
+      name: form.name.trim(),
       firstName,
       lastName,
-      phone: form.phone,
-      email: form.email,
-      message: form.message,
+      phone: form.phone.trim(),
+      email: form.email.trim(),
+      message: form.message.trim() || `Inquiry from blog article: ${articleTitle}`,
       subject: `Blog Enquiry: ${articleTitle}`,
       blogName: articleTitle,
+      source: "Blog Article Page",
     };
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 30000);
 
     try {
       const res = await fetch("/send-mail.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
-      const result = await res.json();
-      if (result.success) {
+
+      const responseText = await res.text();
+      let result = {};
+      try {
+        result = responseText ? JSON.parse(responseText) : {};
+      } catch {
+        result = { message: "The mail server returned an invalid response." };
+      }
+
+      if (res.ok && result.success) {
         setSent(true);
       } else {
         setError(result.message || "Something went wrong. Please try again.");
       }
-    } catch {
-      setError("Could not connect. Please try again later.");
+    } catch (err) {
+      if (err.name === "AbortError") {
+        setError("Request timed out. Please try again or email info@worexatechnologies.com.");
+      } else {
+        setError("Could not connect. Please try again later.");
+      }
     } finally {
+      window.clearTimeout(timeoutId);
       setLoading(false);
     }
   };

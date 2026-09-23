@@ -25,9 +25,10 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
 
     const nameParts = form.name.trim().split(" ");
     const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "-";
+    const lastName = nameParts.slice(1).join(" ") || "";
 
     const payload = {
+      name: form.name.trim(),
       firstName,
       lastName,
       phone: form.phone.trim(),
@@ -35,6 +36,7 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
       message: `[Inquiry for: ${serviceName}]\nName: ${form.name.trim()}\nPhone: ${form.phone.trim()}\nEmail: ${form.email.trim()}`,
       subject: `Service Inquiry: ${serviceName} - ${form.name.trim()}`,
       serviceName,
+      source: `Service Inquiry: ${serviceName}`,
     };
 
     const controller = new AbortController();

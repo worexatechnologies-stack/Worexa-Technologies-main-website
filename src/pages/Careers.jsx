@@ -65,16 +65,22 @@ export default function Careers() {
     const role = form.role.value;
     const rawMessage = form.message.value || "";
 
+    const firstName = (form.firstName.value || "").trim();
+    const lastName = (form.lastName.value || "").trim();
+    const fullName = `${firstName} ${lastName}`.trim();
+
     const formData = new FormData();
-    formData.append("firstName", form.firstName.value);
-    formData.append("lastName", form.lastName.value);
-    formData.append("email", form.email.value);
-    formData.append("phone", form.phone.value);
+    formData.append("name", fullName);
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("email", (form.email.value || "").trim());
+    formData.append("phone", (form.phone.value || "").trim());
     formData.append("subject", `Job Application: ${role}`);
     formData.append(
       "message",
-      `Role Applied For: ${role}\n\nCover Letter / Message:\n${rawMessage}`
+      `Role Applied For: ${role}\n\nCover Letter / Message:\n${rawMessage || "No cover note provided"}`
     );
+    formData.append("source", "Careers Page");
     if (resumeFile) {
       formData.append("resumeFile", resumeFile);
     }

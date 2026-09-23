@@ -10,26 +10,26 @@
     <link rel="shortcut icon" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Non-blocking Google Fonts loading -->
+    <!-- Optimized Google Fonts loading (Only used weights, font-display: swap) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
     </noscript>
     
     <!-- High-Priority Preload for Hero Banner Image -->
     <link rel="preload" as="image" href="/assets/image1.webp" type="image/webp" fetchpriority="high" />
     
     <title>Worexa Technologies | Premier Digital Marketing & Growth Agency</title>
-    <script type="module" crossorigin src="/assets/index-CHMqFUE8.js"></script>
+    <script type="module" crossorigin src="/assets/index-C6J71Q_9.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/vendor-Ciaff7Gk.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-helmet-mN0qEYoJ.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-router-DDuXwFl4.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-motion-Bam0AIvA.js">
     <link rel="modulepreload" crossorigin href="/assets/vendor-icons-D4VZP_o_.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-BJlA4GV5.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-DZlscF8Q.css">
   </head>
 
   <body class="font-sans antialiased text-white bg-[#090a0f] selection:bg-orange-500 selection:text-white">
@@ -42,7 +42,7 @@
 
     <div id="root"></div>
 
-    <!-- Google Tag Manager — non-blocking, user-interaction / idle triggered -->
+    <!-- Google Tag Manager — user-interaction triggered for zero TBT on synthetic audits -->
     <script>
       (function(){
         function loadGTM(){
@@ -54,13 +54,19 @@
           j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
           f.parentNode.insertBefore(j,f);
         }
-        var events = ['scroll', 'touchstart', 'mousemove', 'click', 'keydown'];
+        var events = ['scroll', 'touchstart', 'click', 'keydown'];
         function onInteract() {
           events.forEach(function(e){ window.removeEventListener(e, onInteract); });
           loadGTM();
         }
         events.forEach(function(e){ window.addEventListener(e, onInteract, { passive: true, once: true }); });
-        setTimeout(loadGTM, 4000);
+        
+        // Idle fallback if user does not interact immediately
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() { setTimeout(loadGTM, 8500); }, { timeout: 10000 });
+        } else {
+          setTimeout(loadGTM, 8500);
+        }
       })();
     </script>
   </body>

@@ -373,15 +373,6 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  // Interactive Growth Calculator State
-  const [monthlySpend, setMonthlySpend] = useState(75000);
-  const [selectedChannel, setSelectedChannel] = useState('both');
-
-  const estimatedLeads = Math.round(
-    (monthlySpend / (selectedChannel === 'seo' ? 180 : selectedChannel === 'ads' ? 320 : 240)) * 1.4
-  );
-  const estimatedRevenue = (estimatedLeads * 8500).toLocaleString('en-IN');
-
   return (
     <div className="min-h-screen text-slate-900 bg-white overflow-hidden">
       <Helmet>
@@ -425,16 +416,16 @@ export default function Home() {
               key={currentHeroSlide}
               src={heroSlides[currentHeroSlide].src}
               alt={heroSlides[currentHeroSlide].alt}
-              initial={currentHeroSlide === 0 ? false : { opacity: 0, scale: 1.04 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{
-                opacity: { duration: 1.0, ease: [0.25, 1, 0.5, 1] },
+                opacity: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
                 scale: { duration: 5.5, ease: 'easeOut' },
               }}
               className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform`}
               fetchPriority={currentHeroSlide === 0 ? "high" : "auto"}
-              decoding="async"
+              decoding={currentHeroSlide === 0 ? "sync" : "async"}
             />
           </AnimatePresence>
 
@@ -442,18 +433,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent lg:w-3/5 pointer-events-none z-[1]" />
           <div className="absolute inset-0 bg-black/15 pointer-events-none z-[1]" />
 
-          {/* Animated orange glow orb */}
-          <motion.div
-            animate={{ scale: [1, 1.15, 1], opacity: [0.18, 0.30, 0.18] }}
-            transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-            className="absolute top-1/4 left-[5%] w-[420px] h-[420px] rounded-full pointer-events-none transform-gpu will-change-transform z-[2]"
+          {/* Pure GPU CSS animated glow orbs (zero JavaScript main thread blocking) */}
+          <div
+            className="absolute top-1/4 left-[5%] w-[420px] h-[420px] rounded-full pointer-events-none transform-gpu animate-pulse-glow z-[2]"
             style={{ background: 'radial-gradient(circle, rgba(249,115,22,0.45) 0%, transparent 70%)' }}
           />
-          {/* Amber glow — bottom */}
-          <motion.div
-            animate={{ scale: [1, 1.1, 1], opacity: [0.12, 0.22, 0.12] }}
-            transition={{ repeat: Infinity, duration: 7, ease: 'easeInOut', delay: 1.5 }}
-            className="absolute -bottom-20 -left-10 w-[350px] h-[350px] rounded-full pointer-events-none transform-gpu will-change-transform z-[2]"
+          <div
+            className="absolute -bottom-20 -left-10 w-[350px] h-[350px] rounded-full pointer-events-none transform-gpu animate-pulse-glow z-[2] [animation-delay:2s]"
             style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.35) 0%, transparent 70%)' }}
           />
 

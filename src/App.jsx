@@ -4,9 +4,9 @@ import Layout from './components/layout/Layout';
 
 // --- DIRECT PAGE IMPORTS ---
 import Home from './pages/Home';
-import BestMarketingCompany from './pages/BestMarketingCompany';
 
 // --- LAZY-LOADED PAGES (code-split per secondary route) ---
+const BestMarketingCompany = React.lazy(() => import('./pages/BestMarketingCompany'));
 const About = React.lazy(() => import('./pages/About'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Article = React.lazy(() => import('./pages/Article'));

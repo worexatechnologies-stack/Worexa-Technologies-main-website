@@ -194,8 +194,10 @@ export default function Footer() {
 
               {/* Email */}
               <button
+                type="button"
                 onClick={handleCopyEmail}
-                className="flex items-center gap-3 rounded-xl border border-zinc-700/40 bg-zinc-800/30 px-4 py-3 text-sm text-zinc-300 hover:border-orange-500/40 hover:text-white transition-all duration-200 group text-left w-full"
+                aria-label="Copy email address info@worexatechnologies.com"
+                className="flex items-center gap-3 rounded-xl border border-zinc-700/40 bg-zinc-800/30 px-4 py-3 text-sm text-zinc-300 hover:border-orange-500/40 hover:text-white transition-all duration-200 group text-left w-full cursor-pointer"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-all duration-200">
                   <Mail size={14} />

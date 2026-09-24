@@ -83,9 +83,6 @@ export default function Articles() {
                   loading="lazy"
                   className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 px-3 py-1 text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-white shadow-md">
-                  Featured Insight
-                </div>
               </div>
 
               <div className="lg:col-span-5 p-4 sm:p-8 lg:p-10 flex flex-col justify-between">

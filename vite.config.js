@@ -23,9 +23,19 @@ const serveLandingPage = () => ({
   },
 });
 
+const optimizeHtmlPlugin = () => ({
+  name: 'optimize-html',
+  transformIndexHtml(html) {
+    return html.replace(
+      /<link rel="stylesheet" crossorigin href="([^"]+\.css)">/g,
+      '<link rel="preload" as="style" href="$1"><link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\'"><noscript><link rel="stylesheet" href="$1"></noscript>'
+    );
+  }
+});
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), serveLandingPage()],
+  plugins: [react(), serveLandingPage(), optimizeHtmlPlugin()],
   build: {
     rollupOptions: {
       output: {

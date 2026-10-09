@@ -19,7 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^3.0.0",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.30.6",
     "three": "^0.186.0"
   },
   "devDependencies": {
@@ -32,8 +32,8 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "postcss": "^8.4.38",
-    "sharp": "^0.35.3",
+    "postcss": "^8.5.23",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
   }

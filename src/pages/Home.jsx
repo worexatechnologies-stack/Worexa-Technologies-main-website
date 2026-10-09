@@ -59,12 +59,6 @@ const heroSlides = [
     position: "object-[65%_center]",
     tag: "Creative Media & Production",
   },
-  {
-    src: "/assets/hero-team-members.webp",
-    alt: "Worexa Marketing Specialists",
-    position: "object-[70%_center]",
-    tag: "Specialist Growth Consultants",
-  },
 ];
 
 const heroMetrics = [
@@ -419,12 +413,12 @@ export default function Home() {
               srcSet={currentHeroSlide === 0 ? "/assets/image1-mobile.webp 720w, /assets/image1.webp 1920w" : undefined}
               sizes="100vw"
               alt={heroSlides[currentHeroSlide].alt}
-              initial={false}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{
-                opacity: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
-                scale: { duration: 5.5, ease: 'easeOut' },
+                duration: 0.8,
+                ease: [0.25, 1, 0.5, 1],
               }}
               className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform`}
               fetchPriority={currentHeroSlide === 0 ? "high" : "auto"}

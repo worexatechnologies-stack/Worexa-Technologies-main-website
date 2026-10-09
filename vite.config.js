@@ -40,7 +40,12 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          if (id.includes('articleData.js')) {
+            return 'article-data';
+          }
           if (id.includes('node_modules')) {
+            if (id.includes('react-dom') || id.includes('react/') || id.includes('scheduler')) return 'vendor-react';
+            if (id.includes('lenis') || id.includes('gsap')) return 'vendor-scroll';
             if (id.includes('three')) return 'vendor-three';
             if (id.includes('framer-motion')) return 'vendor-motion';
             if (id.includes('lucide-react')) return 'vendor-icons';

@@ -394,22 +394,26 @@ export default function Article() {
                 {/* HTML Content Render */}
                 <article 
                   onClick={handleContentClick}
-                  className="px-4 py-6 sm:px-8 sm:py-10 md:px-12 md:py-12"
+                  className="px-3.5 py-5 sm:px-8 sm:py-10 md:px-12 md:py-12 w-full overflow-hidden"
                 >
                   <div
                     className="
                       article-content
-                      text-[15.5px] sm:text-[16.5px] leading-[1.78] text-slate-700
+                      text-[15px] sm:text-[16.5px] leading-[1.78] text-slate-700
+                      break-words
                       [&>h3:first-child]:hidden
+                      [&_p]:text-justify
+                      [&_p]:[text-justify:inter-word]
                       [&_p]:mb-4
                       [&_p]:sm:mb-5
                       [&_p]:leading-[1.78]
                       [&_p]:text-slate-700
-                      [&_p]:text-[15.5px]
+                      [&_p]:text-[15px]
                       [&_p]:sm:text-[16.5px]
                       [&_a]:font-semibold
                       [&_a]:text-orange-600
                       [&_a]:underline-offset-4
+                      [&_a]:break-words
                       [&_a:hover]:underline
                       [&_a:hover]:text-orange-700
                       [&_h2]:mt-7
@@ -454,6 +458,8 @@ export default function Article() {
                       [&_ul]:sm:p-5
                       [&_ul]:shadow-2xs
                       [&_ul]:space-y-2
+                      [&_ul]:max-w-full
+                      [&_ul]:overflow-x-auto
                       [&_ol]:my-4
                       [&_ol]:sm:my-6
                       [&_ol]:rounded-xl
@@ -465,6 +471,10 @@ export default function Article() {
                       [&_ol]:sm:p-5
                       [&_ol]:shadow-2xs
                       [&_ol]:space-y-2
+                      [&_ol]:max-w-full
+                      [&_ol]:overflow-x-auto
+                      [&_li]:text-justify
+                      [&_li]:[text-justify:inter-word]
                       [&_li]:text-[14.5px]
                       [&_li]:sm:text-[15.5px]
                       [&_li]:leading-relaxed

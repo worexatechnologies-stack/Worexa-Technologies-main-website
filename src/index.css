@@ -882,16 +882,16 @@
     font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
     line-height: 1.8;
     color: #334155;
-    -webkit-hyphens: none;
-    hyphens: none;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .article-content p,
   .blog-content p {
-    text-align: left;
-    -webkit-hyphens: none;
-    hyphens: none;
+    text-align: justify;
+    text-justify: inter-word;
     word-break: normal;
     overflow-wrap: break-word;
     margin-bottom: 1.25rem;
@@ -969,6 +969,8 @@
     border: 1px solid #e2e8f0;
     box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.02);
     list-style: none;
+    max-width: 100%;
+    overflow-x: auto;
   }
 
   @media (min-width: 640px) {
@@ -988,9 +990,12 @@
     padding-left: 1.4rem;
     margin-bottom: 0.65rem;
     line-height: 1.65;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
     color: #334155;
     font-size: 0.9375rem;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .article-content ul li:last-child,
@@ -1021,10 +1026,40 @@
     padding-left: 1.75rem;
     margin-bottom: 0.65rem;
     line-height: 1.65;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
     color: #334155;
     font-size: 0.9375rem;
     counter-increment: article-counter;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .article-content ol li::before,
+  .blog-content ol li::before {
+    content: counter(article-counter);
+    position: absolute;
+    left: 0.1rem;
+    top: 0.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.35rem;
+    background-color: #ea580c;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+  }
+
+  @media (min-width: 640px) {
+    .article-content ul li,
+    .article-content ol li,
+    .blog-content ul li,
+    .blog-content ol li {
+      font-size: 1rem;
+    }
   }
 
   .article-content ol li::before,
@@ -1166,3 +1201,26 @@
     }
   }
 }
+
+/* =========================================================================
+   LENIS + GSAP SMOOTH SCROLLING ENGINE STYLES
+   ========================================================================= */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

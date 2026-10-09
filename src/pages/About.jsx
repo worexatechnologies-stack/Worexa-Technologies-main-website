@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -7,42 +7,34 @@ import {
   Globe,
   Lightbulb,
   Rocket,
-  Search,
   ShieldCheck,
   Target,
   TrendingUp,
   Users,
-  Volume2,
-  VolumeX,
-  Zap,
   CheckCircle2,
   Award,
-  MapPin,
-  Play,
-  Pause,
   ChevronDown,
-  HelpCircle,
-  Sparkles,
-  Smartphone,
   Star,
-  Film,
   Layers,
-  Award as AwardIcon,
-  X
+  Building2,
+  Check,
+  Zap,
+  MapPin
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const image7 = "/assets/image7.webp";
 const image9 = "/assets/image9.webp";
 const teamHeroImage = "/assets/worexa-team-hero.jpg";
-const heroShowcaseImage = "/assets/about-hero-showcase-clean.png";
-const companyVideo = "/assets/final4.mp4";
+const teamCultureImage = "/assets/worexa-team-culture.jpg";
+const teamGroupImage = "/assets/worexa-team-group.jpg";
+const aboutPic2 = "/assets/aboutpic2.webp";
 
 const clientLogos = [
   { label: "SPYSENSE", category: "IOT & SECURITY", image: "/assets/spy-sense.svg" },
   { label: "VIYANA EVENTS", category: "LUXURY GIFTING", image: "/assets/viyana-events-gifting.svg" },
   { label: "MY DEAR PARTNER", category: "WEB PLATFORM", image: "/assets/my-dear-partner.svg" },
-  { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.webp", bg: "bg-[#104239]" },
+  { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.webp" },
   { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-preschool.svg" },
   { label: "APPUGE CARE", category: "MATERNITY & HEALTH", image: "/assets/appuge-care.svg" },
   { label: "SAHANA PHOTOGRAPHY", category: "MEDIA & PRODUCTION", image: "/assets/sahana-photography.svg" },
@@ -106,36 +98,26 @@ const faqs = [
 ];
 
 export default function About() {
-  const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [activeMediaTab, setActiveMediaTab] = useState('photo');
-  const [showVideoModal, setShowVideoModal] = useState(false);
+  const [activeTab, setActiveTab] = useState('team');
   const [activeIndex, setActiveIndex] = useState(null);
-  const videoRef = useRef(null);
 
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
+  const stats = [
+    { label: "Client Retention Rate", value: "98%", change: "+14% YoY" },
+    { label: "Campaigns Executed", value: "500+", change: "Data-Driven" },
+    { label: "Average Campaign ROI", value: "4.8x", change: "Verified" },
+    { label: "Organic Impressions", value: "10M+", change: "Search & Social" }
+  ];
 
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
+  const galleryImages = [
+    { id: 'team', src: teamHeroImage, title: 'Growth & Strategy Team', subtitle: 'Collaborating at our Bengaluru Studio' },
+    { id: 'culture', src: teamCultureImage, title: 'Creative Innovation', subtitle: 'Designing high-impact brand identities' },
+    { id: 'group', src: teamGroupImage, title: 'Client Partnerships', subtitle: 'Driving growth for 100+ businesses' }
+  ];
 
   return (
     <div className="min-h-screen text-slate-900 bg-white selection:bg-orange-100 selection:text-orange-900">
       <Helmet>
-        <title id="metaTitle">About Worexa Technologies | Digital Marketing Agency.</title>
+        <title id="metaTitle">About Worexa Technologies | Digital Marketing Agency Bangalore</title>
         <meta
           name="description"
           id="metaDescription"
@@ -164,14 +146,11 @@ export default function About() {
 
       {/* =========================================================================
           SECTION 1: HERO — YOUR DIGITAL GROWTH PARTNER IN BANGALORE
-          Exact match with user reference design: Luxury light studio desk aesthetic,
-          Vidhana Soudha glow, 3D laptop/phone showcase, and high-impact conversion deck
       ========================================================================= */}
-      <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-28 lg:pb-16 overflow-hidden bg-[#fbfbfa] text-slate-900 border-b border-slate-200/80">
+      <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-20 overflow-hidden bg-[#fbfbfa] text-slate-900 border-b border-slate-200/80">
         
         {/* Soft Ambient Warm Lighting & Subtle Grid Texture */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Subtle micro dot grid */}
           <div
             className="absolute inset-0 opacity-[0.25]"
             style={{
@@ -180,13 +159,11 @@ export default function About() {
             }}
           />
 
-          {/* Warm Sun/Amber Radial Glow */}
           <div
             className="absolute top-0 right-10 w-[600px] h-[600px] rounded-full opacity-60 blur-3xl"
             style={{ background: 'radial-gradient(circle, rgba(249,115,22,0.14) 0%, rgba(251,191,36,0.08) 45%, transparent 70%)' }}
           />
 
-          {/* Subtle warm ambient wash on left */}
           <div
             className="absolute -top-24 -left-20 w-[450px] h-[450px] rounded-full opacity-40 blur-3xl"
             style={{ background: 'radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 65%)' }}
@@ -194,235 +171,155 @@ export default function About() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-y-6 sm:gap-y-8 lg:gap-y-6 lg:gap-x-8 items-center">
+          <div className="grid lg:grid-cols-12 gap-y-8 lg:gap-x-12 items-center">
             
-            {/* 1. H1 Headline — Order 1 on mobile, Col 1-7 Row 1 on desktop */}
+            {/* Left Content Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="order-1 lg:col-span-7 lg:row-start-1 text-center lg:text-left flex flex-col items-center lg:items-start"
+              className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start"
             >
-              <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-black tracking-tight leading-[1.1] text-slate-900">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 border border-orange-200/80 text-orange-700 text-xs font-extrabold tracking-wide mb-5 sm:mb-6 shadow-2xs">
+                <Award size={13} className="text-orange-500" />
+                <span>BANGALORE'S PREMIER DIGITAL GROWTH STUDIO</span>
+              </div>
+
+              <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] xl:text-[3.65rem] font-black tracking-tight leading-[1.1] text-slate-900 mb-5 sm:mb-6">
                 Your Digital Growth <br />
                 Partner in{' '}
                 <span className="text-orange-600">
                   Bangalore
                 </span>
               </h1>
-            </motion.div>
 
-            {/* 2. Device Showcase with Video — Order 2 on mobile (after headline, before description), Col 8-12 Row 1-3 on desktop */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="order-2 lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-3 relative flex items-center justify-center pt-1 sm:pt-4 lg:pt-0"
-            >
-              {/* Main Device / Video Showcase Card */}
-              <div className="relative w-full max-w-[330px] xs:max-w-[350px] sm:max-w-[370px] lg:max-w-[380px] xl:max-w-[400px] mx-auto">
-                
-                {/* Video Screen */}
-                <div className="relative h-[510px] xs:h-[540px] sm:h-[570px] lg:h-[590px] xl:h-[610px] w-full overflow-hidden rounded-[2.25rem] bg-slate-950 shadow-[0_20px_50px_-15px_rgba(15,23,42,0.14)] hover:shadow-[0_25px_60px_-12px_rgba(249,115,22,0.2)] transition-all duration-500 group">
-                  <video
-                    ref={videoRef}
-                    poster={image7}
-                    src={companyVideo}
-                    autoPlay
-                    muted={isMuted}
-                    loop
-                    playsInline
-                    className="h-full w-full object-cover cursor-pointer video-about-framed"
-                    onClick={togglePlay}
-                  />
-
-                  {/* Top Floating Controls */}
-                  <div className="absolute top-3 right-3 z-20 flex items-center justify-end pointer-events-auto">
-                    <div className="flex items-center gap-1">
-                      <button
-                        type="button"
-                        onClick={togglePlay}
-                        className="flex h-7 w-7 items-center justify-center rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white hover:bg-orange-500 hover:border-orange-500 transition-all cursor-pointer shadow-sm"
-                        aria-label={isPlaying ? 'Pause video' : 'Play video'}
-                      >
-                        {isPlaying ? <Pause size={11} /> : <Play size={11} className="translate-x-0.5" />}
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={toggleMute}
-                        className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[10px] font-semibold text-white hover:bg-orange-500 hover:border-orange-500 transition-all cursor-pointer shadow-sm"
-                        aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-                      >
-                        {isMuted ? <VolumeX size={12} /> : <Volume2 size={12} />}
-                        <span>{isMuted ? 'Sound Off' : 'Sound On'}</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Center Play Overlay When Paused */}
-                  {!isPlaying && (
-                    <div
-                      onClick={togglePlay}
-                      className="absolute inset-0 z-10 flex items-center justify-center bg-black/40 backdrop-blur-xs cursor-pointer"
-                    >
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white shadow-2xl shadow-orange-500/50 hover:scale-110 transition-transform">
-                        <Play size={20} className="translate-x-0.5 fill-current" />
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-              </div>
-
-            </motion.div>
-
-            {/* 3. Paragraph Description — Order 3 on mobile (after video), Col 1-7 Row 2 on desktop */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.1 }}
-              className="order-3 lg:col-span-7 lg:row-start-2 text-center lg:text-left"
-            >
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal mx-auto lg:mx-0">
-                Worexa Technologies is a digital marketing and advertising company in Bangalore that helps businesses increase online visibility, generate qualified leads, and improve conversions. We provide SEO, Google Ads, Meta Ads, social media marketing, content marketing, and performance marketing services designed around measurable business goals.
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-xl mb-7 sm:mb-8 text-center lg:text-left">
+                Worexa Technologies is a digital marketing and advertising company in Bangalore that helps businesses increase online visibility, generate qualified leads, and improve conversions. We provide SEO, Google Ads, Meta Ads, social media marketing, content strategy, and performance marketing designed around measurable business outcomes.
               </p>
-            </motion.div>
 
-            {/* 4. Value Pillars & Action Buttons — Order 4 on mobile (below description), Col 1-7 Row 3 on desktop */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.2 }}
-              className="order-4 lg:col-span-7 lg:row-start-3 space-y-5 text-center lg:text-left flex flex-col items-center lg:items-start"
-            >
-              {/* 4 Value Pillars Row with Dividers (Matching Reference Image) */}
-              <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-4 items-center w-full">
-                
-                {/* Pillar 1: More Visibility */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <TrendingUp size={18} />
+              {/* 4 Value Pillars Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 w-full mb-8 pt-2">
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-orange-50 text-orange-600 mb-2">
+                    <TrendingUp size={16} />
                   </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Visibility</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Rank Higher on Google</p>
-                  </div>
+                  <p className="text-xs font-bold text-slate-900 leading-tight">More Visibility</p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">Rank Higher on Search</p>
                 </div>
 
-                {/* Pillar 2: More Leads */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Target size={18} />
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-orange-50 text-orange-600 mb-2">
+                    <Target size={16} />
                   </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Leads</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Reach the Right Audience</p>
-                  </div>
+                  <p className="text-xs font-bold text-slate-900 leading-tight">More Leads</p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">Reach High Intent</p>
                 </div>
 
-                {/* Pillar 3: More Customers */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Users size={18} />
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-orange-50 text-orange-600 mb-2">
+                    <Users size={16} />
                   </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">More Customers</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Turn Clicks into Sales</p>
-                  </div>
+                  <p className="text-xs font-bold text-slate-900 leading-tight">More Customers</p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">Turn Clicks to Sales</p>
                 </div>
 
-                {/* Pillar 4: Better Growth */}
-                <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-1.5 sm:border-l sm:border-slate-200 sm:pl-3.5">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-orange-50 text-orange-600 border border-orange-200/70 shadow-2xs">
-                    <Star size={18} />
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-orange-50 text-orange-600 mb-2">
+                    <Star size={16} />
                   </div>
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Better Growth</p>
-                    <p className="text-[11px] text-slate-500 font-medium leading-tight">Long-Term Success</p>
-                  </div>
+                  <p className="text-xs font-bold text-slate-900 leading-tight">Better Growth</p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight mt-0.5">Long-Term Impact</p>
                 </div>
-
               </div>
 
               {/* Action Buttons Row */}
-              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                {/* Primary CTA Button */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 sm:gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-sm sm:text-base font-bold px-7 py-3.5 shadow-lg shadow-orange-500/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-500/50 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white text-sm font-bold px-7 py-3.5 shadow-lg shadow-orange-500/30 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                 >
                   <span>Work With Our Team</span>
                   <ArrowRight size={17} />
                 </Link>
+
+                <Link
+                  to="/services"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-sm font-bold px-7 py-3.5 transition-all duration-200 shadow-2xs hover:scale-[1.02]"
+                >
+                  <span>Explore Services</span>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right Showcase Card (Clean photographic & stat visual replacing video) */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="lg:col-span-5 relative flex items-center justify-center pt-2 lg:pt-0"
+            >
+              <div className="relative w-full max-w-md mx-auto">
+                {/* Main Showcase Frame */}
+                <div className="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl p-4 sm:p-5">
+                  {/* Team Photographic Banner */}
+                  <div className="relative h-60 sm:h-72 w-full overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/80 group">
+                    <img
+                      src={teamHeroImage}
+                      alt="Worexa Technologies Growth Team"
+                      className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                    
+                    <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15 flex items-center gap-2">
+                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <span className="text-[11px] font-bold text-white uppercase tracking-wider">Bengaluru Studio</span>
+                    </div>
+
+                    <div className="absolute bottom-3 left-3 right-3 text-white">
+                      <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-0.5">Worexa Headquarters</p>
+                      <p className="text-sm sm:text-base font-black leading-snug">Empowering 100+ Brands Across India</p>
+                    </div>
+                  </div>
+
+                  {/* Stat Highlights Bar below picture */}
+                  <div className="grid grid-cols-2 gap-2.5 mt-3.5">
+                    <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
+                      <p className="text-xl font-black text-orange-400">98%</p>
+                      <p className="text-[11px] text-slate-300 font-medium">Client Retention</p>
+                    </div>
+
+                    <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
+                      <p className="text-xl font-black text-amber-400">500+</p>
+                      <p className="text-[11px] text-slate-300 font-medium">Growth Campaigns</p>
+                    </div>
+                  </div>
+
+                  {/* Floating Guarantee Chip */}
+                  <div className="mt-3 p-3 rounded-xl bg-gradient-to-r from-orange-500/20 via-amber-500/15 to-transparent border border-orange-500/30 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 size={16} className="text-orange-400 shrink-0" />
+                      <span className="text-xs font-bold text-slate-200">Data-Driven Strategy &amp; Execution</span>
+                    </div>
+                    <span className="text-[10px] font-mono font-bold text-orange-300 uppercase">Verified</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
           </div>
         </div>
-
-        {/* Interactive Video Story Modal */}
-        <AnimatePresence>
-          {showVideoModal && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 sm:p-6"
-              onClick={() => setShowVideoModal(false)}
-            >
-              <motion.div
-                initial={{ scale: 0.92, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.92, opacity: 0 }}
-                onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-4xl overflow-hidden rounded-3xl bg-slate-950 border border-white/15 shadow-2xl"
-              >
-                <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-slate-900/80">
-                  <div className="flex items-center gap-2.5">
-                    <span className="h-2.5 w-2.5 rounded-full bg-orange-500 animate-pulse" />
-                    <span className="text-sm font-bold text-white tracking-wide">
-                      Worexa Technologies Story • Bengaluru Growth Studio
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setShowVideoModal(false)}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-orange-500 transition-colors cursor-pointer"
-                    aria-label="Close story video"
-                  >
-                    <X size={16} />
-                  </button>
-                </div>
-                <div className="relative aspect-video w-full bg-black">
-                  <video
-                    src={companyVideo}
-                    controls
-                    autoPlay
-                    playsInline
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
       </section>
 
       {/* =========================================================================
-          SECTION 2: DIGITAL MARKETING EXPERTS — ARCHITECTURAL MANIFESTO SPREAD
-          Aesthetic: Clean high-contrast editorial spread with glowing metric blocks
+          SECTION 2: DIGITAL MARKETING EXPERTS MANIFESTO SPREAD
       ========================================================================= */}
-      <section className="relative bg-gradient-to-b from-slate-200/80 via-slate-100/90 to-slate-200/80 py-20 sm:py-28 overflow-hidden border-b border-slate-300/80">
-        {/* Ambient background glow */}
+      <section className="relative bg-gradient-to-b from-slate-200/80 via-slate-100/90 to-slate-200/80 py-16 sm:py-24 overflow-hidden border-b border-slate-300/80">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[360px] bg-gradient-to-b from-orange-100/30 via-amber-50/15 to-transparent blur-3xl pointer-events-none -z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          {/* Top Centered Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.14]">
+          <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-14">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.14]">
               Digital Marketing Experts Helping Brands Grow With{' '}
               <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
                 Strategy, Creativity &amp; Data
@@ -430,18 +327,15 @@ export default function About() {
             </h2>
           </div>
 
-          {/* The Worexa Standard Manifesto Card */}
-          <div className="rounded-3xl border border-slate-300/70 bg-white p-8 sm:p-12 shadow-[0_15px_45px_-15px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_50px_-12px_rgba(249,115,22,0.12)] transition-all duration-500 relative overflow-hidden">
-            {/* Top Accent Gradient Line */}
+          <div className="rounded-3xl border border-slate-300/70 bg-white p-6 sm:p-12 shadow-md relative overflow-hidden">
             <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400" />
-            <div className="absolute top-0 right-0 w-60 h-60 bg-gradient-to-br from-orange-400/10 via-amber-300/10 to-transparent rounded-full blur-2xl pointer-events-none" />
-
-            <div className="space-y-6 relative z-10 text-center max-w-3xl mx-auto">
-              <p className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-slate-900 leading-snug tracking-tight">
+            
+            <div className="space-y-5 relative z-10 text-center max-w-3xl mx-auto">
+              <p className="text-lg sm:text-2xl font-black text-slate-900 leading-snug tracking-tight">
                 We are a full-service digital marketing agency helping ambitious businesses build stronger brands, reach the right audience, and generate measurable growth.
               </p>
 
-              <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                 Our team combines digital marketing strategy, creative design, performance marketing, technology, and data to turn ideas into campaigns that deliver real business results — integrated digital experiences designed around your business goals, not vanity metrics.
               </p>
             </div>
@@ -450,33 +344,29 @@ export default function About() {
       </section>
 
       {/* =========================================================================
-          SECTION 3: WHO IS WOREXA TECHNOLOGIES? — ASYMMETRICAL STEPPED CARDS
-          Aesthetic: Tiered modern cards with methodology pillar bar on warm slate-50
+          SECTION 3: WHO IS WOREXA TECHNOLOGIES? — METHODOLOGY & STACKING CARDS
       ========================================================================= */}
-      <section className="relative bg-gradient-to-b from-slate-50/80 via-orange-50/15 to-slate-50/80 py-20 sm:py-28 border-b border-slate-200/80">
+      <section className="relative bg-gradient-to-b from-slate-50/80 via-orange-50/15 to-slate-50/80 py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Top Centered Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 space-y-4">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 sm:whitespace-nowrap">
+          <div className="text-center max-w-4xl mx-auto mb-12 space-y-3">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900">
               Who Is{' '}
               <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
                 Worexa Technologies?
               </span>
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-medium max-w-4xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed font-medium max-w-3xl mx-auto">
               Worexa Technologies is a Bangalore-based marketing and growth firm that strives to help startups, SMEs, local enterprises, and growing brands enhance their digital footprint and market performance.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-start">
-
-            {/* Left 5 Columns: Sticky Overview Block */}
-            <div className="lg:col-span-5 space-y-7 lg:sticky lg:top-28">
-
-              {/* Our Approach Card with Stepped Progress Nodes */}
-              <div className="rounded-3xl border border-slate-200/90 bg-white p-7 shadow-sm space-y-4">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            {/* Left Column: 3 Core Pillars */}
+            <div className="lg:col-span-5 space-y-6">
+              <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-sm space-y-4">
                 <div className="flex items-center justify-between">
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Our Approach</p>
                   <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">3 Core Pillars</span>
@@ -508,8 +398,8 @@ export default function About() {
               </div>
             </div>
 
-            {/* Right 7 Columns: Parallax Stacking Cards ("one goes top on another") */}
-            <div className="lg:col-span-7 relative">
+            {/* Right Column: 3 Cards */}
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5">
               {[
                 {
                   num: '#01',
@@ -529,36 +419,27 @@ export default function About() {
                   title: 'Built for Growth at Every Stage',
                   desc: 'From early-stage startups finding product-market fit, to established SMEs scaling market share, to local enterprises going digital — we architect marketing systems built to grow with your business.',
                 },
-              ].map((card, idx) => {
+              ].map((card) => {
                 const IconComponent = card.icon;
                 return (
                   <div
                     key={card.title}
-                    className={`sticky rounded-3xl border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_-12px_30px_rgba(0,0,0,0.08),0_20px_40px_rgba(0,0,0,0.06)] hover:border-orange-400/80 transition-all duration-300 relative overflow-hidden ${
-                      idx > 0 ? 'mt-[40vh] sm:mt-[50vh]' : 'mt-0'
-                    }`}
-                    style={{
-                      top: `calc(7rem + ${idx * 1.5}rem)`,
-                      zIndex: 10 + idx,
-                    }}
+                    className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-xs hover:border-orange-400 transition-all duration-300 relative overflow-hidden"
                   >
-                    {/* Top subtle highlight gradient accent */}
-                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-orange-500/0 via-orange-500/40 to-orange-500/0" />
-
-                    <div className="flex items-start gap-5">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-orange-50 border border-orange-200/80 text-orange-600 shadow-2xs">
-                        <IconComponent size={24} />
+                    <div className="flex items-start gap-4 sm:gap-5">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-orange-50 border border-orange-200/80 text-orange-600">
+                        <IconComponent size={22} />
                       </div>
-                      <div className="space-y-2.5 flex-1">
+                      <div className="space-y-2 flex-1">
                         <div className="flex items-center justify-between">
-                          <h3 className="text-xl font-black text-slate-900">
+                          <h3 className="text-base sm:text-lg font-black text-slate-900">
                             {card.title}
                           </h3>
                           <span className="text-xs font-mono font-bold text-slate-400">
                             {card.num}
                           </span>
                         </div>
-                        <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                           {card.desc}
                         </p>
                       </div>
@@ -567,77 +448,111 @@ export default function About() {
                 );
               })}
             </div>
+
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          SECTION 4: HELPING BUSINESSES GROW IN BANGALORE AND BEYOND
-          Aesthetic: Visual Photographic Editorial Spread with Vector Capability Tiles
+          SECTION 4: TEAM & CULTURE GALLERY SHOWCASE
       ========================================================================= */}
-      <section className="py-24 sm:py-32 bg-white border-b border-slate-200/80 overflow-hidden">
+      <section className="py-16 sm:py-24 bg-white border-b border-slate-200/80 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              Inside Worexa Technologies:{' '}
+              <span className="text-orange-600">Our Culture &amp; Studio</span>
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-slate-600 font-normal">
+              Meet the strategists, creators, developers, and media specialists behind Bangalore's fastest-growing digital agency.
+            </p>
 
-            {/* Left: Single Cinematic Studio Photo */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-[2.2rem] overflow-hidden border border-slate-200/90 shadow-2xl group">
+            {/* Interactive Filter Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+              {galleryImages.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                    activeTab === tab.id
+                      ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  {tab.title}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Active Image Showcase Box */}
+          <div className="max-w-4xl mx-auto relative rounded-3xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl group">
+            {galleryImages.map((img) => (
+              img.id === activeTab && (
+                <div key={img.id} className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden">
+                  <img
+                    src={img.src}
+                    alt={img.title}
+                    className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white">
+                    <p className="text-xs font-bold text-orange-400 uppercase tracking-widest">{img.subtitle}</p>
+                    <h3 className="text-base sm:text-xl font-black">{img.title}</h3>
+                  </div>
+                </div>
+              )
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 5: CLIENT TRUST & PARTNER LOGOS
+      ========================================================================= */}
+      <section className="py-16 sm:py-20 bg-slate-50/70 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600 mb-3">
+            Trusted by Industry Leaders &amp; Ambitious Brands
+          </p>
+          <h2 className="text-xl sm:text-3xl font-black text-slate-900 mb-8 sm:mb-10">
+            Partnering With Businesses Across Education, Tech, Healthcare &amp; E-Commerce
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
+            {clientLogos.map((client) => (
+              <div
+                key={client.label}
+                className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-orange-300 transition-all"
+              >
                 <img
-                  src={image9}
-                  alt="Worexa Creative Production"
-                  className="w-full h-80 sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
+                  src={client.image}
+                  alt={client.label}
+                  className="h-9 w-auto max-w-[110px] object-contain mb-2"
                   loading="lazy"
                 />
-              </div>
-            </div>
-
-            {/* Right: Editorial Narrative Content */}
-            <div className="lg:col-span-7 space-y-7">
-              {/* Headline */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[2.85rem] font-black text-slate-900 tracking-tight leading-[1.1]">
-                Helping Businesses Grow in{' '}
-                <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
-                  Bangalore and Beyond
+                <span className="text-[10px] font-bold text-slate-700 text-center leading-tight">
+                  {client.label}
                 </span>
-              </h2>
-
-              {/* Intro paragraph */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Bangalore is one of India&apos;s most competitive business markets, with startups, technology companies, real estate businesses, healthcare providers, educational institutions, retailers, and professional service businesses competing for customer attention.
-              </p>
-
-              {/* Pull-quote highlight in Glass Box */}
-              <div className="relative pl-6 pr-6 py-4 border-l-4 border-orange-500 bg-gradient-to-r from-orange-50/70 via-amber-50/40 to-transparent rounded-r-3xl space-y-2 shadow-2xs">
-                <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                  For businesses operating in such a competitive environment, simply having an online presence is not enough.
-                </p>
-                <p className="text-sm sm:text-base font-black text-slate-900">
-                  You need to be discoverable, relevant, credible, and easy to choose.
-                </p>
+                <span className="text-[9px] text-slate-400 font-semibold tracking-tighter">
+                  {client.category}
+                </span>
               </div>
-
-              {/* Closing statement */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                That&apos;s where a strategic digital marketing approach can make a difference. Worexa Technologies helps businesses strengthen their online presence through a combination of search visibility, paid advertising, social media, content, branding, websites, and conversion-focused marketing.
-              </p>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
 
-
-
       {/* =========================================================================
-          SECTION 6: WE ARE YOUR GROWTH PARTNER — ROADMAP & INTERCONNECTED PIPELINE
-          Aesthetic: Chronological stepped roadmap with executive callout cards
+          SECTION 6: WE ARE YOUR GROWTH PARTNER — ROADMAP & PIPELINE
       ========================================================================= */}
-      <section className="relative overflow-hidden bg-white py-24 sm:py-32 border-b border-slate-200/80">
+      <section className="relative overflow-hidden bg-white py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Top Centered Section Header */}
-          <div className="text-center max-w-4xl mx-auto mb-14 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl lg:text-[3.2rem] font-black tracking-tight leading-[1.15] text-slate-900">
+          <div className="text-center max-w-4xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-4xl lg:text-[3.2rem] font-black tracking-tight leading-[1.15] text-slate-900">
               We Are Your{' '}
               <span className="bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 bg-clip-text text-transparent">
                 Growth Partner,
@@ -647,111 +562,94 @@ export default function About() {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-14 items-center">
-
-            {/* Left 6 Columns: Interactive Process Pipeline */}
-            <div className="lg:col-span-6 space-y-4">
-              {/* Connected Milestone Step Track with Interactive Lighting */}
-              <div className="space-y-4 relative">
-                {[
-                  { step: '01', label: 'Understand your business & audience' },
-                  { step: '02', label: 'Develop a tailored marketing strategy' },
-                  { step: '03', label: 'Execute with creativity & data precision' },
-                  { step: '04', label: 'Monitor, optimise & improve results' },
-                ].map(({ step, label }, index) => (
-                  <div
-                    key={step}
-                    className="flex items-center gap-4 p-4 rounded-2xl border border-slate-200/90 bg-slate-50/70 hover:bg-white hover:border-orange-400 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
-                  >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-100/90 font-mono text-xs font-black text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors shadow-2xs">
-                      {step}
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm sm:text-base font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
-                        {label}
-                      </p>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-slate-300 group-hover:text-orange-500">
-                      Step 0{index + 1}
-                    </span>
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left 6 Columns: Stepped Process */}
+            <div className="lg:col-span-6 space-y-3.5">
+              {[
+                { step: '01', label: 'Understand your business & audience' },
+                { step: '02', label: 'Develop a tailored marketing strategy' },
+                { step: '03', label: 'Execute with creativity & data precision' },
+                { step: '04', label: 'Monitor, optimise & improve results' },
+              ].map(({ step, label }, index) => (
+                <div
+                  key={step}
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-slate-200/90 bg-slate-50/70 hover:bg-white hover:border-orange-400 hover:shadow-md transition-all duration-300 group"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-100/90 font-mono text-xs font-black text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                    {step}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-slate-900 transition-colors">
+                      {label}
+                    </p>
                   </div>
-                ))}
-              </div>
+                  <span className="text-[11px] font-mono font-bold text-slate-400">
+                    Step 0{index + 1}
+                  </span>
+                </div>
+              ))}
             </div>
 
             {/* Right 6 Columns: Executive Dual Narrative Cards & CTAs */}
-            <div className="lg:col-span-6 space-y-6">
-              {/* Content block 1 */}
-              <div className="rounded-3xl border border-slate-200/90 bg-slate-50/80 p-8 space-y-4 shadow-sm">
-                <p className="text-base text-slate-800 leading-relaxed">
+            <div className="lg:col-span-6 space-y-5">
+              <div className="rounded-3xl border border-slate-200/90 bg-slate-50/80 p-6 sm:p-7 space-y-3 shadow-xs">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
                   At Worexa Technologies, we believe digital marketing should contribute to <span className="font-black text-slate-900">real business growth</span>, not just clicks, impressions, or likes. We first understand your business, target audience, competitors, and objectives before developing a marketing strategy.
                 </p>
-                <p className="text-base text-slate-600 leading-relaxed font-normal">
-                  Our team combines strategy, creativity, technology, data, and performance marketing to help businesses attract the right audience and convert opportunities into customers. We continuously monitor performance, identify what is working, and optimize to improve results.
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  Our team combines strategy, creativity, technology, data, and performance marketing to help businesses attract the right audience and convert opportunities into customers.
                 </p>
               </div>
 
-              {/* Content block 2: Warm Amber Container */}
-              <div className="rounded-3xl border border-orange-200 bg-gradient-to-r from-orange-50/80 to-amber-50/60 px-8 py-6 shadow-sm">
-                <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-semibold">
-                  Whether you&apos;re <span className="font-black text-slate-900">launching a startup</span>, growing a small business, or scaling an established brand — our goal is to make your digital marketing more strategic, measurable, and focused on growth.
+              <div className="rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50/80 to-amber-50/60 p-5 shadow-xs">
+                <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-semibold">
+                  Whether you're <span className="font-black text-slate-900">launching a startup</span>, growing a small business, or scaling an established brand — our goal is to make your digital marketing more strategic, measurable, and focused on growth.
                 </p>
               </div>
 
-              {/* CTA Action Buttons */}
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-3.5 pt-1">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white text-sm font-black px-8 py-3.5 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-200"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white text-xs sm:text-sm font-black px-7 py-3 shadow-md shadow-orange-500/20 transition-all hover:scale-105"
                 >
                   <span>Work With Us</span>
-                  <ArrowRight size={16} />
+                  <ArrowRight size={15} />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-400 text-slate-800 text-sm font-black px-8 py-3.5 transition-all duration-200 shadow-2xs hover:scale-105"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-xs sm:text-sm font-black px-7 py-3 transition-all hover:scale-105"
                 >
                   <span>View Our Services</span>
-                  <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
           </div>
-
-
-
         </div>
       </section>
 
       {/* =========================================================================
-          FAQ SECTION: FREQUENTLY ASKED QUESTIONS ABOUT WOREXA TECHNOLOGIES
-          Aesthetic: Two-column interactive accordion with glowing active states
+          SECTION 7: FAQ ACCORDION
       ========================================================================= */}
-      <section className="py-24 sm:py-32 relative bg-[#f8fafc] border-t border-slate-200 overflow-hidden">
-        {/* Ambient glow */}
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-gradient-to-r from-orange-400/5 via-amber-300/5 to-transparent blur-3xl" />
-
+      <section className="py-16 sm:py-24 relative bg-[#f8fafc] border-t border-slate-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-          {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
               Frequently Asked Questions About{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
                 Worexa Technologies
               </span>
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-medium">
+            <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
               Everything you need to know about our growth agency, capabilities, approach, and how we help businesses scale.
             </p>
           </div>
 
-          {/* 2-Column Responsive Accordion Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
             
-            {/* Column 1 (Questions 01 to 05) */}
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               {faqs.slice(0, 5).map((faq, idx) => {
                 const index = idx;
                 const isOpen = activeIndex === index;
@@ -767,19 +665,19 @@ export default function About() {
                     <button
                       type="button"
                       onClick={() => setActiveIndex(isOpen ? null : index)}
-                      className="flex w-full items-start justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer"
+                      className="flex w-full items-start justify-between gap-3.5 p-4 sm:p-5 text-left cursor-pointer"
                       aria-expanded={isOpen}
                     >
-                      <div className="flex items-start gap-3.5">
+                      <div className="flex items-start gap-3">
                         <span
-                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
+                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${
                             isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
                           }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
+                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${
                             isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
                           }`}
                         >
@@ -788,13 +686,13 @@ export default function About() {
                       </div>
 
                       <div
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                           isOpen
                             ? 'bg-orange-500 text-white rotate-180 shadow-xs'
                             : 'bg-slate-100 text-slate-500'
                         }`}
                       >
-                        <ChevronDown size={16} />
+                        <ChevronDown size={14} />
                       </div>
                     </button>
 
@@ -807,7 +705,7 @@ export default function About() {
                           transition={{ duration: 0.25, ease: 'easeInOut' }}
                           className="overflow-hidden"
                         >
-                          <div className="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed pl-12 sm:pl-14 border-t border-slate-100">
+                          <div className="px-4 sm:px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed pl-10 sm:pl-11 border-t border-slate-100">
                             {faq.answer}
                           </div>
                         </motion.div>
@@ -818,8 +716,7 @@ export default function About() {
               })}
             </div>
 
-            {/* Column 2 (Questions 06 to 10) */}
-            <div className="space-y-4">
+            <div className="space-y-3.5">
               {faqs.slice(5, 10).map((faq, idx) => {
                 const index = idx + 5;
                 const isOpen = activeIndex === index;
@@ -835,19 +732,19 @@ export default function About() {
                     <button
                       type="button"
                       onClick={() => setActiveIndex(isOpen ? null : index)}
-                      className="flex w-full items-start justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer"
+                      className="flex w-full items-start justify-between gap-3.5 p-4 sm:p-5 text-left cursor-pointer"
                       aria-expanded={isOpen}
                     >
-                      <div className="flex items-start gap-3.5">
+                      <div className="flex items-start gap-3">
                         <span
-                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
+                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${
                             isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
                           }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
+                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${
                             isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
                           }`}
                         >
@@ -856,13 +753,13 @@ export default function About() {
                       </div>
 
                       <div
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                           isOpen
                             ? 'bg-orange-500 text-white rotate-180 shadow-xs'
                             : 'bg-slate-100 text-slate-500'
                         }`}
                       >
-                        <ChevronDown size={16} />
+                        <ChevronDown size={14} />
                       </div>
                     </button>
 
@@ -875,7 +772,7 @@ export default function About() {
                           transition={{ duration: 0.25, ease: 'easeInOut' }}
                           className="overflow-hidden"
                         >
-                          <div className="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed pl-12 sm:pl-14 border-t border-slate-100">
+                          <div className="px-4 sm:px-5 pb-5 pt-1 text-xs text-slate-600 leading-relaxed pl-10 sm:pl-11 border-t border-slate-100">
                             {faq.answer}
                           </div>
                         </motion.div>
@@ -886,6 +783,42 @@ export default function About() {
               })}
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 8: HIGH-CONVERTING BOTTOM CTA BANNER
+      ========================================================================= */}
+      <section className="py-14 sm:py-20 bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs font-extrabold uppercase tracking-widest">
+            <Zap size={13} />
+            <span>Ready To Scale Your Business?</span>
+          </div>
+
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
+            Transform Your Online Visibility into <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-orange-500">
+              Measurable Revenue Growth
+            </span>
+          </h2>
+
+          <p className="text-xs sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Partner with Worexa Technologies in Bengaluru to architect data-driven SEO, Google Ads, and social marketing campaigns built for sustainable success.
+          </p>
+
+          <div className="pt-3 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-amber-600 text-white font-bold text-sm px-8 py-3.5 shadow-xl shadow-orange-500/25 hover:scale-105 transition-transform"
+            >
+              <span>Schedule Strategy Call</span>
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

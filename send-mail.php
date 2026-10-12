@@ -1,14 +1,35 @@
 <?php
+// Security Headers
 header('Content-Type: application/json; charset=UTF-8');
-header('Access-Control-Allow-Origin: *');
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+header('Referrer-Policy: strict-origin-when-cross-origin');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
+// Restrict CORS to authorized origins
+$allowedOrigins = [
+    'https://worexatechnologies.com',
+    'https://www.worexatechnologies.com',
+    'http://localhost:5173',
+    'http://127.0.0.1:5173',
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+];
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (!empty($origin)) {
+    if (in_array($origin, $allowedOrigins, true) || preg_match('/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/', $origin)) {
+        header("Access-Control-Allow-Origin: $origin");
+        header("Vary: Origin");
+    } else {
+        header('Access-Control-Allow-Origin: null');
+    }
+}
+
 $requestMethod = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-file_put_contents(__DIR__ . '/debug.log', date('[Y-m-d H:i:s] ') . "Script started. Request Method: " . $requestMethod . " | POST keys: " . implode(',', array_keys($_POST)) . " | FILES keys: " . implode(',', array_keys($_FILES)) . "\n", FILE_APPEND);
 
 function json_response($statusCode, $payload) {
-    file_put_contents(__DIR__ . '/debug.log', date('[Y-m-d H:i:s] ') . "Responding with $statusCode: " . json_encode($payload) . "\n", FILE_APPEND);
     http_response_code($statusCode);
     echo json_encode($payload);
     exit;
@@ -34,12 +55,59 @@ if ($requestMethod !== 'POST') {
     ]);
 }
 
+// IP-based Rate Limiter (Max 5 submissions per 10 minutes per IP)
+$clientIp = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '127.0.0.1';
+if (strpos($clientIp, ',') !== false) {
+    $clientIp = trim(explode(',', $clientIp)[0]);
+}
+$clientIp = filter_var($clientIp, FILTER_VALIDATE_IP) ?: '127.0.0.1';
+
+function check_rate_limit($ip, $maxAttempts = 5, $windowSeconds = 600) {
+    $hash = md5($ip);
+    $rateDir = sys_get_temp_dir() . '/worexa_rate_limit';
+    if (!is_dir($rateDir)) {
+        @mkdir($rateDir, 0700, true);
+    }
+    $file = $rateDir . '/rl_' . $hash . '.json';
+    $now = time();
+    $attempts = [];
+    if (file_exists($file)) {
+        $content = @file_get_contents($file);
+        $attempts = json_decode($content, true) ?: [];
+    }
+    $attempts = array_filter($attempts, function ($ts) use ($now, $windowSeconds) {
+        return is_numeric($ts) && ($now - $ts) < $windowSeconds;
+    });
+    if (count($attempts) >= $maxAttempts) {
+        return false;
+    }
+    $attempts[] = $now;
+    @file_put_contents($file, json_encode($attempts), LOCK_EX);
+    return true;
+}
+
+if (!check_rate_limit($clientIp)) {
+    json_response(429, [
+        'success' => false,
+        'message' => 'Too many submissions. Please wait a few minutes before trying again.'
+    ]);
+}
+
 $rawInput = file_get_contents('php://input');
 $jsonInput = json_decode($rawInput, true);
 $data = is_array($jsonInput) ? $jsonInput : $_POST;
 
-function clean_value($value) {
-    return trim(str_replace(["\r", "\n"], ' ', (string) $value));
+// Anti-Spam Honeypot Check (Silently drop bots that populate trap fields)
+if (!empty($data['website_url']) || !empty($data['company_website_url'])) {
+    json_response(200, [
+        'success' => true,
+        'message' => 'Thank you. Your message has been sent.'
+    ]);
+}
+
+function clean_value($value, $maxLen = 255) {
+    $clean = trim(str_replace(["\r", "\n", "\0"], ' ', (string) $value));
+    return mb_substr($clean, 0, $maxLen, 'UTF-8');
 }
 
 function load_env_file($path) {
@@ -81,8 +149,8 @@ function load_env_file($path) {
 
 function smtp_config_from_env($env) {
     $host = !empty($env['SMTP_HOST']) ? $env['SMTP_HOST'] : 'smtp.gmail.com';
-    $username = !empty($env['SMTP_USER']) ? $env['SMTP_USER'] : 'worexatechnologies@gmail.com';
-    $password = !empty($env['SMTP_PASSWORD']) ? $env['SMTP_PASSWORD'] : 'xexitywvmvpugals';
+    $username = !empty($env['SMTP_USER']) ? $env['SMTP_USER'] : '';
+    $password = !empty($env['SMTP_PASSWORD']) ? $env['SMTP_PASSWORD'] : '';
     $fromEmail = !empty($env['MAIL_FROM']) ? $env['MAIL_FROM'] : $username;
 
     if ($host === '' || $username === '' || $password === '' || $fromEmail === '') {
@@ -112,7 +180,7 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
     $timeout = max(5, min(15, (int) ($config['timeout'] ?? 8)));
 
     if ($host === '' || $username === '' || $password === '' || $fromEmail === '') {
-        return [false, 'SMTP is not configured. Add smtp-config.php with host, username, password, and from_email.'];
+        return [false, 'SMTP is not configured. Add smtp-config.php or .env with host, username, password, and from_email.'];
     }
 
     $socketHost = $secure === 'ssl' ? 'ssl://' . $host : $host;
@@ -148,7 +216,8 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
         return [false, 'SMTP server did not respond correctly.'];
     }
 
-    [$ok, $response] = $send('EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'localhost'), 250);
+    $clientName = preg_replace('/[^a-zA-Z0-9\.-]/', '', $_SERVER['SERVER_NAME'] ?? 'localhost') ?: 'localhost';
+    [$ok, $response] = $send('EHLO ' . $clientName, 250);
     if (!$ok) {
         fclose($socket);
         return [false, 'SMTP EHLO failed: ' . trim($response)];
@@ -161,7 +230,7 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
             return [false, 'SMTP STARTTLS failed: ' . trim($response)];
         }
 
-        [$ok, $response] = $send('EHLO ' . ($_SERVER['SERVER_NAME'] ?? 'localhost'), 250);
+        [$ok, $response] = $send('EHLO ' . $clientName, 250);
         if (!$ok) {
             fclose($socket);
             return [false, 'SMTP EHLO after TLS failed: ' . trim($response)];
@@ -183,7 +252,7 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
     [$ok, $response] = $send(base64_encode($password), 235);
     if (!$ok) {
         fclose($socket);
-        return [false, 'SMTP password failed. Use a Gmail app password, not your normal Gmail password.'];
+        return [false, 'SMTP password failed. Use a valid Gmail app password, not your normal password.'];
     }
 
     [$ok, $response] = $send('MAIL FROM: <' . $fromEmail . '>', 250);
@@ -204,29 +273,32 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
         return [false, 'SMTP DATA failed: ' . trim($response)];
     }
 
+    $cleanReplyToName = preg_replace('/[\r\n"<>]/', '', $replyToName);
+    $cleanFromName = preg_replace('/[\r\n"<>]/', '', $fromName);
+
     $headers = [
         'MIME-Version: 1.0',
-        'From: ' . $fromName . ' <' . $fromEmail . '>',
-        'Reply-To: ' . $replyToName . ' <' . $replyToEmail . '>',
+        'From: ' . $cleanFromName . ' <' . $fromEmail . '>',
+        'Reply-To: ' . $cleanReplyToName . ' <' . $replyToEmail . '>',
         'To: ' . $to,
         'Subject: ' . $subject,
     ];
 
     if ($attachment && !empty($attachment['tmp_name'])) {
-        $boundary = md5(uniqid((string)time()));
+        $boundary = md5(uniqid((string)time(), true));
         $headers[] = 'Content-Type: multipart/mixed; boundary="' . $boundary . '"';
 
-        $file_name = $attachment['name'];
+        $safeFileName = preg_replace('/[^a-zA-Z0-9_\.-]/', '_', basename($attachment['name']));
         $file_content = chunk_split(base64_encode(file_get_contents($attachment['tmp_name'])));
-        $file_type = $attachment['type'] ?: 'application/octet-stream';
+        $file_type = !empty($attachment['type']) ? preg_replace('/[^\w\/\.\-]/', '', $attachment['type']) : 'application/octet-stream';
 
         $final_body = "--" . $boundary . "\r\n";
         $final_body .= "Content-Type: text/html; charset=UTF-8\r\n";
         $final_body .= "Content-Transfer-Encoding: 8bit\r\n\r\n";
         $final_body .= $body . "\r\n\r\n";
         $final_body .= "--" . $boundary . "\r\n";
-        $final_body .= "Content-Type: " . $file_type . "; name=\"" . basename($file_name) . "\"\r\n";
-        $final_body .= "Content-Disposition: attachment; filename=\"" . basename($file_name) . "\"\r\n";
+        $final_body .= "Content-Type: " . $file_type . "; name=\"" . $safeFileName . "\"\r\n";
+        $final_body .= "Content-Disposition: attachment; filename=\"" . $safeFileName . "\"\r\n";
         $final_body .= "Content-Transfer-Encoding: base64\r\n\r\n";
         $final_body .= $file_content . "\r\n";
         $final_body .= "--" . $boundary . "--\r\n";
@@ -263,15 +335,16 @@ function send_smtp_admin($smtpConfig, $adminTo, $adminSubject, $adminBody, $repl
     return [true, ''];
 }
 
-$firstName = clean_value($data['firstName'] ?? '');
-$lastName = clean_value($data['lastName'] ?? '');
-$name = clean_value($data['name'] ?? trim($firstName . ' ' . $lastName));
-$email = filter_var(clean_value($data['email'] ?? ''), FILTER_VALIDATE_EMAIL);
-$phone = clean_value($data['phone'] ?? '');
-$subject = clean_value($data['subject'] ?? 'New Lead Received');
-$message = trim((string) ($data['message'] ?? ''));
-$source = clean_value($data['source'] ?? '');
-$blogName = clean_value($data['blogName'] ?? '');
+// Sanitized and Length-Capped Form Inputs
+$firstName = clean_value($data['firstName'] ?? '', 60);
+$lastName = clean_value($data['lastName'] ?? '', 60);
+$name = clean_value($data['name'] ?? trim($firstName . ' ' . $lastName), 120);
+$email = filter_var(clean_value($data['email'] ?? '', 100), FILTER_VALIDATE_EMAIL);
+$phone = clean_value($data['phone'] ?? '', 30);
+$subject = clean_value($data['subject'] ?? 'New Lead Received', 150);
+$message = clean_value($data['message'] ?? '', 4000);
+$source = clean_value($data['source'] ?? '', 100);
+$blogName = clean_value($data['blogName'] ?? '', 150);
 
 if ($name === '' || !$email) {
     json_response(422, [
@@ -288,6 +361,63 @@ if ($message === '') {
     $message = "Inquiry submitted through website form.\n" . implode("\n", $context);
 }
 
+// Secure Attachment Validation (Resumes)
+$attachment = $_FILES['resumeFile'] ?? null;
+if ($attachment && !empty($attachment['tmp_name'])) {
+    if (!isset($attachment['error']) || $attachment['error'] !== UPLOAD_ERR_OK) {
+        json_response(400, [
+            'success' => false,
+            'message' => 'Attachment upload failed. Please try again.'
+        ]);
+    }
+
+    if (!is_uploaded_file($attachment['tmp_name'])) {
+        json_response(400, [
+            'success' => false,
+            'message' => 'Security check failed on uploaded file.'
+        ]);
+    }
+
+    // Maximum 5 MB limit
+    if ($attachment['size'] > 5 * 1024 * 1024) {
+        json_response(413, [
+            'success' => false,
+            'message' => 'Attachment is too large. Maximum allowed file size is 5 MB.'
+        ]);
+    }
+
+    $ext = strtolower(pathinfo($attachment['name'], PATHINFO_EXTENSION));
+    $allowedExts = ['pdf', 'doc', 'docx', 'rtf', 'txt'];
+    if (!in_array($ext, $allowedExts, true)) {
+        json_response(415, [
+            'success' => false,
+            'message' => 'Invalid file extension. Only PDF, DOC, DOCX, RTF, or TXT documents are allowed.'
+        ]);
+    }
+
+    // Deep MIME verification if finfo is enabled
+    if (function_exists('finfo_open')) {
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mime = finfo_file($finfo, $attachment['tmp_name']);
+        finfo_close($finfo);
+        $allowedMimes = [
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'application/rtf',
+            'text/rtf',
+            'text/plain',
+            'application/octet-stream'
+        ];
+        if (!in_array($mime, $allowedMimes, true)) {
+            json_response(415, [
+                'success' => false,
+                'message' => 'Invalid file content. Uploaded file does not appear to be a valid document.'
+            ]);
+        }
+    }
+}
+
 $env = load_env_file(__DIR__ . '/.env');
 $to = filter_var($env['MAIL_TO'] ?? 'worexatechnologies@gmail.com', FILTER_VALIDATE_EMAIL);
 
@@ -295,17 +425,14 @@ if (str_starts_with($subject, 'Job Application:')) {
     $to = 'worexatechnologies@gmail.com';
 }
 
-file_put_contents(__DIR__ . '/debug.log', date('[Y-m-d H:i:s] ') . "Admin notification TO: $to | Submitted email: $email | Subject: $subject\n", FILE_APPEND);
-
-
 if (!$to) {
     json_response(500, [
         'success' => false,
-        'message' => 'MAIL_TO is missing or invalid.'
+        'message' => 'Server recipient configuration is missing.'
     ]);
 }
 
-$subjectPrefix = clean_value($env['MAIL_SUBJECT_PREFIX'] ?? 'Website contact');
+$subjectPrefix = clean_value($env['MAIL_SUBJECT_PREFIX'] ?? 'Website contact', 60);
 $mailSubject = $subjectPrefix . ': ' . $subject;
 $title = str_starts_with($subject, 'Job Application:') ? "New Job Application" : "New Consultation Request";
 $dateStr = gmdate('Y-m-d\TH:i:s+00:00');
@@ -367,25 +494,7 @@ $body .= "
 </div>
 ";
 
-$serverName = $_SERVER['SERVER_NAME'] ?? 'worexatechnologies.com';
-$serverName = preg_replace('/^www\./', '', $serverName);
-$fromDomain = in_array($serverName, ['localhost', '127.0.0.1'], true)
-    ? 'worexatechnologies.com'
-    : $serverName;
-
-$headers = [
-    'MIME-Version: 1.0',
-    'From: Worexa Website <no-reply@' . $fromDomain . '>',
-    'Reply-To: ' . $name . ' <' . $email . '>',
-    'Content-Type: text/html; charset=UTF-8',
-    'X-Mailer: PHP/' . phpversion(),
-];
-
 $smtpConfigPath = __DIR__ . '/smtp-config.php';
-
-$attachment = $_FILES['resumeFile'] ?? null;
-
-$isJobApplication = str_starts_with($subject, 'Job Application:');
 
 if (file_exists($smtpConfigPath)) {
     $smtpConfig = require $smtpConfigPath;
@@ -402,7 +511,7 @@ if (file_exists($smtpConfigPath)) {
     if (!$sent) {
         json_response(500, [
             'success' => false,
-            'message' => $smtpError
+            'message' => 'Unable to send message at this time. Please try again later.'
         ]);
     }
 
@@ -428,7 +537,7 @@ if ($smtpConfig !== null) {
     if (!$sent) {
         json_response(500, [
             'success' => false,
-            'message' => $smtpError
+            'message' => 'Unable to send message at this time. Please try again later.'
         ]);
     }
 
@@ -441,16 +550,31 @@ if ($smtpConfig !== null) {
 if (!function_exists('mail')) {
     json_response(500, [
         'success' => false,
-        'message' => 'PHP mail() is not available on this server.'
+        'message' => 'Mail service is not configured on this server.'
     ]);
 }
+
+$serverName = $_SERVER['SERVER_NAME'] ?? 'worexatechnologies.com';
+$serverName = preg_replace('/^www\./', '', $serverName);
+$fromDomain = in_array($serverName, ['localhost', '127.0.0.1'], true)
+    ? 'worexatechnologies.com'
+    : $serverName;
+
+$cleanFromName = preg_replace('/[\r\n"<>]/', '', $name);
+$headers = [
+    'MIME-Version: 1.0',
+    'From: Worexa Website <no-reply@' . $fromDomain . '>',
+    'Reply-To: ' . $cleanFromName . ' <' . $email . '>',
+    'Content-Type: text/html; charset=UTF-8',
+    'X-Mailer: PHP/' . phpversion(),
+];
 
 $sent = @mail($to, $mailSubject, $body, implode("\r\n", $headers));
 
 if (!$sent) {
     json_response(500, [
         'success' => false,
-        'message' => 'PHP mail failed on this server. Add SMTP settings to .env or create smtp-config.php for Gmail SMTP.'
+        'message' => 'Mail delivery failed. Please contact the administrator.'
     ]);
 }
 

@@ -105,41 +105,61 @@ function ContactForm({ articleTitle }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Full Name"
-        required
-        value={form.name}
-        onChange={handleChange}
-        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
-      />
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone Number"
-        required
-        value={form.phone}
-        onChange={handleChange}
-        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required
-        value={form.email}
-        onChange={handleChange}
-        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
-      />
-      <textarea
-        name="message"
-        placeholder="Inquiry / Growth Goals..."
-        rows={4}
-        value={form.message}
-        onChange={handleChange}
-        className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 transition-all resize-none"
-      />
+      <div>
+        <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Full Name *
+        </label>
+        <input
+          type="text"
+          name="name"
+          required
+          value={form.name}
+          onChange={handleChange}
+          className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        />
+      </div>
+
+      <div>
+        <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Phone Number *
+        </label>
+        <input
+          type="tel"
+          name="phone"
+          required
+          value={form.phone}
+          onChange={handleChange}
+          className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        />
+      </div>
+
+      <div>
+        <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Email Address *
+        </label>
+        <input
+          type="email"
+          name="email"
+          required
+          value={form.email}
+          onChange={handleChange}
+          className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 transition-all"
+        />
+      </div>
+
+      <div>
+        <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">
+          Inquiry / Growth Goals
+        </label>
+        <textarea
+          name="message"
+          rows={3}
+          value={form.message}
+          onChange={handleChange}
+          className="w-full rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 px-3.5 sm:px-4 py-2.5 text-base sm:text-xs text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 transition-all resize-none"
+        />
+      </div>
+
       {error && <p className="text-xs text-red-500">{error}</p>}
       <button
         type="submit"
@@ -491,6 +511,9 @@ export default function Article() {
                     "
                     dangerouslySetInnerHTML={{
                       __html: (article.content || "")
+                        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+                        .replace(/\son\w+\s*=\s*(['"]).*?\1/gi, "")
+                        .replace(/href\s*=\s*(['"])\s*javascript:[^'"]*\1/gi, 'href="#"')
                         .replace(/<li[^>]*>\s*[•·]\s*/gi, "<li>")
                         .replace(/<li[^>]*>\s*<\/li>/gi, "")
                         .replace(/<h3>(.*?)<\/h3>/i, (match, p1) => {

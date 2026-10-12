@@ -52,8 +52,12 @@ DirectoryIndex index.php index.html
 
 # Security and Cache headers
 <IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
 
   # Static assets immutable caching
   <FilesMatch "\.(ico|jpg|jpeg|png|gif|webp|svg|js|css|woff|woff2)$">
@@ -66,7 +70,12 @@ DirectoryIndex index.php index.html
   </FilesMatch>
 </IfModule>
 
-# Prevent access to sensitive files
-<FilesMatch "^(\.env|smtp-config.*\.php|composer\.json|package\.json|package-lock\.json)$">
+# Block access to hidden files and directories (like .git, .env)
+<IfModule mod_rewrite.c>
+  RewriteRule "(^|/)\.(?!well-known)" - [F]
+</IfModule>
+
+# Prevent access to sensitive files, logs, configs, and source maps
+<FilesMatch "(^\.env.*|smtp-config.*\.php|composer\.(json|lock)|package(-lock)?\.json|vercel\.json|BACKEND_SETUP\.md|.*\.(log|bak|backup|old|sql|sh|md))$">
   Require all denied
 </FilesMatch>

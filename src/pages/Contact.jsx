@@ -241,6 +241,16 @@ export default function Contact() {
                     <p className="text-xs text-slate-500 mt-1">Tell us about your brand and what growth milestones you're targeting.</p>
                   </div>
 
+                  {/* Honeypot field for bot protection */}
+                  <div style={{ display: 'none' }} aria-hidden="true">
+                    <input
+                      type="text"
+                      name="website_url"
+                      tabIndex="-1"
+                      autoComplete="off"
+                    />
+                  </div>
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="firstName" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
@@ -251,8 +261,8 @@ export default function Contact() {
                         required
                         name="firstName"
                         type="text"
-                        placeholder="e.g. John"
-                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
+                        maxLength={60}
+                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
                       />
                     </div>
 
@@ -265,8 +275,8 @@ export default function Contact() {
                         required
                         name="lastName"
                         type="text"
-                        placeholder="e.g. Doe"
-                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
+                        maxLength={60}
+                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
                       />
                     </div>
                   </div>
@@ -281,10 +291,9 @@ export default function Contact() {
                         required
                         name="phone"
                         type="tel"
-                        placeholder="e.g. 9876543210"
                         maxLength={10}
                         onInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10); }}
-                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
+                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
                       />
                     </div>
 
@@ -297,8 +306,8 @@ export default function Contact() {
                         required
                         name="email"
                         type="email"
-                        placeholder="e.g. john@company.com"
-                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
+                        maxLength={100}
+                        className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all"
                       />
                     </div>
                   </div>
@@ -311,9 +320,9 @@ export default function Contact() {
                       id="message"
                       required
                       name="message"
+                      maxLength={3000}
                       rows="4"
-                      placeholder="e.g. We are looking for technical SEO and Google Ads optimization to scale qualified monthly leads..."
-                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all resize-none"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 text-sm transition-all resize-none"
                     ></textarea>
                   </div>
 

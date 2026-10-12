@@ -1,2 +1,34 @@
+# Environment & Secrets
 .env
+.env.*
+!.env.example
+smtp-config.php
+*.pem
+*.key
+
+# Logs & Debugging
+*.log
+debug.log
+vite-dev.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build artifacts
+dist/
+dist-ssr/
+
+# Python cache & temporary scripts
 __pycache__/
+*.pyc
+temp_inspect.py
+scratch/
+
+# Operating System artifacts
+.DS_Store
+Thumbs.db

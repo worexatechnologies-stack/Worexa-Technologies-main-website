@@ -81,7 +81,7 @@ const clientLogos = [
   { label: "VIYANA PRODUCTIONS", category: "MEDIA & PRODUCTION", image: "/assets/viyana-productions-logo.png" },
   { label: "MY DEAR PARTNER", category: "WEB PLATFORM", image: "/assets/my-dear-partner.png" },
   { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.webp", bg: "bg-[#104239]" },
-  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-preschool.svg" },
+  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-logo-official.png" },
   { label: "APPUGE CARE", category: "MATERNITY & HEALTH", image: "/assets/appuge-logo.png" },
   { label: "SAHANTA PHOTOGRAPHY", category: "MEDIA & PRODUCTION", image: "/assets/sahana-photography.svg" },
   { label: "VOLPE", category: "EDTECH & SOFTWARE", image: "/assets/volpe-logo.png" },
@@ -387,7 +387,7 @@ export default function Home() {
         <meta id="ogDescription" property="og:description" content="Grow your business with a creative marketing and advertising company in Bangalore. Build your brand, connect with your audience, and achieve measurable marketing results." />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/" />
         <meta id="ogSiteName" property="og:site_name" content="Worexa Technologies" />
-        <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo-white.png" />
+        <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
         <meta id="twitterTitle" name="twitter:title" content="Marketing and Advertising Company in Bangalore | Drive Business Growth" />
         <meta id="twitterDescription" name="twitter:description" content="Looking for a marketing and advertising company in Bangalore? Get digital marketing, branding, creative campaigns, and growth strategies designed to increase visibility and engagement." />
@@ -410,7 +410,7 @@ export default function Home() {
             <motion.img
               key={currentHeroSlide}
               src={heroSlides[currentHeroSlide].src}
-              srcSet={currentHeroSlide === 0 ? "/assets/image1-mobile.webp 720w, /assets/image1.webp 1920w" : undefined}
+              srcSet={currentHeroSlide === 0 ? "/assets/image1-mobile.webp 1080w, /assets/image1.webp 2048w" : undefined}
               sizes="100vw"
               alt={heroSlides[currentHeroSlide].alt}
               initial={{ opacity: 0 }}
@@ -420,15 +420,15 @@ export default function Home() {
                 duration: 0.8,
                 ease: [0.25, 1, 0.5, 1],
               }}
-              className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform`}
+              className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform brightness-[1.04] contrast-[1.02]`}
               fetchPriority={currentHeroSlide === 0 ? "high" : "auto"}
               decoding={currentHeroSlide === 0 ? "sync" : "async"}
             />
           </AnimatePresence>
 
           {/* Soft localized left vignette only behind text to ensure crisp legibility without darkening the team image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent lg:w-3/5 pointer-events-none z-[1]" />
-          <div className="absolute inset-0 bg-black/15 pointer-events-none z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent lg:w-3/5 pointer-events-none z-[1]" />
+          <div className="absolute inset-0 bg-black/[0.03] pointer-events-none z-[1]" />
 
           {/* Pure GPU CSS animated glow orbs (zero JavaScript main thread blocking) */}
           <div
@@ -551,6 +551,7 @@ export default function Home() {
                   src="/assets/final4.mp4"
                   controls
                   autoPlay
+                  preload="none"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -863,10 +864,8 @@ export default function Home() {
                   height="312"
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-105 brightness-[1.03] contrast-[1.02]"
                 />
-                {/* Subtle depth gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>

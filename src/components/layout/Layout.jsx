@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocation, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import TermsModal from '../common/TermsModal';
 
 function FloatingConcierge() {
   const [open, setOpen] = useState(false);
@@ -101,6 +102,9 @@ export default function Layout({ children }) {
 
       {/* Modern Floating Concierge */}
       <FloatingConcierge />
+
+      {/* First-time Visitor Terms & Conditions Modal */}
+      <TermsModal />
     </div>
   );
 }

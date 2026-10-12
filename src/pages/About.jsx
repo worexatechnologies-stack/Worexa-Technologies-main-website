@@ -25,6 +25,7 @@ import { Link } from 'react-router-dom';
 
 const image7 = "/assets/image7.webp";
 const image9 = "/assets/image9.webp";
+const image5 = "/assets/image5.webp";
 const teamHeroImage = "/assets/worexa-team-hero.jpg";
 const teamCultureImage = "/assets/worexa-team-culture.jpg";
 const teamGroupImage = "/assets/worexa-team-group.jpg";
@@ -35,7 +36,7 @@ const clientLogos = [
   { label: "VIYANA EVENTS", category: "LUXURY GIFTING", image: "/assets/viyana-events-gifting.svg" },
   { label: "MY DEAR PARTNER", category: "WEB PLATFORM", image: "/assets/my-dear-partner.svg" },
   { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.webp" },
-  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-preschool.svg" },
+  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-logo-official.png" },
   { label: "APPUGE CARE", category: "MATERNITY & HEALTH", image: "/assets/appuge-care.svg" },
   { label: "SAHANA PHOTOGRAPHY", category: "MEDIA & PRODUCTION", image: "/assets/sahana-photography.svg" },
   { label: "VOLPE", category: "EDTECH & SOFTWARE", image: "/assets/volpehub.svg" },
@@ -171,14 +172,14 @@ export default function About() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-y-8 lg:gap-x-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-y-10 lg:gap-x-10 xl:gap-x-14 items-center">
             
             {/* Left Content Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start"
+              className="lg:col-span-6 xl:col-span-6 text-center lg:text-left flex flex-col items-center lg:items-start"
             >
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100/80 border border-orange-200/80 text-orange-700 text-xs font-extrabold tracking-wide mb-5 sm:mb-6 shadow-2xs">
@@ -199,7 +200,7 @@ export default function About() {
               </p>
 
               {/* 4 Value Pillars Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-4 w-full mb-8 pt-2">
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3.5 sm:gap-4 w-full mb-8 pt-2">
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left p-3 rounded-2xl bg-white border border-slate-200/80 shadow-2xs">
                   <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-orange-50 text-orange-600 mb-2">
                     <TrendingUp size={16} />
@@ -252,57 +253,20 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* Right Showcase Card (Clean photographic & stat visual replacing video) */}
+            {/* Right Photographic Image Showcase */}
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="lg:col-span-5 relative flex items-center justify-center pt-2 lg:pt-0"
+              className="lg:col-span-6 xl:col-span-6 relative flex items-center justify-center pt-2 lg:pt-0"
             >
-              <div className="relative w-full max-w-md mx-auto">
-                {/* Main Showcase Frame */}
-                <div className="relative overflow-hidden rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl p-4 sm:p-5">
-                  {/* Team Photographic Banner */}
-                  <div className="relative h-60 sm:h-72 w-full overflow-hidden rounded-2xl bg-slate-800 border border-slate-700/80 group">
-                    <img
-                      src={teamHeroImage}
-                      alt="Worexa Technologies Growth Team"
-                      className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-                    
-                    <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/15 flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span className="text-[11px] font-bold text-white uppercase tracking-wider">Bengaluru Studio</span>
-                    </div>
-
-                    <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-0.5">Worexa Headquarters</p>
-                      <p className="text-sm sm:text-base font-black leading-snug">Empowering 100+ Brands Across India</p>
-                    </div>
-                  </div>
-
-                  {/* Stat Highlights Bar below picture */}
-                  <div className="grid grid-cols-2 gap-2.5 mt-3.5">
-                    <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
-                      <p className="text-xl font-black text-orange-400">98%</p>
-                      <p className="text-[11px] text-slate-300 font-medium">Client Retention</p>
-                    </div>
-
-                    <div className="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700/60">
-                      <p className="text-xl font-black text-amber-400">500+</p>
-                      <p className="text-[11px] text-slate-300 font-medium">Growth Campaigns</p>
-                    </div>
-                  </div>
-
-                  {/* Floating Guarantee Chip */}
-                  <div className="mt-3 p-3 rounded-xl bg-gradient-to-r from-orange-500/20 via-amber-500/15 to-transparent border border-orange-500/30 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 size={16} className="text-orange-400 shrink-0" />
-                      <span className="text-xs font-bold text-slate-200">Data-Driven Strategy &amp; Execution</span>
-                    </div>
-                    <span className="text-[10px] font-mono font-bold text-orange-300 uppercase">Verified</span>
-                  </div>
+              <div className="relative w-full max-w-2xl lg:max-w-none mx-auto">
+                <div className="relative overflow-hidden rounded-[32px] border border-slate-200/90 shadow-2xl shadow-slate-900/12 group bg-slate-100">
+                  <img
+                    src={image5}
+                    alt="Worexa Technologies Digital Growth Agency"
+                    className="w-full h-auto max-h-[640px] sm:max-h-[680px] lg:max-h-[720px] object-cover object-center group-hover:scale-103 transition-transform duration-700 brightness-[1.03] contrast-[1.02]"
+                  />
                 </div>
               </div>
             </motion.div>

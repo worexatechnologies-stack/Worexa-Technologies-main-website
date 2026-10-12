@@ -86,7 +86,7 @@ const clientLogos = [
   { label: "VIYANA EVENTS & GIFTING", category: "LUXURY GIFTING", image: "/assets/viyana-events-gifting.svg" },
   { label: "MY DEAR PARTNER", category: "WEB PLATFORM", image: "/assets/my-dear-partner.png" },
   { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.jpg", bg: "bg-[#104239]" },
-  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-preschool.png" },
+  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-logo-official.png" },
   { label: "APPUGE CARE", category: "MATERNITY & HEALTH", image: "/assets/appuge-care.png" },
   { label: "SAHANTA PHOTOGRAPHY", category: "MEDIA & PRODUCTION", image: "/assets/sahana-photography.png" },
   { label: "VOLPE", category: "EDTECH & SOFTWARE", image: "/assets/volpehub.png" },
@@ -845,15 +845,15 @@ export default function BestMarketingCompany() {
                 opacity: { duration: 1.2, ease: [0.25, 1, 0.5, 1] },
                 scale: { duration: 5.5, ease: 'easeOut' },
               }}
-              className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform`}
+              className={`absolute inset-0 w-full h-full object-cover ${heroSlides[currentHeroSlide].position} transform-gpu will-change-transform brightness-[1.04] contrast-[1.02]`}
               fetchPriority={currentHeroSlide === 0 ? "high" : "auto"}
               decoding="async"
             />
           </AnimatePresence>
 
           {/* Soft localized left vignette */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent lg:w-3/5 pointer-events-none z-[1]" />
-          <div className="absolute inset-0 bg-black/15 pointer-events-none z-[1]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent lg:w-3/5 pointer-events-none z-[1]" />
+          <div className="absolute inset-0 bg-black/[0.03] pointer-events-none z-[1]" />
 
           {/* Animated orange glow orb */}
           <motion.div
@@ -995,6 +995,7 @@ export default function BestMarketingCompany() {
                   src="/assets/final4.mp4"
                   controls
                   autoPlay
+                  preload="none"
                   className="w-full h-full object-cover"
                 />
               </div>

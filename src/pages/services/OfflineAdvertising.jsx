@@ -1,5 +1,5 @@
 import ServiceContactForm from '../../components/ServiceContactForm';
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -98,7 +98,7 @@ const OfflineAdvertising = () => {
         <meta
           id="ogImage"
           property="og:image"
-          content="https://worexatechnologies.com/assets/logo-white.png"
+          content="https://worexatechnologies.com/assets/logo.png"
         />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
         <meta
@@ -124,7 +124,7 @@ const OfflineAdvertising = () => {
         />
         <meta id="Publisher" property="publisher" content="Worexa Technologies" />
         <meta property="og:locale" content="en_US" />
-              <script type="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -153,10 +153,10 @@ const OfflineAdvertising = () => {
       </Helmet>
 
       {/* --- 2. INTRO SECTION --- */}
-            {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
+      {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
       <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-14 sm:pb-16 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow (matching Image 1) */}
-        <div 
+        <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[300px] pointer-events-none"
           style={{
             background: 'radial-gradient(ellipse at center top, rgba(249, 115, 22, 0.22) 0%, rgba(249, 115, 22, 0.05) 50%, transparent 75%)',
@@ -181,11 +181,11 @@ const OfflineAdvertising = () => {
       </section>
 
       {/* --- INTRO CONTENT SECTION — CLEAN WHITE BACKGROUND --- */}
-            {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
+      {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-            
+
             {/* Left Column: Original Intro Content */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -195,17 +195,17 @@ const OfflineAdvertising = () => {
               className="lg:col-span-7 space-y-6 sm:space-y-8"
             >
 
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              Reach customers where they live, work, and shop with Worexa Technologies’ offline advertising and local marketing services. We help businesses build stronger local visibility through strategically planned advertising campaigns that connect your brand with the right audience in the right locations.
-            </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                Reach customers where they live, work, and shop with Worexa Technologies’ offline advertising and local marketing services. We help businesses build stronger local visibility through strategically planned advertising campaigns that connect your brand with the right audience in the right locations.
+              </p>
 
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              Our approach combines local market research, audience targeting, outdoor advertising, print promotions, event marketing, location-based campaigns, and performance measurement to create impactful offline marketing strategies. Whether you want to increase local brand awareness, attract walk-in customers, promote a new location, or generate leads, we create campaigns tailored to your business objectives and target market.
-            </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                Our approach combines local market research, audience targeting, outdoor advertising, print promotions, event marketing, location-based campaigns, and performance measurement to create impactful offline marketing strategies. Whether you want to increase local brand awareness, attract walk-in customers, promote a new location, or generate leads, we create campaigns tailored to your business objectives and target market.
+              </p>
 
-            <p className="text-xl md:text-2xl font-black text-orange-600">
-              Right Location. Right Audience. Stronger Local Presence.
-            </p>
+              <p className="text-xl md:text-2xl font-black text-orange-600">
+                Right Location. Right Audience. Stronger Local Presence.
+              </p>
             </motion.div>
 
             {/* Right Column: Only Form */}
@@ -538,7 +538,7 @@ const OfflineAdvertising = () => {
         </div>
       </section>
 
-            {/* --- 7. FAQ SECTION --- */}
+      {/* --- 7. FAQ SECTION --- */}
       <section className="py-20 sm:py-28 relative bg-[#f1f5f9] border-t border-slate-200 overflow-hidden">
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-gradient-to-r from-orange-400/5 via-amber-300/5 to-transparent blur-3xl" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

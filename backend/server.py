@@ -89,14 +89,30 @@ def send_email(mail):
 
 
 class ContactHandler(BaseHTTPRequestHandler):
+    ALLOWED_ORIGINS = {
+        "https://worexatechnologies.com",
+        "https://www.worexatechnologies.com",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000"
+    }
+
     def _send_json(self, status, payload):
         body = json.dumps(payload).encode("utf-8")
+        origin = self.headers.get("Origin", "")
+        allowed_origin = origin if origin in self.ALLOWED_ORIGINS else env("CORS_ORIGIN", "https://worexatechnologies.com")
+
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(body)))
-        self.send_header("Access-Control-Allow-Origin", env("CORS_ORIGIN", "*"))
+        self.send_header("Access-Control-Allow-Origin", allowed_origin)
+        self.send_header("Vary", "Origin")
         self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("X-Frame-Options", "DENY")
         self.end_headers()
         self.wfile.write(body)
 

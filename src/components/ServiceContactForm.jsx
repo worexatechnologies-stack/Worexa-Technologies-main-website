@@ -115,6 +115,18 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
             </div>
           )}
 
+          {/* Honeypot field for bot protection */}
+          <div style={{ display: 'none' }} aria-hidden="true">
+            <input
+              type="text"
+              name="website_url"
+              tabIndex="-1"
+              autoComplete="off"
+              value={form.website_url || ""}
+              onChange={handleChange}
+            />
+          </div>
+
           {/* Full Name */}
           <div>
             <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-700 mb-1">
@@ -124,6 +136,7 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
               type="text"
               name="name"
               required
+              maxLength={100}
               value={form.name}
               onChange={handleChange}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/15 transition-all"
@@ -139,6 +152,7 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
               type="tel"
               name="phone"
               required
+              maxLength={25}
               value={form.phone}
               onChange={handleChange}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/15 transition-all"
@@ -154,6 +168,7 @@ export default function ServiceContactForm({ serviceName = "Digital Marketing Se
               type="email"
               name="email"
               required
+              maxLength={100}
               value={form.email}
               onChange={handleChange}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/15 transition-all"

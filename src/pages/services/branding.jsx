@@ -1,5 +1,5 @@
 import ServiceContactForm from '../../components/ServiceContactForm';
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -98,7 +98,7 @@ const Branding = () => {
         <meta
           id="ogImage"
           property="og:image"
-          content="https://worexatechnologies.com/assets/logo-white.png"
+          content="https://worexatechnologies.com/assets/logo.png"
         />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
         <meta
@@ -124,7 +124,7 @@ const Branding = () => {
         />
         <meta id="Publisher" property="publisher" content="Worexa Technologies" />
         <meta property="og:locale" content="en_US" />
-              <script type="application/ld+json">
+        <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -153,10 +153,10 @@ const Branding = () => {
       </Helmet>
 
       {/* --- 2. INTRO SECTION --- */}
-            {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
+      {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
       <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-14 sm:pb-16 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow (matching Image 1) */}
-        <div 
+        <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[300px] pointer-events-none"
           style={{
             background: 'radial-gradient(ellipse at center top, rgba(249, 115, 22, 0.22) 0%, rgba(249, 115, 22, 0.05) 50%, transparent 75%)',
@@ -181,11 +181,11 @@ const Branding = () => {
       </section>
 
       {/* --- INTRO CONTENT SECTION — CLEAN WHITE BACKGROUND --- */}
-            {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
+      {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-            
+
             {/* Left Column: Original Intro Content */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -194,15 +194,15 @@ const Branding = () => {
               transition={{ duration: 0.5 }}
               className="lg:col-span-7 space-y-6 sm:space-y-8"
             >
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              Build a memorable brand with Worexa Technologies’ branding and creative design services. We help businesses create a distinctive visual identity that communicates their values, connects with the right audience, and builds recognition across digital and offline touchpoints.
-            </p>
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              Our approach combines brand strategy, market research, visual identity, creative design, brand messaging, and consistent communication to create a strong and recognizable brand presence. Whether you are launching a new brand, rebranding an existing business, or looking to strengthen your visual identity, we develop creative solutions aligned with your business goals and target audience.
-            </p>
-            <p className="text-xl md:text-2xl font-black text-orange-600">
-              Strong Identity. Creative Impact. Lasting Recognition.
-            </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                Build a memorable brand with Worexa Technologies’ branding and creative design services. We help businesses create a distinctive visual identity that communicates their values, connects with the right audience, and builds recognition across digital and offline touchpoints.
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                Our approach combines brand strategy, market research, visual identity, creative design, brand messaging, and consistent communication to create a strong and recognizable brand presence. Whether you are launching a new brand, rebranding an existing business, or looking to strengthen your visual identity, we develop creative solutions aligned with your business goals and target audience.
+              </p>
+              <p className="text-xl md:text-2xl font-black text-orange-600">
+                Strong Identity. Creative Impact. Lasting Recognition.
+              </p>
             </motion.div>
 
             {/* Right Column: Only Form */}
@@ -219,7 +219,7 @@ const Branding = () => {
           </div>
         </div>
       </section>
-      
+
       {/* --- 3. APPROACH GRID --- */}
       <section className="pb-24 bg-white">
         <div className="container mx-auto px-6">
@@ -264,148 +264,148 @@ const Branding = () => {
         </div>
       </section>
 
-{/* GOOGLE ADS SERVICES SECTION */}
-<section className="py-24 bg-gray-50 px-6">
-  <div className="max-w-7xl mx-auto">
+      {/* GOOGLE ADS SERVICES SECTION */}
+      <section className="py-24 bg-gray-50 px-6">
+        <div className="max-w-7xl mx-auto">
 
-    {/* HEADING */}
-    <div className="text-center mb-16">
-      <span className="text-orange-600 font-semibold uppercase tracking-[4px]">
-      </span>
+          {/* HEADING */}
+          <div className="text-center mb-16">
+            <span className="text-orange-600 font-semibold uppercase tracking-[4px]">
+            </span>
 
-      <h2 className="text-4xl font-black text-black mb-6 uppercase">Our Branding Services Include:</h2>
-    </div>
-
-    {/* SERVICES LIST */}
-    <div className="grid lg:grid-cols-2 gap-8">
-
-      {/* LEFT SIDE */}
-      <div className="space-y-6">
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            01
+            <h2 className="text-4xl font-black text-black mb-6 uppercase">Our Branding Services Include:</h2>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Brand strategy & positioning
-            </h3>
-            
+          {/* SERVICES LIST */}
+          <div className="grid lg:grid-cols-2 gap-8">
+
+            {/* LEFT SIDE */}
+            <div className="space-y-6">
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  01
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Brand strategy & positioning
+                  </h3>
+
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  02
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Logo design & visual identity
+                  </h3>
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  03
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Brand guidelines & consistency
+                  </h3>
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  04
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Color palette & typography
+                  </h3>
+                </div>
+              </div>
+
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="space-y-6">
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  05
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Brand messaging & tone of voice
+                  </h3>
+
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  06
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Social media branding
+                  </h3>
+
+                </div>
+              </div>
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  07
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Packaging & brand collaterals
+                  </h3>
+                </div>
+              </div>
+
+
+              <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
+                <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
+                  08
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-black mb-2">
+                    Rebranding & brand refresh
+                  </h3>
+                </div>
+              </div>
+
+
+
+            </div>
+
           </div>
         </div>
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            02
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Logo design & visual identity
-            </h3>
-          </div>
-        </div>
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            03
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Brand guidelines & consistency
-            </h3>
-          </div>
-        </div>
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            04
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Color palette & typography
-            </h3>
-          </div>
-        </div>
-
-      </div>
-
-      {/* RIGHT SIDE */}
-      <div className="space-y-6">
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            05
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Brand messaging & tone of voice
-            </h3>
-            
-          </div>
-        </div>
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            06
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Social media branding
-            </h3>
-            
-          </div>
-        </div>
-
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            07
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Packaging & brand collaterals
-            </h3>
-          </div>
-        </div>
+      </section>
 
 
-        <div className="group bg-white rounded-[2rem] p-7 shadow-sm hover:shadow-2xl border border-transparent hover:border-orange-500 transition-all duration-300 flex items-start gap-5">
-          <div className="min-w-[60px] h-[60px] rounded-2xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl font-bold">
-            08
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-2">
-              Rebranding & brand refresh
-            </h3>
-          </div>
-        </div>
-
-        
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-      
 
       {/* --- 4. RESULTS SECTION --- */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-8">
           <div className="max-w-7xl mx-auto bg-orange-50 rounded-[2.5rem] p-8 md:p-14 border border-orange-100 relative overflow-hidden group shadow-2xl">
-            
+
             <div className="absolute top-0 right-0 w-64 h-64 bg-orange-200/40 blur-[100px] rounded-full group-hover:bg-orange-300/40 transition-colors duration-700"></div>
 
             <div className="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-              
+
               <div className="lg:w-1/2 text-left">
                 <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                   Branding That <br />
@@ -439,63 +439,63 @@ const Branding = () => {
 
       {/* --- 5. WHY CHOOSE US --- */}
       <section className="py-24 bg-white overflow-hidden">
-  <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
 
-    {/* HEADING */}
-    <div className="text-center mb-16 md:mb-20">
-      <span className="text-orange-600 uppercase tracking-[4px] text-sm font-semibold">
-        Why Choose Us
-      </span>
-
-      <h2 className="text-4xl md:text-6xl font-black text-slate-900 mt-5 leading-tight">
-        Why Choose Us For <br className="hidden md:block" />
-        Branding?
-      </h2>
-
-      <p className="max-w-4xl mx-auto text-gray-600 text-lg leading-relaxed mt-8">
-        Choosing the right partner can make a significant difference in how your brand is perceived in the market.
-As an experienced marketing and advertising company in Bangalore, we focus on building brands that are both visually compelling and strategically positioned for success.
-
-      </p>
-    </div>
-
-    {/* CARDS */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-
-      {[
-        "Strategic and research-driven approach",
-        "Unique and customized brand identity",
-        "Balance of creativity and performance",
-        "Consistent brand experience across all platforms"
-      ].map((item, i) => (
-        <div
-          key={i}
-          className="group relative bg-gray-50 border border-gray-200 rounded-[2rem] p-7 md:p-8 hover:border-orange-500 hover:shadow-2xl transition-all duration-300 min-h-[220px] flex flex-col justify-between"
-        >
-
-          {/* NUMBER */}
-          <div className="flex justify-end">
-            <span className="text-5xl md:text-6xl font-black text-orange-100 leading-none">
-              0{i + 1}
+          {/* HEADING */}
+          <div className="text-center mb-16 md:mb-20">
+            <span className="text-orange-600 uppercase tracking-[4px] text-sm font-semibold">
+              Why Choose Us
             </span>
+
+            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mt-5 leading-tight">
+              Why Choose Us For <br className="hidden md:block" />
+              Branding?
+            </h2>
+
+            <p className="max-w-4xl mx-auto text-gray-600 text-lg leading-relaxed mt-8">
+              Choosing the right partner can make a significant difference in how your brand is perceived in the market.
+              As an experienced marketing and advertising company in Bangalore, we focus on building brands that are both visually compelling and strategically positioned for success.
+
+            </p>
           </div>
 
-          {/* TEXT */}
-          <h3 className="text-xl md:text-2xl font-bold text-slate-900 leading-relaxed relative z-10 mt-6">
-            {item}
-          </h3>
+          {/* CARDS */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
 
+            {[
+              "Strategic and research-driven approach",
+              "Unique and customized brand identity",
+              "Balance of creativity and performance",
+              "Consistent brand experience across all platforms"
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group relative bg-gray-50 border border-gray-200 rounded-[2rem] p-7 md:p-8 hover:border-orange-500 hover:shadow-2xl transition-all duration-300 min-h-[220px] flex flex-col justify-between"
+              >
+
+                {/* NUMBER */}
+                <div className="flex justify-end">
+                  <span className="text-5xl md:text-6xl font-black text-orange-100 leading-none">
+                    0{i + 1}
+                  </span>
+                </div>
+
+                {/* TEXT */}
+                <h3 className="text-xl md:text-2xl font-bold text-slate-900 leading-relaxed relative z-10 mt-6">
+                  {item}
+                </h3>
+
+              </div>
+            ))}
+
+          </div>
         </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* --- 6. WHAT YOU CAN EXPECT --- */}
       <section className="py-24 bg-orange-600">
         <div className="container mx-auto px-8 text-center">
-          
+
           <h2 className="text-4xl font-black text-white mb-6 uppercase">
             What You Can Expect
           </h2>
@@ -525,7 +525,7 @@ As an experienced marketing and advertising company in Bangalore, we focus on bu
         </div>
       </section>
 
-            {/* --- 7. FAQ SECTION --- */}
+      {/* --- 7. FAQ SECTION --- */}
       <section className="py-20 sm:py-28 relative bg-[#f1f5f9] border-t border-slate-200 overflow-hidden">
         <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-gradient-to-r from-orange-400/5 via-amber-300/5 to-transparent blur-3xl" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

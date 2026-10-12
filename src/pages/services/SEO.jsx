@@ -98,7 +98,7 @@ const SEO = () => {
         <meta
           id="ogImage"
           property="og:image"
-          content="https://worexatechnologies.com/assets/logo-white.png"
+          content="https://worexatechnologies.com/assets/logo.png"
         />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
         <meta
@@ -155,7 +155,7 @@ const SEO = () => {
       {/* --- HERO BANNER — PURE BLACK (#000000) EXCLUSIVELY FOR BREADCRUMB & HEADLINE --- */}
       <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-14 sm:pb-16 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow (matching Image 1) */}
-        <div 
+        <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[300px] pointer-events-none"
           style={{
             background: 'radial-gradient(ellipse at center top, rgba(249, 115, 22, 0.22) 0%, rgba(249, 115, 22, 0.05) 50%, transparent 75%)',
@@ -180,11 +180,11 @@ const SEO = () => {
       </section>
 
       {/* --- INTRO CONTENT SECTION — CLEAN WHITE BACKGROUND --- */}
-            {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
+      {/* --- INTRO CONTENT & INLINE FORM SECTION --- */}
       <section className="bg-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-            
+
             {/* Left Column: Original Intro Content */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -194,13 +194,13 @@ const SEO = () => {
               className="lg:col-span-7 space-y-6 sm:space-y-8"
             >
 
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              Our SEO services help businesses improve their visibility in organic search, attract qualified customers, and turn search traffic into measurable business growth. We build customized SEO strategies based on your industry, target audience, competition, and business objectives not one-size-fits-all tactics.
-            </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                Our SEO services help businesses improve their visibility in organic search, attract qualified customers, and turn search traffic into measurable business growth. We build customized SEO strategies based on your industry, target audience, competition, and business objectives not one-size-fits-all tactics.
+              </p>
 
-            <p className="text-xl text-gray-600 leading-relaxed font-medium">
-              From technical SEO and keyword research to on-page optimization, content strategy, local SEO, link building, and performance tracking, we improve the factors that help search engines understand your website and help potential customers find your business.
-            </p>
+              <p className="text-xl text-gray-600 leading-relaxed font-medium">
+                From technical SEO and keyword research to on-page optimization, content strategy, local SEO, link building, and performance tracking, we improve the factors that help search engines understand your website and help potential customers find your business.
+              </p>
             </motion.div>
 
             {/* Right Column: Only Form */}
@@ -547,22 +547,18 @@ const SEO = () => {
                 const index = idx;
                 const isOpen = activeIndex === index;
                 return (
-                  <div key={index} className={`rounded-2xl transition-all duration-300 border ${
-                    isOpen ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20' : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-sm'
-                  }`}>
+                  <div key={index} className={`rounded-2xl transition-all duration-300 border ${isOpen ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20' : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-sm'
+                    }`}>
                     <button type="button" onClick={() => setActiveIndex(isOpen ? null : index)}
                       className="flex w-full items-start justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer" aria-expanded={isOpen}>
                       <div className="flex items-start gap-3.5">
-                        <span className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
-                          isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-400'
-                        }`}>{String(index + 1).padStart(2, '0')}</span>
-                        <span className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
-                          isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                        }`}>{faq.question}</span>
+                        <span className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-400'
+                          }`}>{String(index + 1).padStart(2, '0')}</span>
+                        <span className={`text-sm sm:text-base font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                          }`}>{faq.question}</span>
                       </div>
-                      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                        isOpen ? 'bg-orange-500 text-white rotate-180 shadow-sm' : 'bg-slate-100 text-slate-500'
-                      }`}><ChevronDown size={16} /></div>
+                      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-orange-500 text-white rotate-180 shadow-sm' : 'bg-slate-100 text-slate-500'
+                        }`}><ChevronDown size={16} /></div>
                     </button>
                     <AnimatePresence initial={false}>
                       {isOpen && (
@@ -583,22 +579,18 @@ const SEO = () => {
                 const index = idx + Math.ceil(faqs.length / 2);
                 const isOpen = activeIndex === index;
                 return (
-                  <div key={index} className={`rounded-2xl transition-all duration-300 border ${
-                    isOpen ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20' : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-sm'
-                  }`}>
+                  <div key={index} className={`rounded-2xl transition-all duration-300 border ${isOpen ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20' : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-sm'
+                    }`}>
                     <button type="button" onClick={() => setActiveIndex(isOpen ? null : index)}
                       className="flex w-full items-start justify-between gap-4 p-5 sm:p-6 text-left cursor-pointer" aria-expanded={isOpen}>
                       <div className="flex items-start gap-3.5">
-                        <span className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
-                          isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-400'
-                        }`}>{String(index + 1).padStart(2, '0')}</span>
-                        <span className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
-                          isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                        }`}>{faq.question}</span>
+                        <span className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-400'
+                          }`}>{String(index + 1).padStart(2, '0')}</span>
+                        <span className={`text-sm sm:text-base font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                          }`}>{faq.question}</span>
                       </div>
-                      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                        isOpen ? 'bg-orange-500 text-white rotate-180 shadow-sm' : 'bg-slate-100 text-slate-500'
-                      }`}><ChevronDown size={16} /></div>
+                      <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? 'bg-orange-500 text-white rotate-180 shadow-sm' : 'bg-slate-100 text-slate-500'
+                        }`}><ChevronDown size={16} /></div>
                     </button>
                     <AnimatePresence initial={false}>
                       {isOpen && (

@@ -14,6 +14,7 @@ const Article = React.lazy(() => import('./pages/Article'));
 const Articles = React.lazy(() => import('./pages/Articles'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Careers = React.lazy(() => import('./pages/Careers'));
+const JobDetail = React.lazy(() => import('./pages/JobDetail'));
 
 // --- LAZY-LOADED SERVICE PAGES ---
 const SEO = React.lazy(() => import('./pages/services/SEO'));
@@ -72,6 +73,7 @@ function App() {
             <Route path="/articles/:slug" element={<Article />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/careers" element={<Careers />} />
+            <Route path="/careers/:slug" element={<JobDetail />} />
            
             
             {/* Sub-Routes for individual services */}

@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import {
@@ -23,18 +24,18 @@ import {
 const SUBMIT_TIMEOUT_MS = 30000;
 
 const openRoles = [
-  { title: "Senior Web Developer", category: "Engineering", icon: <Code size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Full-Stack Application Dev", category: "Engineering", icon: <MonitorPlay size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Business Development Executive (BDE)", category: "Sales & Growth", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Performance Marketing Lead", category: "Marketing", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Social Media Strategist", category: "Marketing", icon: <Megaphone size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Community & Social Manager", category: "Marketing", icon: <Users size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Content Strategist & Copywriter", category: "Creative", icon: <PenTool size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Commercial Video Editor & Motion", category: "Production", icon: <Video size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Senior Brand & Graphic Designer", category: "Design", icon: <PenTool size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Human Resources (HR) Specialist", category: "Operations", icon: <UserPlus size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Finance & Accounts Specialist", category: "Finance", icon: <DollarSign size={20} />, type: "Full-Time", loc: "Bengaluru" },
-  { title: "Digital Marketing Internship", category: "Early Career", icon: <Briefcase size={20} />, type: "Internship", loc: "Bengaluru" },
+  { title: "Senior Web Developer", slug: "senior-web-developer", category: "Engineering", icon: <Code size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Full-Stack Application Developer", slug: "full-stack-application-developer", category: "Engineering", icon: <MonitorPlay size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Business Development Executive (BDE)", slug: "business-development-executive-bde", category: "Sales & Growth", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Performance Marketing Lead", slug: "performance-marketing-lead", category: "Marketing", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Social Media Strategist", slug: "social-media-strategist", category: "Marketing", icon: <Megaphone size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Community & Social Manager", slug: "community-and-social-manager", category: "Marketing", icon: <Users size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Content Strategist & Copywriter", slug: "content-strategist-and-copywriter", category: "Creative", icon: <PenTool size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Commercial Video Editor & Motion", slug: "commercial-video-editor-and-motion", category: "Production", icon: <Video size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Senior Brand & Graphic Designer", slug: "senior-brand-and-graphic-designer", category: "Design", icon: <PenTool size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Human Resources (HR) Specialist", slug: "human-resources-hr-specialist", category: "Operations", icon: <UserPlus size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Finance & Accounts Specialist", slug: "finance-and-accounts-specialist", category: "Finance", icon: <DollarSign size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Digital Marketing Internship", slug: "digital-marketing-internship", category: "Early Career", icon: <Briefcase size={20} />, type: "Internship", loc: "Bengaluru" },
 ];
 
 export default function Careers() {
@@ -43,17 +44,38 @@ export default function Careers() {
   const [resumeFile, setResumeFile] = useState(null);
   const fileInputRef = useRef(null);
 
+  const validateAndSetFile = (file) => {
+    if (!file) return false;
+    const maxSizeBytes = 5 * 1024 * 1024; // 5 MB
+    if (file.size > maxSizeBytes) {
+      alert("Resume file is too large. Maximum allowed size is 5 MB.");
+      return false;
+    }
+    const ext = file.name.split(".").pop()?.toLowerCase();
+    if (!["pdf", "doc", "docx", "rtf", "txt"].includes(ext)) {
+      alert("Invalid file format. Please upload a PDF, DOC, or DOCX document.");
+      return false;
+    }
+    setResumeFile(file);
+    return true;
+  };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file) setResumeFile(file);
+    if (file) {
+      if (!validateAndSetFile(file) && fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+    }
   };
 
   const handleDrop = (e) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     if (file) {
-      setResumeFile(file);
-      fileInputRef.current.files = e.dataTransfer.files;
+      if (validateAndSetFile(file) && fileInputRef.current) {
+        fileInputRef.current.files = e.dataTransfer.files;
+      }
     }
   };
 
@@ -230,17 +252,19 @@ export default function Careers() {
                 </div>
 
                 <p className="text-[11px] font-bold uppercase tracking-wider text-orange-600">{role.category}</p>
-                <h3 className="text-lg font-black text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">{role.title}</h3>
+                <Link to={`/careers/${role.slug}`} className="block">
+                  <h3 className="text-lg font-black text-slate-900 mt-1 group-hover:text-orange-600 transition-colors">{role.title}</h3>
+                </Link>
 
                 <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-xs text-slate-500">{role.loc}</span>
-                  <a
-                    href="#apply-now"
+                  <Link
+                    to={`/careers/${role.slug}`}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 group-hover:text-orange-700 transition-colors"
                   >
-                    <span>Apply</span>
+                    <span>View Role & Apply</span>
                     <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -287,8 +311,7 @@ export default function Careers() {
                       required
                       name="firstName"
                       type="text"
-                      placeholder="e.g. Rahul"
-                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
                     />
                   </div>
 
@@ -300,8 +323,7 @@ export default function Careers() {
                       required
                       name="lastName"
                       type="text"
-                      placeholder="e.g. Sharma"
-                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
                     />
                   </div>
                 </div>
@@ -315,8 +337,7 @@ export default function Careers() {
                       required
                       name="email"
                       type="email"
-                      placeholder="e.g. rahul@example.com"
-                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
                     />
                   </div>
 
@@ -328,10 +349,9 @@ export default function Careers() {
                       required
                       name="phone"
                       type="tel"
-                      placeholder="e.g. 9876543210"
                       maxLength={10}
                       onInput={(e) => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10); }}
-                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
+                      className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all"
                     />
                   </div>
                 </div>
@@ -426,8 +446,7 @@ export default function Careers() {
                   <textarea
                     name="message"
                     rows="3"
-                    placeholder="Provide portfolio links (GitHub, Behance, LinkedIn) or introduce your experience..."
-                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all resize-none"
+                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:bg-white focus:border-orange-500 text-sm transition-all resize-none"
                   ></textarea>
                 </div>
 

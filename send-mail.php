@@ -346,11 +346,15 @@ $message = clean_value($data['message'] ?? '', 4000);
 $source = clean_value($data['source'] ?? '', 100);
 $blogName = clean_value($data['blogName'] ?? '', 150);
 
-if ($name === '' || !$email) {
+if ($name === '' || (!$email && $phone === '')) {
     json_response(422, [
         'success' => false,
-        'message' => 'Please provide a valid name and email address.'
+        'message' => 'Please provide a valid name and contact details.'
     ]);
+}
+
+if (!$email) {
+    $email = 'lead@worexatechnologies.com';
 }
 
 if ($message === '') {

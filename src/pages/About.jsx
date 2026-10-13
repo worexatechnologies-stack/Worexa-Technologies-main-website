@@ -31,19 +31,6 @@ const teamCultureImage = "/assets/worexa-team-culture.jpg";
 const teamGroupImage = "/assets/worexa-team-group.jpg";
 const aboutPic2 = "/assets/aboutpic2.webp";
 
-const clientLogos = [
-  { label: "SPYSENSE", category: "IOT & SECURITY", image: "/assets/spy-sense.svg" },
-  { label: "VIYANA EVENTS", category: "LUXURY GIFTING", image: "/assets/viyana-events-gifting.svg" },
-  { label: "MY DEAR PARTNER", category: "WEB PLATFORM", image: "/assets/my-dear-partner.svg" },
-  { label: "ALL FRESH NATURALS", category: "ORGANIC & WELLNESS", image: "/assets/all-fresh-naturals.webp" },
-  { label: "BRIGHT STAR PRE-SCHOOL", category: "EARLY EDUCATION", image: "/assets/brightstar-logo-official.png" },
-  { label: "APPUGE CARE", category: "MATERNITY & HEALTH", image: "/assets/appuge-care.svg" },
-  { label: "SAHANA PHOTOGRAPHY", category: "MEDIA & PRODUCTION", image: "/assets/sahana-photography.svg" },
-  { label: "VOLPE", category: "EDTECH & SOFTWARE", image: "/assets/volpehub.svg" },
-  { label: "ADVOCATE SEVA", category: "LEGAL & ADVISORY", image: "/assets/advocate-seva.svg" },
-  { label: "INDIRA CONVENT HIGH SCHOOL", category: "EDUCATION & ACADEMICS", image: "/assets/indira-convent-high-school.svg" },
-  { label: "AMOGH MASUR ASSOCIATES", category: "CORPORATE ADVISORY", image: "/assets/amogh-masur-associates.svg" }
-];
 
 const faqs = [
   {
@@ -473,41 +460,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* =========================================================================
-          SECTION 5: CLIENT TRUST & PARTNER LOGOS
-      ========================================================================= */}
-      <section className="py-16 sm:py-20 bg-slate-50/70 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600 mb-3">
-            Trusted by Industry Leaders &amp; Ambitious Brands
-          </p>
-          <h2 className="text-xl sm:text-3xl font-black text-slate-900 mb-8 sm:mb-10">
-            Partnering With Businesses Across Education, Tech, Healthcare &amp; E-Commerce
-          </h2>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4">
-            {clientLogos.map((client) => (
-              <div
-                key={client.label}
-                className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white border border-slate-200/80 shadow-2xs hover:border-orange-300 transition-all"
-              >
-                <img
-                  src={client.image}
-                  alt={client.label}
-                  className="h-9 w-auto max-w-[110px] object-contain mb-2"
-                  loading="lazy"
-                />
-                <span className="text-[10px] font-bold text-slate-700 text-center leading-tight">
-                  {client.label}
-                </span>
-                <span className="text-[9px] text-slate-400 font-semibold tracking-tighter">
-                  {client.category}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* =========================================================================
           SECTION 6: WE ARE YOUR GROWTH PARTNER — ROADMAP & PIPELINE

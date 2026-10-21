@@ -1,4 +1,7 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', '0');
+
 // Security Headers
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
@@ -107,7 +110,7 @@ if (!empty($data['website_url']) || !empty($data['company_website_url'])) {
 
 function clean_value($value, $maxLen = 255) {
     $clean = trim(str_replace(["\r", "\n", "\0"], ' ', (string) $value));
-    return mb_substr($clean, 0, $maxLen, 'UTF-8');
+    return function_exists('mb_substr') ? mb_substr($clean, 0, $maxLen, 'UTF-8') : substr($clean, 0, $maxLen);
 }
 
 function load_env_file($path) {
@@ -179,6 +182,10 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
     $secure = strtolower($config['secure'] ?? 'tls');
     $timeout = max(5, min(15, (int) ($config['timeout'] ?? 8)));
 
+    if (($secure === 'tls' || $secure === 'ssl') && !extension_loaded('openssl')) {
+        return [false, 'PHP OpenSSL extension is not loaded. Please restart your dev server (npm run dev) so php.ini takes effect.'];
+    }
+
     if ($host === '' || $username === '' || $password === '' || $fromEmail === '') {
         return [false, 'SMTP is not configured. Add smtp-config.php or .env with host, username, password, and from_email.'];
     }
@@ -225,7 +232,7 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
 
     if ($secure === 'tls') {
         [$ok, $response] = $send('STARTTLS', 220);
-        if (!$ok || !stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
+        if (!$ok || !@stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
             fclose($socket);
             return [false, 'SMTP STARTTLS failed: ' . trim($response)];
         }

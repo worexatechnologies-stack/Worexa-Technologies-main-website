@@ -1,4 +1,7 @@
 <?php
+error_reporting(0);
+ini_set('display_errors', '0');
+
 header('Content-Type: application/json; charset=UTF-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
@@ -82,7 +85,7 @@ function load_env_file($path) {
 function smtp_config_from_env($env) {
     $host = !empty($env['SMTP_HOST']) ? $env['SMTP_HOST'] : 'smtp.gmail.com';
     $username = !empty($env['SMTP_USER']) ? $env['SMTP_USER'] : 'worexatechnologies@gmail.com';
-    $password = !empty($env['SMTP_PASSWORD']) ? $env['SMTP_PASSWORD'] : 'xexitywvmvpugals';
+    $password = !empty($env['SMTP_PASSWORD']) ? $env['SMTP_PASSWORD'] : 'dtjiqyhxwpiunhof';
     $fromEmail = !empty($env['MAIL_FROM']) ? $env['MAIL_FROM'] : $username;
 
     if ($host === '' || $username === '' || $password === '' || $fromEmail === '') {
@@ -156,7 +159,7 @@ function smtp_send($config, $to, $subject, $body, $replyToEmail, $replyToName, $
 
     if ($secure === 'tls') {
         [$ok, $response] = $send('STARTTLS', 220);
-        if (!$ok || !stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
+        if (!$ok || !@stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT)) {
             fclose($socket);
             return [false, 'SMTP STARTTLS failed: ' . trim($response)];
         }

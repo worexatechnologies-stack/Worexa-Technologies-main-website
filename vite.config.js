@@ -18,6 +18,21 @@ const serveLandingPage = () => ({
           return;
         }
       }
+      if (
+        pathname === '/best-application-development-in-bangalore' ||
+        pathname === '/best-application-development-in-bangalore/' ||
+        pathname === '/best-application-development-in-banglore' ||
+        pathname === '/best-application-development-in-banglore/'
+      ) {
+        const filePath = path.resolve(__dirname, 'public/best-application-development-in-bangalore/index.html');
+        if (fs.existsSync(filePath)) {
+          const html = fs.readFileSync(filePath, 'utf-8');
+          res.setHeader('Content-Type', 'text/html; charset=utf-8');
+          res.statusCode = 200;
+          res.end(html);
+          return;
+        }
+      }
       next();
     });
   },

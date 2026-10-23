@@ -1,32 +1,34 @@
 export const jobs = [
   {
-    slug: "senior-web-developer",
-    title: "Senior Web Developer",
+    slug: "application-developer-android-ios",
+    title: "Application Developer / Android & iOS",
     department: "IT",
     category: "Engineering",
     jobType: "Full-Time",
     location: "Bengaluru",
     experience: "2+ years",
     description: [
-      "Develop, maintain, and optimize company websites and web applications.",
-      "Write clean, efficient, and reusable code.",
-      "Improve website speed, performance, security, and user experience.",
-      "Identify and fix technical issues and bugs.",
-      "Work with designers, marketers, and other developers to implement website features.",
-      "Review code and guide junior developers.",
-      "Ensure websites are responsive and compatible with different browsers and devices."
+      "Design, develop, and maintain high-quality mobile applications for Android and iOS platforms.",
+      "Write clean, efficient, and reusable code following best practices.",
+      "Collaborate with UI/UX designers to implement intuitive and engaging user interfaces.",
+      "Integrate RESTful APIs, third-party libraries, and backend services.",
+      "Optimize application performance, responsiveness, and stability.",
+      "Identify and fix bugs, performance bottlenecks, and technical issues.",
+      "Publish and manage app releases on Google Play Store and Apple App Store.",
+      "Stay updated with the latest mobile development trends and technologies."
     ],
     requiredSkills: [
-      "HTML, CSS, JavaScript.",
-      "React or other modern web frameworks.",
-      "Backend development and database knowledge.",
-      "API integration, Git, and debugging.",
+      "Flutter, React Native, or native Android (Kotlin/Java) and iOS (Swift) development.",
+      "Experience with mobile UI frameworks and responsive design.",
+      "API integration, RESTful services, and third-party SDKs.",
+      "App deployment on Google Play Store and Apple App Store.",
+      "Git, debugging, and mobile testing tools.",
       "Problem-solving and teamwork."
     ],
     seo: {
-      title: "Senior Web Developer Job in Bangalore | Worexa Technologies Careers",
-      description: "Apply for Senior Web Developer role at Worexa Technologies in Bengaluru. 2+ years experience in HTML, CSS, JavaScript, React, and backend development required.",
-      keywords: "senior web developer job bangalore, react developer job bangalore, web developer vacancy bangalore, worexa technologies careers"
+      title: "Application Developer Android & iOS Job in Bangalore | Worexa Technologies Careers",
+      description: "Apply for Application Developer / Android & iOS role at Worexa Technologies in Bengaluru. 2+ years experience in Flutter, React Native, or native mobile development required.",
+      keywords: "application developer job bangalore, android developer job bangalore, ios developer job bangalore, mobile app developer vacancy bangalore, worexa technologies careers"
     }
   },
   {
@@ -47,11 +49,14 @@ export const jobs = [
       "Deploy application updates and maintain existing systems."
     ],
     requiredSkills: [
-      "HTML, CSS, and JavaScript.",
-      "React, Angular, or similar frontend technologies.",
-      "Node.js, Python, Java, or another backend technology.",
-      "SQL or NoSQL databases.",
-      "API integration, Git, and debugging."
+      "Python, Django, Django REST Framework (DRF), Flask / FastAPI.",
+      "HTML5, CSS3, JavaScript (ES6+), React.js, TypeScript, Tailwind CSS.",
+      "REST API Development, JWT Authentication.",
+      "PostgreSQL, MySQL, SQL, Django ORM, Database Design & Optimization.",
+      "Git & GitHub, Postman, Unit Testing (pytest), Debugging.",
+      "Docker, CI/CD, Linux Basics, Cloud Deployment, AWS Basics.",
+      "Data Structures & Algorithms, Object-Oriented Programming (OOP).",
+      "Responsive Web Design, Web Security."
     ],
     seo: {
       title: "Full-Stack Application Developer Job in Bangalore | Worexa Technologies Careers",

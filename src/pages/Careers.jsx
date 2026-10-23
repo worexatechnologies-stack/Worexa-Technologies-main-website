@@ -24,7 +24,7 @@ import {
 const SUBMIT_TIMEOUT_MS = 30000;
 
 const openRoles = [
-  { title: "Senior Web Developer", slug: "senior-web-developer", category: "Engineering", icon: <Code size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Application Developer / Android & iOS", slug: "application-developer-android-ios", category: "Engineering", icon: <Code size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Full-Stack Application Developer", slug: "full-stack-application-developer", category: "Engineering", icon: <MonitorPlay size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Business Development Executive (BDE)", slug: "business-development-executive-bde", category: "Sales & Growth", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Performance Marketing Lead", slug: "performance-marketing-lead", category: "Marketing", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },

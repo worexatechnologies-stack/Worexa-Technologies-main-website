@@ -93,6 +93,27 @@ function App() {
             <Route path="/services/public-relations" element={<PublicRelations />} />
             <Route path="/best-marketing-company-in-bangalore" element={<BestMarketingCompany />} />
             <Route path="/best-marketing-and-advertising-company-in-bangalore" element={<BestMarketingCompany />} />
+            <Route
+              path="/best-application-development-in-bangalore"
+              Component={() => {
+                window.location.href = '/best-application-development-in-bangalore/';
+                return null;
+              }}
+            />
+            <Route
+              path="/best-application-development-in-banglore"
+              Component={() => {
+                window.location.href = '/best-application-development-in-bangalore/';
+                return null;
+              }}
+            />
+            <Route
+              path="/application"
+              Component={() => {
+                window.location.href = '/best-application-development-in-bangalore/';
+                return null;
+              }}
+            />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

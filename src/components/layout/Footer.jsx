@@ -171,6 +171,12 @@ export default function Footer() {
               >
                 Best Marketing Company in Bangalore
               </a>
+              <a
+                href="/best-application-development-in-bangalore"
+                className="text-sm font-bold text-orange-400 hover:text-orange-300 transition-colors leading-snug cursor-pointer"
+              >
+                Best Application Development in Bangalore
+              </a>
             </div>
           </div>
 

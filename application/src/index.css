@@ -1,0 +1,121 @@
+/* ============================================
+   DESIGN SYSTEM — Worexa Compact Style
+   Clean white, subtle grid, vibrant orange accents
+   ============================================ */
+
+:root {
+  /* Brand Palette */
+  --primary-orange: #FF5500;
+  --primary-orange-hover: #E64C00;
+  --primary-orange-light: #FFF2EB;
+  --primary-orange-border: rgba(255, 85, 0, 0.2);
+
+  --whatsapp-green: #25D366;
+  --whatsapp-green-hover: #1EBE5D;
+
+  --bg-page: #FAFCFE;
+  --bg-white: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --bg-warm: #FFF9F5;
+
+  /* Typography Colors */
+  --text-main: #111827;
+  --text-heading: #0F172A;
+  --text-muted: #4B5563;
+  --text-light: #64748B;
+  --text-faint: #94A3B8;
+
+  /* Borders & Shadows */
+  --border-light: #E2E8F0;
+  --border-subtle: #F1F5F9;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 16px 30px -6px rgba(255, 85, 0, 0.12), 0 8px 12px -6px rgba(0, 0, 0, 0.04);
+  --shadow-btn: 0 4px 14px rgba(255, 85, 0, 0.28);
+
+  /* Radius (Crisp, modern) */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-white);
+  color: var(--text-main);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+::selection {
+  background: var(--primary-orange);
+  color: #fff;
+}
+
+/* Subtle Grid Background (exact match to screenshot) */
+.grid-bg {
+  background-color: #FAFCFE;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Compact Container */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Reduced Section Sizes */
+.section-compact {
+  padding: 56px 0;
+  position: relative;
+}
+
+.section-white {
+  background: var(--bg-white);
+}
+
+.section-light {
+  background: #F8FAFD;
+}
+
+.section-subtle-warm {
+  background: #FFFBF8;
+}

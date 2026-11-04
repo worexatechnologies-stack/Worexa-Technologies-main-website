@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'node:fs'
 import path from 'node:path'
+import http from 'node:http'
 
 const serveLandingPage = () => ({
   name: 'serve-landing-page',
@@ -32,6 +33,29 @@ const serveLandingPage = () => ({
           res.end(html);
           return;
         }
+      }
+      if (pathname.endsWith('/send-mail.php') || pathname === '/send-mail.php') {
+        const proxyReq = http.request(
+          'http://127.0.0.1:8000/send-mail.php',
+          {
+            method: req.method,
+            headers: {
+              ...req.headers,
+              host: '127.0.0.1:8000',
+            },
+          },
+          (proxyRes) => {
+            res.writeHead(proxyRes.statusCode || 200, proxyRes.headers);
+            proxyRes.pipe(res);
+          }
+        );
+        proxyReq.on('error', () => {
+          res.statusCode = 502;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify({ success: false, message: 'PHP backend is not running on 127.0.0.1:8000.' }));
+        });
+        req.pipe(proxyReq);
+        return;
       }
       next();
     });
@@ -78,6 +102,10 @@ export default defineConfig({
     proxy: {
       '/send-mail.php': 'http://127.0.0.1:8000',
       '/best-marketing-company-in-bangalore/send-mail.php': {
+        target: 'http://127.0.0.1:8000',
+        rewrite: () => '/send-mail.php',
+      },
+      '/best-application-development-in-bangalore/send-mail.php': {
         target: 'http://127.0.0.1:8000',
         rewrite: () => '/send-mail.php',
       },

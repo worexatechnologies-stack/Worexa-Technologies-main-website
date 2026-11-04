@@ -7,7 +7,12 @@ import Footer from './Footer';
 import ContactPopupModal from '../common/ContactPopupModal';
 
 function FloatingConcierge() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    setOpen(true);
+  }, [location.pathname]);
 
   return (
     <div className="fixed bottom-4 right-3.5 sm:bottom-6 sm:right-6 z-50 flex flex-col items-center gap-2.5 sm:gap-3">

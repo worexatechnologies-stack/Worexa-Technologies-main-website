@@ -35,6 +35,14 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   React.useEffect(() => {
+    if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname.replace(/\/+$/, '') + window.location.search + window.location.hash
+      );
+    }
+
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
@@ -96,21 +104,21 @@ function App() {
             <Route
               path="/best-application-development-in-bangalore"
               Component={() => {
-                window.location.href = '/best-application-development-in-bangalore/';
+                window.location.replace('/best-application-development-in-bangalore');
                 return null;
               }}
             />
             <Route
               path="/best-application-development-in-banglore"
               Component={() => {
-                window.location.href = '/best-application-development-in-bangalore/';
+                window.location.replace('/best-application-development-in-bangalore');
                 return null;
               }}
             />
             <Route
               path="/application"
               Component={() => {
-                window.location.href = '/best-application-development-in-bangalore/';
+                window.location.replace('/best-application-development-in-bangalore');
                 return null;
               }}
             />

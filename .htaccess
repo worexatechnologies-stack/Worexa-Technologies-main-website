@@ -17,6 +17,10 @@ DirectoryIndex index.php index.html
   RewriteEngine On
   RewriteBase /
 
+  # Serve landing subdirectories without trailing slash
+  RewriteRule ^best-marketing-company-in-bangalore/?$ best-marketing-company-in-bangalore/index.html [L]
+  RewriteRule ^best-application-development-in-bangalore/?$ best-application-development-in-bangalore/index.html [L]
+
   # If the request matches an existing file or directory, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d

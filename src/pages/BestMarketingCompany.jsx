@@ -771,6 +771,13 @@ export default function BestMarketingCompany() {
 
   // Preload hero images for instant seamless transitions & scroll to top
   useEffect(() => {
+    if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname.replace(/\/+$/, '') + window.location.search + window.location.hash
+      );
+    }
     window.scrollTo(0, 0);
     heroSlides.forEach((slide) => {
       const img = new Image();

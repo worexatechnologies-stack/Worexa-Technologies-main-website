@@ -241,6 +241,18 @@ export default function App() {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+
+  // Remove trailing slash from URL if present
+  useEffect(() => {
+    if (window.location.pathname.length > 1 && window.location.pathname.endsWith('/')) {
+      window.history.replaceState(
+        null,
+        '',
+        window.location.pathname.replace(/\/+$/, '') + window.location.search + window.location.hash
+      );
+    }
+  }, []);
 
   // Initialize Lenis Smooth Scrolling and GSAP Animations
   useEffect(() => {
@@ -450,17 +462,69 @@ export default function App() {
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formState.name.trim() || !formState.email.trim() || !formState.phone.trim()) {
       alert('Please fill in all required fields (Name, Phone, and Email).');
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
+    setSubmitError('');
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 30000);
+
+    const payload = {
+      name: formState.name.trim(),
+      phone: `+91 ${formState.phone.trim()}`,
+      email: formState.email.trim(),
+      subject: 'Best Application Development Inquiry',
+      source: 'Best Application Development in Bangalore landing page',
+      message: [
+        `Organisation: ${formState.organization.trim()}`,
+        `Industry: ${formState.industry}`,
+        `Looking For: ${formState.lookingFor}`,
+        `Project Duration: ${formState.duration}`,
+        `Budget: ${formState.budget}`,
+        `Growth Goals / Brief: ${formState.message.trim() || 'Not provided'}`,
+      ].join('\n'),
+    };
+
+    try {
+      let res = await fetch('/send-mail.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      }).catch(() => null);
+
+      if (!res || !res.ok) {
+        res = await fetch('/best-application-development-in-bangalore/send-mail.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          signal: controller.signal,
+        });
+      }
+
+      window.clearTimeout(timeoutId);
+      const result = await res.json().catch(() => ({}));
+
+      if (res.ok && result.success) {
+        setFormSubmitted(true);
+      } else {
+        throw new Error(result.message || 'Unable to send your request. Please try again.');
+      }
+    } catch (err) {
+      window.clearTimeout(timeoutId);
+      const errMsg = err?.name === 'AbortError'
+        ? 'The request timed out. Please try again.'
+        : err?.message || 'Failed to send enquiry. Please try again.';
+      setSubmitError(errMsg);
+      alert(errMsg);
+    } finally {
       setIsSubmitting(false);
-      setFormSubmitted(true);
-    }, 900);
+    }
   };
 
   return (
@@ -733,7 +797,21 @@ export default function App() {
                 <button
                   className="btn-explore-orange"
                   style={{ padding: '6px 16px', fontSize: '0.8rem' }}
-                  onClick={() => setFormSubmitted(false)}
+                  onClick={() => {
+                    setFormSubmitted(false);
+                    setSubmitError('');
+                    setFormState({
+                      name: '',
+                      organization: '',
+                      phone: '',
+                      email: '',
+                      industry: 'Fashion And Lifestyle',
+                      lookingFor: 'Strategy',
+                      duration: '6 Months Above',
+                      budget: '30k - 1lakh',
+                      message: '',
+                    });
+                  }}
                 >
                   Submit Another Enquiry
                 </button>
@@ -906,6 +984,12 @@ export default function App() {
                     onChange={handleInputChange}
                   />
                 </div>
+
+                {submitError && (
+                  <div style={{ color: '#EF4444', fontSize: '0.78rem', marginBottom: 10, textAlign: 'center' }}>
+                    {submitError}
+                  </div>
+                )}
 
                 {/* Submit button */}
                 <button type="submit" className="btn-form-submit" disabled={isSubmitting}>

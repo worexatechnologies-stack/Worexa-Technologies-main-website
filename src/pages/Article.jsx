@@ -309,19 +309,16 @@ export default function Article() {
     <div className="min-h-screen text-slate-900 bg-white">
       {/* DYNAMIC ARTICLE SEO */}
       <Helmet>
-        <title>{article.seo?.title || article.title}</title>
-        <meta name="description" content={article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
-        {article.seo?.keywords && <meta name="keywords" content={article.seo.keywords} />}
-        {article.seo?.publisher && <meta name="publisher" content={article.seo.publisher} />}
-        <meta name="author" content={article.seo?.author || "Worexa Technologies"} />
-        <meta name="robots" content={article.seo?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
-        <link rel="canonical" href={article.seo?.canonical || `https://worexatechnologies.com/articles/${article.slug}`} />
-        <meta property="og:title" content={article.seo?.ogTitle || article.seo?.title || article.title} />
-        <meta property="og:type" content={article.seo?.ogType || "article"} />
-        <meta property="og:description" content={article.seo?.ogDescription || article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
-        <meta property="og:url" content={article.seo?.ogUrl || article.seo?.canonical || `https://worexatechnologies.com/articles/${article.slug}`} />
-        <meta property="og:site_name" content={article.seo?.ogSiteName || "Worexa Technologies"} />
+        <title id="metaTitle">{article.seo?.title || article.title}</title>
+        <meta name="description" id="metaDescription" content={article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
+        {article.seo?.keywords && <meta name="keywords" id="metaKeywords" content={article.seo.keywords} />}
+        <meta id="ogTitle" property="og:title" content={article.seo?.ogTitle || article.seo?.title || article.title} />
+        <meta id="ogType" property="og:type" content={article.seo?.ogType || "article"} />
+        <meta id="ogDescription" property="og:description" content={article.seo?.ogDescription || article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
+        <meta id="ogUrl" property="og:url" content={article.seo?.ogUrl || article.seo?.canonical || `https://worexatechnologies.com/articles/${article.slug}`} />
+        <meta id="ogSiteName" property="og:site_name" content={article.seo?.ogSiteName || "Worexa Technologies"} />
         <meta
+          id="ogImage"
           property="og:image"
           content={
             article.seo?.ogImage ||
@@ -330,11 +327,15 @@ export default function Article() {
               : `https://worexatechnologies.com${article.image}`)
           }
         />
+        <meta id="twitterSite" name="twitter:site" content={article.seo?.twitterSite || "https://twitter.com/"} />
+        <meta id="twitterTitle" name="twitter:title" content={article.seo?.twitterTitle || article.seo?.ogTitle || article.seo?.title || article.title} />
+        <meta id="twitterDescription" name="twitter:description" content={article.seo?.twitterDescription || article.seo?.ogDescription || article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
+        <meta id="author" name="author" content={article.seo?.author || "Akshay"} />
+        <link id="canonical" rel="canonical" href={article.seo?.canonical || `https://worexatechnologies.com/articles/${article.slug}`} />
+        <meta id="indexingStatus" name="robots" content={article.seo?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+        {article.seo?.publisher && <meta id="Publisher" property="publisher" content={article.seo.publisher} />}
         <meta property="og:locale" content={article.seo?.ogLocale || "en_US"} />
         <meta name="twitter:card" content="summary_large_image" />
-        {article.seo?.twitterSite && <meta name="twitter:site" content={article.seo.twitterSite} />}
-        <meta name="twitter:title" content={article.seo?.twitterTitle || article.seo?.ogTitle || article.seo?.title || article.title} />
-        <meta name="twitter:description" content={article.seo?.twitterDescription || article.seo?.ogDescription || article.seo?.description || `Read ${article.title} on Worexa Technologies.`} />
         <meta
           name="twitter:image"
           content={

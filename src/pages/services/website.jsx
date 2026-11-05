@@ -125,13 +125,13 @@ const Website = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Website Design and Development in Bangalore | Web Development"
+          content="Website Design and Development in Bangalore | Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Looking for premium Website Design and Development in Bangalore? We craft stunning, responsive, and SEO-optimized sites to help grow your business online."
+          content="Website Design and Development in Bangalore. Worexa Technologies designs and develops user-friendly websites for Bangalore businesses, with a focus on clear experiences and business goals."
         />
         <meta
           id="ogUrl"
@@ -152,12 +152,12 @@ const Website = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Website Design and Development in Bangalore | Web Development"
+          content="Website Design and Development in Bangalore | Web Development Worexa"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Looking for premium Website Design and Development in Bangalore? We craft stunning, responsive, and SEO-optimized sites to help grow your business online."
+          content="Give your business a better online presence with Worexa Technologies. We develop responsive Website Design and Development in Bangalore. Websites that are easy to use and reflect your brand."
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -170,7 +170,7 @@ const Website = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

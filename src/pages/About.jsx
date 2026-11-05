@@ -116,19 +116,19 @@ export default function About() {
           id="metaKeywords"
           content="about worexa technologies, digital marketing agency banashankari, web design company bangalore, seo experts in bangalore, best digital marketing company, about us, about worexa"
         />
-        <meta id="ogTitle" property="og:title" content="About Worexa Technologies | Digital Marketing Agency." />
+        <meta id="ogTitle" property="og:title" content="Learn About Worexa Technologies: Our Vision and Digital Expertise" />
         <meta id="ogType" property="og:type" content="website" />
-        <meta id="ogDescription" property="og:description" content="Learn about Worexa Technologies, a results-driven digital marketing agency helping businesses grow through SEO, Social Media, PPC, branding, and web solutions." />
+        <meta id="ogDescription" property="og:description" content="Learn about Worexa Technologies, our team, vision, and approach to digital marketing, advertising, and creative solutions that help businesses build their brands and grow." />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/about" />
         <meta id="ogSiteName" property="og:site_name" content="Worexa Technologies" />
         <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
-        <meta id="twitterTitle" name="twitter:title" content="About Worexa Technologies | Digital Marketing Agency." />
-        <meta id="twitterDescription" name="twitter:description" content="Learn about Worexa Technologies, a results-driven digital marketing agency helping businesses grow through SEO, Social Media, PPC, branding, and web solutions." />
+        <meta id="twitterTitle" name="twitter:title" content="About Worexa Technologies | Introducing Our Innovative Digital Team" />
+        <meta id="twitterDescription" name="twitter:description" content="Learn about Worexa Technologies and our approach to digital growth. See how our team merges creativity, marketing, and technology to help businesses enhance visibility and connect with their audience." />
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/about" />
         <meta id="indexingStatus" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
       </Helmet>
 
@@ -136,7 +136,7 @@ export default function About() {
           SECTION 1: HERO — YOUR DIGITAL GROWTH PARTNER IN BANGALORE
       ========================================================================= */}
       <section className="relative pt-24 pb-12 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-20 overflow-hidden bg-[#fbfbfa] text-slate-900 border-b border-slate-200/80">
-        
+
         {/* Soft Ambient Warm Lighting & Subtle Grid Texture */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
@@ -160,7 +160,7 @@ export default function About() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-12 gap-y-10 lg:gap-x-10 xl:gap-x-14 items-center">
-            
+
             {/* Left Content Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -280,7 +280,7 @@ export default function About() {
 
           <div className="rounded-3xl border border-slate-300/70 bg-white p-6 sm:p-12 shadow-md relative overflow-hidden">
             <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-400" />
-            
+
             <div className="space-y-5 relative z-10 text-center max-w-3xl mx-auto">
               <p className="text-lg sm:text-2xl font-black text-slate-900 leading-snug tracking-tight">
                 We are a full-service digital marketing agency helping ambitious businesses build stronger brands, reach the right audience, and generate measurable growth.
@@ -299,7 +299,7 @@ export default function About() {
       ========================================================================= */}
       <section className="relative bg-gradient-to-b from-slate-50/80 via-orange-50/15 to-slate-50/80 py-16 sm:py-24 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           <div className="text-center max-w-4xl mx-auto mb-12 space-y-3">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900">
               Who Is{' '}
@@ -314,7 +314,7 @@ export default function About() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            
+
             {/* Left Column: 3 Core Pillars */}
             <div className="lg:col-span-5 space-y-6">
               <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-sm space-y-4">
@@ -322,11 +322,11 @@ export default function About() {
                   <p className="text-xs font-black uppercase tracking-[0.2em] text-orange-600">Our Approach</p>
                   <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">3 Core Pillars</span>
                 </div>
-                
+
                 <p className="text-sm font-medium text-slate-700 leading-relaxed">
                   Our approach to marketing entails knowing the following:
                 </p>
-                
+
                 <div className="space-y-3 pt-1">
                   {[
                     { num: '01', title: 'The Business.' },
@@ -409,7 +409,7 @@ export default function About() {
       ========================================================================= */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200/80 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
               Inside Worexa Technologies:{' '}
@@ -425,11 +425,10 @@ export default function About() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                    activeTab === tab.id
-                      ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20'
-                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
+                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${activeTab === tab.id
+                    ? 'bg-orange-500 text-white shadow-md shadow-orange-500/20'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    }`}
                 >
                   {tab.title}
                 </button>
@@ -479,7 +478,7 @@ export default function About() {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left 6 Columns: Stepped Process */}
             <div className="lg:col-span-6 space-y-3.5">
               {[
@@ -564,7 +563,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
-            
+
             <div className="space-y-3.5">
               {faqs.slice(0, 5).map((faq, idx) => {
                 const index = idx;
@@ -572,11 +571,10 @@ export default function About() {
                 return (
                   <div
                     key={index}
-                    className={`rounded-2xl transition-all duration-300 border ${
-                      isOpen
-                        ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
-                        : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-xs'
-                    }`}
+                    className={`rounded-2xl transition-all duration-300 border ${isOpen
+                      ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
+                      : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-xs'
+                      }`}
                   >
                     <button
                       type="button"
@@ -586,27 +584,24 @@ export default function About() {
                     >
                       <div className="flex items-start gap-3">
                         <span
-                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${
-                            isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
-                          }`}
+                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
+                            }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${
-                            isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                          }`}
+                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                            }`}
                         >
                           {faq.question}
                         </span>
                       </div>
 
                       <div
-                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? 'bg-orange-500 text-white rotate-180 shadow-xs'
-                            : 'bg-slate-100 text-slate-500'
-                        }`}
+                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen
+                          ? 'bg-orange-500 text-white rotate-180 shadow-xs'
+                          : 'bg-slate-100 text-slate-500'
+                          }`}
                       >
                         <ChevronDown size={14} />
                       </div>
@@ -639,11 +634,10 @@ export default function About() {
                 return (
                   <div
                     key={index}
-                    className={`rounded-2xl transition-all duration-300 border ${
-                      isOpen
-                        ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
-                        : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-xs'
-                    }`}
+                    className={`rounded-2xl transition-all duration-300 border ${isOpen
+                      ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
+                      : 'bg-white border-slate-200/90 hover:border-slate-300 hover:shadow-xs'
+                      }`}
                   >
                     <button
                       type="button"
@@ -653,27 +647,24 @@ export default function About() {
                     >
                       <div className="flex items-start gap-3">
                         <span
-                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${
-                            isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
-                          }`}
+                          className={`font-mono text-xs font-black px-2 py-0.5 rounded mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
+                            }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${
-                            isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                          }`}
+                          className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                            }`}
                         >
                           {faq.question}
                         </span>
                       </div>
 
                       <div
-                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? 'bg-orange-500 text-white rotate-180 shadow-xs'
-                            : 'bg-slate-100 text-slate-500'
-                        }`}
+                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen
+                          ? 'bg-orange-500 text-white rotate-180 shadow-xs'
+                          : 'bg-slate-100 text-slate-500'
+                          }`}
                       >
                         <ChevronDown size={14} />
                       </div>

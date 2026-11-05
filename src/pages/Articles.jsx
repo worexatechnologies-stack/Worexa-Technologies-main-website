@@ -35,7 +35,7 @@ export default function Articles() {
         <meta property="og:site_name" content="Worexa Technologies" />
         <meta property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta property="og:locale" content="en_US" />
-        <meta property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta name="twitter:site" content="https://twitter.com/" />
         <meta name="twitter:title" content="Digital Marketing Blog | SEO, PPC & Online Marketing Tips" />
         <meta name="twitter:description" content="Stay ahead with our Digital Marketing Blog featuring SEO strategies, PPC guides, content marketing tips, social media insights, and industry trends." />

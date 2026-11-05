@@ -181,19 +181,19 @@ export default function Services() {
           id="metaKeywords"
           content="worexa technologies services, services in worexa technologies, seo agency in bangalore, digital marketing services in bangalore"
         />
-        <meta id="ogTitle" property="og:title" content="Worexa Technologies Services | Digital Growth Solutions." />
+        <meta id="ogTitle" property="og:title" content="Explore Digital Marketing  Services  by Worexa Technologies" />
         <meta id="ogType" property="og:type" content="website" />
-        <meta id="ogDescription" property="og:description" content="Explore Worexa Technologies Services including SEO, Social Media Marketing, PPC, web development, branding, and digital strategies designed for business growth." />
+        <meta id="ogDescription" property="og:description" content="Discover Worexa Technologies services, from digital marketing and SEO to social media, branding, and creative solutions. Find the right strategies to strengthen your online presence." />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/services" />
         <meta id="ogSiteName" property="og:site_name" content="Worexa Technologies" />
         <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
-        <meta id="twitterTitle" name="twitter:title" content="Worexa Technologies Services | Digital Growth Solutions." />
-        <meta id="twitterDescription" name="twitter:description" content="Explore Worexa Technologies Services including SEO, Social Media Marketing, PPC, web development, branding, and digital strategies designed for business growth." />
+        <meta id="twitterTitle" name="twitter:title" content="Worexa Technologies Services | Marketing, SEO, and Creative Solutions" />
+        <meta id="twitterDescription" name="twitter:description" content="From SEO and social media marketing to branding and advertising, explore Worexa Technologies services designed to strengthen your online presence and help your business reach more customers." />
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/services" />
         <meta id="indexingStatus" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
       </Helmet>
 
@@ -222,7 +222,7 @@ export default function Services() {
       <section id="services-directory" className="py-24 sm:py-32 relative bg-slate-50/50">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Section Header */}
           <div className="pb-8 mb-12 text-center">
             <p className="text-xs font-black uppercase tracking-[0.22em] text-orange-600 mb-2">Our Services Directory</p>
@@ -320,7 +320,7 @@ export default function Services() {
       ========================================================================= */}
       <section className="py-24 sm:py-32 bg-slate-50/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-mono text-xs font-bold uppercase tracking-wider mb-4">
@@ -337,7 +337,7 @@ export default function Services() {
 
           {/* 2-Column Responsive Accordion Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 items-start">
-            
+
             {/* Column 1 (Questions 01 to 06) */}
             <div className="space-y-4">
               {faqs.slice(0, 6).map((faq, idx) => {
@@ -346,11 +346,10 @@ export default function Services() {
                 return (
                   <div
                     key={index}
-                    className={`rounded-2xl transition-all duration-300 border ${
-                      isOpen
-                        ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
-                        : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'
-                    }`}
+                    className={`rounded-2xl transition-all duration-300 border ${isOpen
+                      ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
+                      : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'
+                      }`}
                   >
                     <button
                       type="button"
@@ -360,27 +359,24 @@ export default function Services() {
                     >
                       <div className="flex items-start gap-3.5">
                         <span
-                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
-                            isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
-                          }`}
+                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
+                            }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
-                            isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                          }`}
+                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                            }`}
                         >
                           {faq.question}
                         </span>
                       </div>
 
                       <div
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? 'bg-orange-500 text-white rotate-180 shadow-xs'
-                            : 'bg-slate-100 text-slate-500'
-                        }`}
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen
+                          ? 'bg-orange-500 text-white rotate-180 shadow-xs'
+                          : 'bg-slate-100 text-slate-500'
+                          }`}
                       >
                         <ChevronDown size={16} />
                       </div>
@@ -414,11 +410,10 @@ export default function Services() {
                 return (
                   <div
                     key={index}
-                    className={`rounded-2xl transition-all duration-300 border ${
-                      isOpen
-                        ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
-                        : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'
-                    }`}
+                    className={`rounded-2xl transition-all duration-300 border ${isOpen
+                      ? 'bg-white border-orange-400 shadow-md shadow-orange-500/5 ring-1 ring-orange-400/20'
+                      : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'
+                      }`}
                   >
                     <button
                       type="button"
@@ -428,27 +423,24 @@ export default function Services() {
                     >
                       <div className="flex items-start gap-3.5">
                         <span
-                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${
-                            isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
-                          }`}
+                          className={`font-mono text-xs font-black px-2.5 py-0.5 rounded-md mt-0.5 shrink-0 transition-colors ${isOpen ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-500'
+                            }`}
                         >
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <span
-                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${
-                            isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
-                          }`}
+                          className={`text-sm sm:text-base font-bold leading-snug transition-colors ${isOpen ? 'text-orange-600' : 'text-slate-900 hover:text-orange-600'
+                            }`}
                         >
                           {faq.question}
                         </span>
                       </div>
 
                       <div
-                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
-                            ? 'bg-orange-500 text-white rotate-180 shadow-xs'
-                            : 'bg-slate-100 text-slate-500'
-                        }`}
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen
+                          ? 'bg-orange-500 text-white rotate-180 shadow-xs'
+                          : 'bg-slate-100 text-slate-500'
+                          }`}
                       >
                         <ChevronDown size={16} />
                       </div>

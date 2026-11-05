@@ -77,13 +77,13 @@ const OfflineAdvertising = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Explore the Top Offline Advertising Companies in Bangalore"
+          content="Top Offline Advertising Companies in Bangalore | Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Partner with the Top Offline Advertising Companies in Bangalore. We deliver high-impact billboard, print, and transit media campaigns that scale your brand."
+          content="Reach customers beyond screens with Worexa Technologies. Explore top offline advertising companies in Bangalore, including print, outdoor promotions, and local brand campaigns."
         />
         <meta
           id="ogUrl"
@@ -104,12 +104,12 @@ const OfflineAdvertising = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Explore the Top Offline Advertising Companies in Bangalore"
+          content="Top Offline Advertising companies in Bangalore | Worexa Technologies"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Partner with the Top Offline Advertising Companies in Bangalore. We deliver high-impact billboard, print, and transit media campaigns that scale your brand."
+          content="Leading top offline advertising companies in Bangalore provide effective solutions that enhance business visibility through print, outdoor media, and local campaigns. By Worexa Technologies"
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -122,7 +122,7 @@ const OfflineAdvertising = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

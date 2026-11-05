@@ -394,7 +394,7 @@ export default function Home() {
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/" />
         <meta id="indexingStatus" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
       </Helmet>
 
@@ -668,9 +668,8 @@ export default function Home() {
                 </div>
 
                 {/* Subtitle / Category Tag */}
-                <span className={`text-[9px] font-bold tracking-widest uppercase font-mono mt-1 transition-colors ${
-                  item.bg ? 'text-white/80' : 'text-slate-400 group-hover/card:text-orange-600'
-                }`}>
+                <span className={`text-[9px] font-bold tracking-widest uppercase font-mono mt-1 transition-colors ${item.bg ? 'text-white/80' : 'text-slate-400 group-hover/card:text-orange-600'
+                  }`}>
                   {item.category}
                 </span>
               </div>

@@ -123,19 +123,19 @@ export default function Contact() {
           id="metaKeywords"
           content="contact worexa technologies, digital marketing agency bangalore contact, web design company bangalore address, seo agency bangalore number, contact us, contact worexa"
         />
-        <meta id="ogTitle" property="og:title" content="Contact Worexa Technologies | Get in Touch with Us Today." />
+        <meta id="ogTitle" property="og:title" content="Contact Worexa Technologies | Let's Grow Your Business Together" />
         <meta id="ogType" property="og:type" content="website" />
-        <meta id="ogDescription" property="og:description" content="Contact Worexa Technologies for expert digital marketing, web development, branding, and business growth solutions. We are here to help your business succeed." />
+        <meta id="ogDescription" property="og:description" content="Have a project in mind? Contact Worexa Technologies to discuss your business goals and explore marketing, advertising, SEO, and creative solutions tailored to your needs." />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/contact" />
         <meta id="ogSiteName" property="og:site_name" content="Worexa Technologies" />
         <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
-        <meta id="twitterTitle" name="twitter:title" content="Contact Worexa Technologies | Get in Touch with Us Today." />
-        <meta id="twitterDescription" name="twitter:description" content="Contact Worexa Technologies for expert digital marketing, web development, branding, and business growth solutions. We are here to help your business succeed." />
+        <meta id="twitterTitle" name="twitter:title" content="Contact Worexa Technologies | Let's Start Something Great with Worexa" />
+        <meta id="twitterDescription" name="twitter:description" content="Ready to take your business forward? Contact Worexa Technologies to discuss your ideas, explore creative marketing solutions, and find the right strategy for your brand & grow with Worexa Technologies" />
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/contact" />
         <meta id="indexingStatus" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
       </Helmet>
 

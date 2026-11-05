@@ -96,13 +96,13 @@ const GoogleAds = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Best Google Ads Management Company in Bangalore | PPC Experts."
+          content="Best Google Ads Management Company in Bangalore | Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Looking for the best Google Ads management company in Bangalore. Maximize ROI, generate quality Leads, and grow your business with expert PPC and Performance Marketing services."
+          content="Looking to get more from your ad budget? Worexa Technologies manages targeted Google Ads campaigns for Bangalore businesses to attract leads and improve campaign performance."
         />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/services/google-ads" />
         <meta
@@ -119,12 +119,12 @@ const GoogleAds = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Best Google Ads Management Company in Bangalore | PPC Experts."
+          content="Best Google Ads Management Company in Bangalore | Worexa Technologies Bangalore"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Looking for the best Google Ads management company in Bangalore. Maximize ROI, generate quality Leads, and grow your business with expert PPC and Performance Marketing services."
+          content="Best Google Ads Management Company in Bangalore: Worexa Technologies. We create and optimize Google Ads campaigns to reach potential customers, generate leads, and improve advertising performance."
         />
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/services/google-ads" />
@@ -133,7 +133,7 @@ const GoogleAds = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -77,13 +77,13 @@ const Uiux = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Top UI Design Companies in Bangalore | UI/UX CRO Expert."
+          content="Top UI design companies in Bangalore | Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Work with the Top UI Design Companies in Bangalore to transform your app or website. We deliver exceptional, modern user experiences that drive high ROI."
+          content="Top UI design companies in Bangalore | Worexa Technologies helps businesses improve user experience through thoughtful UI/UX design and conversion-focused website improvements."
         />
         <meta
           id="ogUrl"
@@ -104,12 +104,12 @@ const Uiux = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Top UI Design Companies in Bangalore | UI/UX CRO Expert."
+          content="Top UI design companies in Bangalore| Worexa Technologies"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Work with the Top UI Design Companies in Bangalore to transform your app or website. We deliver exceptional, modern user experiences that drive high ROI."
+          content="Turn better user experiences into meaningful actions with Worexa Technologies. Top UI design companies in Bangalore. We focus on UI/UX design and conversion improvements that help visitors navigate and engage."
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -122,7 +122,7 @@ const Uiux = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

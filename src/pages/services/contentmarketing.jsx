@@ -77,13 +77,13 @@ const ContentMarketing = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Content Marketing Companies in Bangalore | Strategy Expert."
+          content="Content Marketing Companies in Bangalore & Email Automation Services"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Discover leading content marketing companies in Bangalore. Elevate your brand's digital presence through tailored strategy, premium content, and higher ROI."
+          content="Content Marketing Companies in Bangalore. Worexa Technologies combines content marketing and email automation to help businesses engage audiences and nurture leads."
         />
         <meta
           id="ogUrl"
@@ -104,12 +104,12 @@ const ContentMarketing = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Content Marketing Companies in Bangalore | Strategy Expert."
+          content="Content Marketing Companies in Bangalore | By Worexa Technologies"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Discover leading content marketing companies in Bangalore. Elevate your brand's digital presence through tailored strategy, premium content, and higher ROI."
+          content="Content marketing companies in Bangalore deliver the right message at the right time with Worexa. Our content marketing & email automation services engage audiences, nurture leads & support business growth."
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -122,7 +122,7 @@ const ContentMarketing = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

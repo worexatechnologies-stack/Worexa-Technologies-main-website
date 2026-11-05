@@ -167,26 +167,26 @@ export default function Careers() {
           id="metaKeywords"
           content="career in worexa technologies, digital marketing internship company, web development internship company, internship company near me, worexa tecnology careers, what careers offer worexa technologies, worexa career"
         />
-        <meta id="ogTitle" property="og:title" content="Career in Worexa Technologies | Join our Growing Team." />
+        <meta id="ogTitle" property="og:title" content="Build Your Career in Worexa Technologies | Join Our Team Today" />
         <meta id="ogType" property="og:type" content="website" />
-        <meta id="ogDescription" property="og:description" content="Explore a career in Worexa Technologies. Join our dynamic team and build your future in digital marketing, design, web development, ads, and business growth." />
+        <meta id="ogDescription" property="og:description" content="Looking for your next opportunity? Explore a career in Worexa Technologies, collaborate with creative minds, develop new skills, and grow through exciting projects." />
         <meta id="ogUrl" property="og:url" content="https://worexatechnologies.com/careers" />
         <meta id="ogSiteName" property="og:site_name" content="Worexa Technologies" />
         <meta id="ogImage" property="og:image" content="https://worexatechnologies.com/assets/logo.png" />
         <meta id="twitterSite" name="twitter:site" content="https://twitter.com/" />
-        <meta id="twitterTitle" name="twitter:title" content="Career in Worexa Technologies | Join our Growing Team." />
-        <meta id="twitterDescription" name="twitter:description" content="Explore a career in Worexa Technologies. Join our dynamic team and build your future in digital marketing, design, web development, ads, and business growth." />
+        <meta id="twitterTitle" name="twitter:title" content="Career in Worexa Technologies | Discover New Opportunities at Worexa" />
+        <meta id="twitterDescription" name="twitter:description" content="Advance your career in Worexa Technologies. Explore exciting opportunities, enhance your skills, collaborate with a creative team, and build your professional future with us. Begin your journey with us." />
         <meta id="author" name="author" content="Akshay" />
         <link id="canonical" rel="canonical" href="https://worexatechnologies.com/careers" />
         <meta id="indexingStatus" name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
       </Helmet>
 
       {/* Hero Header — Pure Black (#000000) */}
       <section className="relative overflow-hidden bg-black pt-32 sm:pt-36 pb-16 sm:pb-20 border-b border-zinc-900">
         {/* Subtle Top Warm Amber/Orange Radial Glow */}
-        <div 
+        <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[300px] pointer-events-none"
           style={{
             background: 'radial-gradient(ellipse at center top, rgba(249, 115, 22, 0.22) 0%, rgba(249, 115, 22, 0.05) 50%, transparent 75%)',
@@ -382,11 +382,10 @@ export default function Careers() {
                     onDragOver={(e) => e.preventDefault()}
                     onDrop={handleDrop}
                     onClick={() => fileInputRef.current.click()}
-                    className={`relative flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed px-6 py-8 transition-all ${
-                      resumeFile
+                    className={`relative flex cursor-pointer flex-col items-center justify-center gap-3 rounded-2xl border-2 border-dashed px-6 py-8 transition-all ${resumeFile
                         ? "border-orange-500 bg-orange-50"
                         : "border-slate-300 bg-slate-50/50 hover:border-orange-400 hover:bg-orange-50/30"
-                    }`}
+                      }`}
                   >
                     <input
                       ref={fileInputRef}

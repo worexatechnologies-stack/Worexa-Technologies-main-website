@@ -82,13 +82,13 @@ const PublicRelations = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Public Relations Services in Bangalore | PR agency."
+          content="Public Relations Services in Bangalore | Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Discover premier Public Relations Services in Bangalore. Build credibility, manage corporate reputation, and secure top-tier media coverage for your business."
+          content="Build stronger public visibility with Worexa Technologies. Our public relations services in Bangalore help businesses share their stories, connect with the media, and strengthen brand reputation."
         />
         <meta
           id="ogUrl"
@@ -109,12 +109,12 @@ const PublicRelations = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Public Relations Services in Bangalore | PR agency."
+          content="Public Relations Services in Bangalore & Brand PR | Worexa Technologies"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Discover premier Public Relations Services in Bangalore. Build credibility, manage corporate reputation, and secure top-tier media coverage for your business."
+          content="Make your brand story heard with Worexa Technologies. Explore public relations services in Bangalore: support for media outreach, meaningful communication, and a stronger reputation in Bangalore."
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -127,7 +127,7 @@ const PublicRelations = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

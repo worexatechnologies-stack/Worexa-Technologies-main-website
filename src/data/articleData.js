@@ -53,7 +53,7 @@ export const articles = [
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/bangalore-digital-marketing-agency",
@@ -201,7 +201,7 @@ export const articles = [
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/top-social-media-marketing-agency-in-bangalore",
@@ -370,7 +370,7 @@ export const articles = [
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/advertising-agencies-in-bangalore-list",
@@ -551,7 +551,7 @@ export const articles = [
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/internet-marketing-services-in-bangalore",
@@ -714,7 +714,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/best-seo-services-company-in-bangalore",
@@ -856,7 +856,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/best-b2b-digital-marketing-agencies",
@@ -1034,7 +1034,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/list-of-advertising-companies-in-bangalore",
@@ -1171,7 +1171,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/digital-marketing-agency-near-me",
@@ -1482,7 +1482,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "best marketing and advertising company in bangalore, best digital marketing agency in bangalore, best digital marketing company in bangalore, best digital marketing agency bangalore, top digital marketing agencies in bangalore",
       author: "Akshay",
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical:
         "https://worexatechnologies.com/articles/best-marketing-and-advertising-company-in-bangalore",
       ogTitle:
@@ -1647,7 +1647,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/digital-marketing-strategy",
@@ -1852,7 +1852,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/best-digital-marketing-agency-in-bangalore",
@@ -2013,7 +2013,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/marketing-social-media-agency",
@@ -2177,7 +2177,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/seo-company-in-bangalore",
@@ -2307,7 +2307,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Looking for the top digital marketing agency in Bangalore? Get result-driven SEO, PPC, social media, and digital marketing services to grow your business online.",
       keywords: "top digital marketing agency in bangalore, top digital marketing companies in bangalore, top marketing companies in bangalore, top digital marketing services in bangalore, top ad agency in bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/top-digital-marketing-agency-in-bangalore",
       ogTitle: "Top Digital Marketing Agency in Bangalore | SEO Experts",
       ogType: "article",
@@ -2479,7 +2480,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Learn how to choose a digital marketing agency that fits your business goals. Discover key factors like expertise, services, experience, pricing, and results.",
       keywords: "how to choose digital marketing agency, how to select a digital marketing agency, how to select a marketing agency, how to select marketing agency",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/how-to-choose-digital-marketing-agency",
       ogTitle: "How to Choose a Digital Marketing Agency | Expert Guide",
       ogType: "article",
@@ -2673,7 +2675,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Discover the advantages of hiring a digital marketing agency, from expert strategies and better online visibility to higher leads, conversions, and business growth.",
       keywords: "advantages of hiring a digital marketing agency, benefits of hiring a digital marketing agency, benefits of hiring a marketing agency, benefits of hiring digital marketing agency",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/advantages-of-hiring-a-digital-marketing-agency",
       ogTitle: "Advantages of Hiring a Digital Marketing Agency | Benefits",
       ogType: "article",
@@ -2887,7 +2890,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Looking for the best advertising agency in Bangalore? Get creative advertising, digital campaigns, branding, and performance marketing solutions to grow your business.",
       keywords: "best advertising agency in bangalore, digital marketing agencies in bangalore, outdoor advertising companies in bangalore, best creative agencies in bangalore, internet marketing company in bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/best-advertising-agency-in-bangalore",
       ogTitle: "Best Advertising Agency in Bangalore | Creative Ad Experts",
       ogType: "article",
@@ -3075,7 +3079,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Explore the top 10 digital marketing agencies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
       keywords: "top 10 digital marketing agencies in bangalore, best digital marketing in bangalore, best marketing companies in bangalore, best digital marketing companies bangalore, best digital marketing services in bangalore, top 10 digital marketing company in bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/top-10-digital-marketing-agencies-in-bangalore",
       ogTitle: "Top 10 Digital Marketing Agencies in Bangalore | Best Agencies",
       ogType: "article",
@@ -3268,7 +3273,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Explore the comprehensive list of digital marketing companies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
       keywords: "list of digital marketing companies in bangalore, digital marketing company in bangalore, best digital marketing companies bangalore, digital marketing agency bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/list-of-digital-marketing-companies-in-bangalore",
       ogTitle: "List of Digital Marketing Companies in Bangalore | Best Agencies",
       ogType: "article",
@@ -3433,7 +3439,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Scale your business online with top SEO services in Bangalore. We specialize in local SEO, technical audits, and link building to drive rankings and ROI. Get a free proposal",
       keywords: "seo services in bangalore, seo company in bangalore, seo agency bangalore, search engine optimization bangalore, search engine optimization services in bangalore, best seo services in bangalore, top seo agencies in bangalore, best seo services bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/seo-services-in-bangalore",
       ogTitle: "Top SEO Services in Bangalore | Drive Traffic & Organic Growth",
       ogType: "article",
@@ -3635,7 +3642,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "How long does SEO take to show results? Learn about the typical SEO timeline, factors affecting rankings, when to expect traffic, and how to measure SEO performance.",
       keywords: "how long does seo take to show results, how long does seo take to see results, how long does it take for seo to show results, how long does seo take, how long does it take for seo to work, how long does it take to a google page ranking, how long does seo take to see results",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/how-long-does-seo-take-to-show-results",
       ogTitle: "How Long Does SEO Take to Show Results? | SEO Timeline",
       ogType: "article",
@@ -3812,7 +3820,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Looking for a performance marketing agency in Bangalore? Learn how performance marketing works, key services, benefits, costs, and how to choose the right agency.",
       keywords: "performance marketing agency in bangalore, performance marketing agency bangalore, performance marketing company in bangalore, performance marketing agency, best performance marketing agencies, performance based digital marketing company",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/performance-marketing-agency-in-bangalore",
       ogTitle: "Performance Marketing Agency in Bangalore | Grow Your Business",
       ogType: "article",
@@ -4012,7 +4021,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Stay ahead of search updates. Learn the top common SEO mistakes impacting organic traffic today and follow our proven guide to fix your technical SEO.",
       keywords: "common seo mistakes, seo mistakes, common seo mistakes to avoid, errors in seo, seo mistakes to avoid, biggest seo mistakes",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/common-seo-mistakes",
       ogTitle: "Most Common SEO Mistakes to Avoid in 2026 | Expert Guide",
       ogType: "article",
@@ -4166,7 +4176,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Top web development company in Bangalore crafting fast, secure, and scalable websites. From UI/UX design to custom web applications, get a free consultation today!",
       keywords: "web development company in bangalore, website development company bangalore, web designing company in bangalore, best web development company in bangalore, website development in bangalore, web development bangalore, website builders in bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/web-development-company-in-bangalore",
       ogTitle: "Web Development Company in Bangalore | Custom Web Solutions",
       ogType: "article",
@@ -4374,7 +4385,8 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       description: "Looking for a branding agency in Bangalore? Explore branding services, brand strategy, identity design, costs, process, and tips to choose the right branding company.",
       keywords: "branding agency in bangalore, branding companies in bangalore, bangalore branding agency, best creative agency in bangalore, best branding agency in bangalore, top branding company in bangalore",
       author: "Akshay",
-      publisher: "Worexa Technologies",
+      publisher:
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/branding-agency-in-bangalore",
       ogTitle: "Creative Branding Agency in Bangalore | Logo & Brand Identity",
       ogType: "article",
@@ -4609,7 +4621,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/social-media-marketing-agency-in-bangalore",
@@ -4952,7 +4964,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/ppc-agency-in-bangalore",
@@ -5302,7 +5314,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/best-creative-agencies",
@@ -5664,7 +5676,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/google-ads-agency-in-bangalore",
@@ -5860,7 +5872,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/b2b-content-strategy",
@@ -6199,7 +6211,7 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       author: "Akshay",
 
       publisher:
-        "Worexa Technologies",
+        "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
 
       canonical:
         "https://worexatechnologies.com/articles/landing-page-optimization",

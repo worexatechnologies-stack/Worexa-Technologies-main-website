@@ -82,13 +82,13 @@ const Photoshoot = () => {
         <meta
           id="ogTitle"
           property="og:title"
-          content="Discover the Photo Shoot Services in Digital Marketing"
+          content="Brand Photo shoot services in digital marketing| Worexa Technologies"
         />
         <meta id="ogType" property="og:type" content="website" />
         <meta
           id="ogDescription"
           property="og:description"
-          content="Elevate your brand with expert photo shoot services in digital marketing. We capture high-quality, engaging visuals that boost your online conversions today."
+          content="Make your brand Photo shoot services in digital marketing. Worexa Technologies creates visual content for digital marketing, social media, products, and promotional campaigns."
         />
         <meta
           id="ogUrl"
@@ -109,12 +109,12 @@ const Photoshoot = () => {
         <meta
           id="twitterTitle"
           name="twitter:title"
-          content="Discover the Photo Shoot Services in Digital Marketing"
+          content="Professional Photo shoot services in digital marketing| Worexa"
         />
         <meta
           id="twitterDescription"
           name="twitter:description"
-          content="Elevate your brand with expert photo shoot services in digital marketing. We capture high-quality, engaging visuals that boost your online conversions today."
+          content="Bring your brand to life through strong visuals. Explore Worexa Technologies Photo shoot services in digital marketing, social media content, and promotional campaigns."
         />
         <meta id="author" name="author" content="Akshay" />
         <link
@@ -127,7 +127,7 @@ const Photoshoot = () => {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-        <meta id="Publisher" property="publisher" content="Worexa Technologies" />
+        <meta id="Publisher" property="publisher" content="https://www.facebook.com/people/Worexa-Technologies/61586485404277/" />
         <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({

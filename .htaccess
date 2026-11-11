@@ -17,6 +17,12 @@ DirectoryIndex index.php index.html
   RewriteEngine On
   RewriteBase /
 
+  # Block access to hidden files and directories (like .git, .env)
+  RewriteRule "(^|/)\.(?!well-known)" - [F]
+
+  # Block direct access to smtp-config
+  RewriteRule "(^|/)smtp-config.*\.php$" - [F]
+
   # Serve landing subdirectories without trailing slash
   RewriteRule ^best-marketing-company-in-bangalore/?$ best-marketing-company-in-bangalore/index.html [L]
   RewriteRule ^best-application-development-in-bangalore/?$ best-application-development-in-bangalore/index.html [L]
@@ -74,12 +80,13 @@ DirectoryIndex index.php index.html
   </FilesMatch>
 </IfModule>
 
-# Block access to hidden files and directories (like .git, .env)
-<IfModule mod_rewrite.c>
-  RewriteRule "(^|/)\.(?!well-known)" - [F]
-</IfModule>
-
 # Prevent access to sensitive files, logs, configs, and source maps
 <FilesMatch "(^\.env.*|smtp-config.*\.php|composer\.(json|lock)|package(-lock)?\.json|vercel\.json|BACKEND_SETUP\.md|.*\.(log|bak|backup|old|sql|sh|md))$">
-  Require all denied
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
 </FilesMatch>

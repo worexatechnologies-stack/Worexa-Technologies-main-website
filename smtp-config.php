@@ -1,4 +1,9 @@
 <?php
+if (!defined('WOREXA_EXEC')) {
+    http_response_code(403);
+    exit('Direct access forbidden.');
+}
+
 return [
     'host' => 'smtp.gmail.com',
     'port' => 587,

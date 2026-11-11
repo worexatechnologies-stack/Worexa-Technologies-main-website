@@ -1,5 +1,18 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /
-
-Sitemap: https://worexatechnologies.com/sitemap.xml
-Sitemap: https://worexatechnologies.com/blogs.xml
+Disallow: /articles/best-marketing%20and%20advertising-company-bangalore-2026
+Disallow: /product/ecowarp-style-t-shirt
+Disallow: /service-4
+Disallow: /service
+Disallow: /building-token-economies-we-shape-the-future
+Disallow: /articles/social-media-marketing-bangalore-guide-2026
+Disallow: /portfolio
+Disallow: /contact-us
+Disallow: /blog/local-seo-small-business
+Disallow: /services/seo
+Disallow: /services/ui-ux
+Disallow: /articles/be-found-first
+Disallow: /articles/local-seo-small-business
+Disallow: /blog
+Sitemap : https://worexatechnologies.com/sitemap.xml
+Sitemap : https://worexatechnologies.com/blogs.xml

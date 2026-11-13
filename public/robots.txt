@@ -4,3 +4,4 @@ Allow: /
 
 Sitemap: https://worexatechnologies.com/sitemap.xml
 Sitemap: https://worexatechnologies.com/blogs.xml
+Sitemap: https://worexatechnologies.com/sitemap_index.xml

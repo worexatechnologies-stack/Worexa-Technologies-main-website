@@ -11,11 +11,19 @@ DirectoryIndex index.php index.html
 <IfModule mod_mime.c>
   # Ensure .php files are handled by PHP (common handler)
   AddHandler application/x-httpd-php .php
+  AddType application/xml .xml
+  AddType text/xml .xml
+  AddCharset UTF-8 .xml
+  AddType text/plain .txt
+  AddCharset UTF-8 .txt
 </IfModule>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Allow direct access to sitemaps and robots.txt without rewriting
+  RewriteRule ^(sitemap.*\.xml|blogs\.xml|robots\.txt)$ - [L]
 
   # Block access to hidden files and directories (like .git, .env)
   RewriteRule "(^|/)\.(?!well-known)" - [F]
@@ -49,6 +57,9 @@ DirectoryIndex index.php index.html
   ExpiresActive On
   ExpiresDefault "access plus 1 month"
   ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 0 seconds"
+  ExpiresByType text/plain "access plus 0 seconds"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
@@ -78,7 +89,24 @@ DirectoryIndex index.php index.html
   <FilesMatch "\.(html|htm)$">
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
   </FilesMatch>
+
+  # XML sitemaps and robots headers
+  <FilesMatch "\.(xml|txt)$">
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set X-Robots-Tag "all"
+  </FilesMatch>
 </IfModule>
+
+# Explicitly grant access to public XML sitemaps and robots.txt
+<FilesMatch "^(sitemap.*\.xml|blogs\.xml|robots\.txt)$">
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Allow from all
+  </IfModule>
+  <IfModule mod_authz_core.c>
+    Require all granted
+  </IfModule>
+</FilesMatch>
 
 # Prevent access to sensitive files, logs, configs, and source maps
 <FilesMatch "(^\.env.*|smtp-config.*\.php|composer\.(json|lock)|package(-lock)?\.json|vercel\.json|BACKEND_SETUP\.md|.*\.(log|bak|backup|old|sql|sh|md))$">

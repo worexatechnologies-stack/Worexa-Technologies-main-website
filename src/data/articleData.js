@@ -1486,10 +1486,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       canonical:
         "https://worexatechnologies.com/articles/best-marketing-and-advertising-company-in-bangalore",
       ogTitle:
-        "Best marketing and advertising company in Bangalore | Strategies",
+        "Best Marketing and Advertising Company in Bangalore | Worexa Technologies",
       ogType: "article",
       ogDescription:
-        "Looking for the best marketing and advertising company in Bangalore? Learn how to choose the right agency, explore key services, and grow your business in 2026.",
+        "Looking for the right marketing partner? Explore what makes a best marketing and advertising company in Bangalore through creative campaigns, strategy, and digital expertise.",
       ogUrl:
         "https://worexatechnologies.com/articles/best-marketing-and-advertising-company-in-bangalore",
       ogSiteName:
@@ -1498,6 +1498,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/assets/best-marketing-and-advertising-company-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
+      twitterTitle:
+        "Best Marketing and Advertising Company in Bangalore | Worexa Technologies",
+      twitterDescription:
+        "Best Marketing and Advertising Company in Bangalore. Discover marketing trends, advertising strategies, and innovative ideas to grow your business in Bangalore. Learn what to seek in a marketing partner.",
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },

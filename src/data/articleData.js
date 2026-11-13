@@ -59,12 +59,12 @@ export const articles = [
         "https://worexatechnologies.com/articles/bangalore-digital-marketing-agency",
 
       ogTitle:
-        "Bangalore Digital Marketing Agency | Top SEO & Marketing Experts",
+        "Bangalore Digital Marketing Agency | Best marketing agency in Bangalore",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a Bangalore digital marketing agency? Discover expert SEO, PPC, social media, content marketing, web development, and lead generation services to grow your business online.",
+        "Explore Bangalore digital marketing agency opportunities for businesses in Bangalore. Understand how SEO, social media, online advertising, and content strategies contribute to sustainable business growth.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/bangalore-digital-marketing-agency",
@@ -80,10 +80,10 @@ export const articles = [
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Bangalore Digital Marketing Agency | Top SEO & Marketing Experts",
+        "Bangalore Digital Marketing Agency | Best digital marketing agency",
 
       twitterDescription:
-        "Looking for a Bangalore digital marketing agency? Discover expert SEO, PPC, social media, content marketing, web development, and lead generation services to grow your business online.",
+        "Bangalore Digital Marketing Agency. Discover digital marketing services and strategies for businesses in Bangalore. Learn how to enhance search visibility, engage with customers, and develop your online brand.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -207,12 +207,12 @@ export const articles = [
         "https://worexatechnologies.com/articles/top-social-media-marketing-agency-in-bangalore",
 
       ogTitle:
-        "Top Social Media Marketing Agency in Bangalore | Grow Your Brand in 2026.",
+        "Top Social Media Marketing Agency in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for the top social media marketing agency in Bangalore? Discover how the right agency can help you build your brand, generate leads, and drive business growth.",
+        "Learn how the right top social media marketing agency in Bangalore can help businesses build brand awareness, engage audiences, and create effective social media campaigns.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/top-social-media-marketing-agency-in-bangalore",
@@ -228,10 +228,10 @@ export const articles = [
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Top Social Media Marketing Agency in Bangalore | Grow Your Brand in 2026.",
+        "Top Social Media Marketing Agency in Bangalore | Worexa Technologies",
 
       twitterDescription:
-        "Looking for the top social media marketing agency in Bangalore? Discover how the right agency can help you build your brand, generate leads, and drive business growth.",
+        "Explore top social media marketing agency in Bangalore strategies, content ideas, and paid campaign insights to understand how businesses can build stronger connections with their audiences.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -376,12 +376,12 @@ export const articles = [
         "https://worexatechnologies.com/articles/advertising-agencies-in-bangalore-list",
 
       ogTitle:
-        "Advertising Agencies in Bangalore List | Top Agencies for Business Growth",
+        "Advertising Agencies in Bangalore List: A Helpful Business Guide",
 
       ogType: "article",
 
       ogDescription:
-        "Discover the ultimate Advertising Agencies in Bangalore List. Connect with top-tier creative minds, scale your business, and drive impactful results today!",
+        "Searching for an advertising agencies in Bangalore list? Explore agency services, marketing expertise, and important factors to consider before selecting an advertising partner.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/advertising-agencies-in-bangalore-list",
@@ -397,10 +397,10 @@ export const articles = [
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Advertising Agencies in Bangalore List | Top Agencies for Business Growth",
+        "Advertising Agencies in Bangalore list | Explore Your Options",
 
       twitterDescription:
-        "Discover the ultimate Advertising Agencies in Bangalore List. Connect with top-tier creative minds, scale your business, and drive impactful results today!",
+        "Explore the advertising agencies in Bangalore list and learn how to compare their services, creative capabilities, and marketing approaches before choosing the right partner for your brand.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -557,12 +557,12 @@ export const articles = [
         "https://worexatechnologies.com/articles/internet-marketing-services-in-bangalore",
 
       ogTitle:
-        "Internet Marketing Services in Bangalore | Complete Business Growth Guide",
+        "Internet Marketing Services in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Are you searching for internet marketing services in Bangalore? Explore how SEO, social media, Google Ads, and content marketing can help your business generate leads and achieve sustainable growth.",
+        "Discover how internet marketing services in Bangalore can help businesses improve online visibility, attract potential customers, and build a stronger digital presence.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/internet-marketing-services-in-bangalore",
@@ -578,10 +578,10 @@ export const articles = [
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Internet Marketing Services in Bangalore | Complete Business Growth Guide",
+        "Internet Marketing Services in Bangalore | By Worexa Technologies",
 
       twitterDescription:
-        "Are you searching for internet marketing services in Bangalore? Explore how SEO, social media, Google Ads, and content marketing can help your business generate leads and achieve sustainable growth.",
+        "Internet marketing services in Bangalore include SEO, social media marketing, online advertising, and content strategies that help businesses reach their target audiences and strengthen their online presence.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -720,12 +720,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/best-seo-services-company-in-bangalore",
 
       ogTitle:
-        "Best SEO Services Company in Bangalore | Complete Guide to Growing Your Business.",
+        "Best SEO Services Company in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for the best SEO services company in Bangalore? Discover how professional SEO services can improve your Google rankings, drive organic traffic, and grow your business.",
+        "Discover what to look for in the best SEO services company in Bangalore. Explore keyword research, technical SEO, content optimisation, and strategies for organic growth.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/best-seo-services-company-in-bangalore",
@@ -741,10 +741,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Best SEO Services Company in Bangalore | Complete Guide to Growing Your Business.",
+        "Best SEO Services Company in Bangalore | Top seo company in Bangalore",
 
       twitterDescription:
-        "Looking for the best SEO services company in Bangalore? Discover how professional SEO services can improve your Google rankings, drive organic traffic, and grow your business.",
+        "Best SEO Services Company in Bangalore. Unlock effective strategies, from keyword research to technical optimization, to boost your Google visibility and attract organic traffic to your business.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -862,12 +862,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/best-b2b-digital-marketing-agencies",
 
       ogTitle:
-        "Best B2B Digital Marketing Agencies | Top B2B Marketing Experts in 2026",
+        "Best B2B Digital Marketing Agencies | A Business Growth Complete Guide",
 
       ogType: "article",
 
       ogDescription:
-        "Discover the best B2B digital marketing agencies that help businesses grow with SEO, PPC, content marketing, lead generation, account-based marketing, and digital strategy.",
+        "Discover how the best B2B digital marketing agencies help businesses reach decision-makers, generate qualified leads, and build stronger relationships through targeted campaigns.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/best-b2b-digital-marketing-agencies",
@@ -883,10 +883,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Best B2B Digital Marketing Agencies | Top B2B Marketing Experts in 2026",
+        "Best B2B Digital Marketing Agencies | Best b2b sevices by Worexa",
 
       twitterDescription:
-        "Discover the best B2B digital marketing agencies that help businesses grow with SEO, PPC, content marketing, lead generation, account-based marketing, and digital strategy.",
+        "Learn how the best B2B digital marketing agencies use SEO, LinkedIn, content marketing, and paid campaigns to connect businesses with decision-makers and generate quality leads for your business growth.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -1040,12 +1040,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/list-of-advertising-companies-in-bangalore",
 
       ogTitle:
-        "List of Advertising Companies in Bangalore | Top Agencies 2026",
+        "List of Advertising Companies in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Explore the complete list of advertising companies in Bangalore offering branding, digital marketing, creative design, media planning, and advertising services. Compare top agencies to find the right partner for your business.",
+        "Looking for a list of advertising companies in Bangalore? Understand different advertising services, compare agency capabilities, and find a suitable partner for your brand.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/list-of-advertising-companies-in-bangalore",
@@ -1061,10 +1061,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "List of Advertising Companies in Bangalore | Top Agencies 2026",
+        "List of Advertising Companies in Bangalore | Worexa Technologies",
 
       twitterDescription:
-        "Explore the complete list of advertising companies in Bangalore offering branding, digital marketing, creative design, media planning, and advertising services. Compare top agencies to find the right partner for your business.",
+        "Explore the List of Advertising Companies in Bangalore. Learn about agency services, campaign planning, and the factors businesses should consider when selecting an advertising company.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -1177,12 +1177,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/digital-marketing-agency-near-me",
 
       ogTitle:
-        "Digital Marketing Agency Near Me | Find Top Local Marketing Experts",
+        "Find a Digital Marketing Agency Near Me | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a digital marketing agency near me? Discover top local agencies offering SEO, PPC, social media marketing, web design, content marketing, and lead generation services to grow your business.",
+        "When selecting a digital marketing agency near me, start by understanding your goals. Review their services, expertise, and important questions to consider before hiring any agency.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/digital-marketing-agency-near-me",
@@ -1198,10 +1198,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Digital Marketing Agency Near Me | Find Top Local Marketing Experts",
+        "Digital Marketing Agency Near Me | Worexa Technologies",
 
       twitterDescription:
-        "Looking for a digital marketing agency near me? Discover top local agencies offering SEO, PPC, social media marketing, web design, content marketing, and lead generation services to grow your business.",
+        "Searching for a digital marketing agency near me? Discover what services to compare, which questions to ask, and how to choose a partner for your business goals.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -1657,12 +1657,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/digital-marketing-strategy",
 
       ogTitle:
-        "Digital Marketing Strategy: A Complete Guide to Grow Your Business",
+        "Digital Marketing Strategy: A Practical Guide | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Learn how to build a successful digital marketing strategy with SEO, PPC, content marketing, social media, email marketing, and analytics to drive traffic, generate leads, and grow your business.",
+        "Build a stronger online presence with a clear digital marketing strategy. Discover how SEO, social media, content, and paid advertising work together to support growth.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/digital-marketing-strategy",
@@ -1678,10 +1678,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Digital Marketing Strategy: A Complete Guide to Grow Your Business",
+        "Digital Marketing Strategy Guide | Best Marketing Services in Bangalore",
 
       twitterDescription:
-        "Learn how to build a successful digital marketing strategy with SEO, PPC, content marketing, social media, email marketing, and analytics to drive traffic, generate leads, and grow your business.",
+        "Develop a digital marketing strategy that integrates SEO, social media, content, and paid advertising to achieve your business goals & reach your target audience effectively & grow your business with Worexa",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -1862,12 +1862,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/best-digital-marketing-agency-in-bangalore",
 
       ogTitle:
-        "Best Digital Marketing Agency in Bangalore | Top-Rated Experts",
+        "Best Digital Marketing Agency in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for the best digital marketing agency in Bangalore? Explore expert SEO, PPC, social media, content marketing, web development, and lead generation services to grow your business online.",
+        "It is essential to choose the best digital marketing agency in Bangalore. Businesses should explore the services, strategies, and expertise of agencies when making their selection.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/best-digital-marketing-agency-in-bangalore",
@@ -1883,10 +1883,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Best Digital Marketing Agency in Bangalore | Top-Rated Experts",
+        "Best Digital Marketing Agency in Bangalore | Worexa Technologies",
 
       twitterDescription:
-        "Looking for the best digital marketing agency in Bangalore? Explore expert SEO, PPC, social media, content marketing, web development, and lead generation services to grow your business online.",
+        "Are you searching for the best digital marketing agency in Bangalore? Discover SEO, social media, paid advertising, and content strategies that drive your business growth with Worexa Technologies.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -2023,12 +2023,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/marketing-social-media-agency",
 
       ogTitle:
-        "Marketing Social Media Agency | Expert Social Media Marketing Services",
+        "Marketing Social Media Agency | Grow social media with Worexa",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a marketing social media agency? Discover expert social media marketing services, including content creation, paid ads, influencer marketing, and strategy to grow your brand and drive engagement.",
+        "Explore how a marketing social media agency plans content, manages brand communication, and creates campaigns that help businesses engage audiences across digital platforms.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/marketing-social-media-agency",
@@ -2044,10 +2044,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Marketing Social Media Agency | Expert Social Media Marketing Services",
+        "Marketing Social Media Agency | Boost your social media with Worexa.",
 
       twitterDescription:
-        "Looking for a marketing social media agency? Discover expert social media marketing services, including content creation, paid ads, influencer marketing, and strategy to grow your brand and drive engagement.",
+        "Learn how a marketing social media agency helps brands grow through creative content, audience engagement, platform management, and targeted advertising campaigns and helps businesses grow.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -2187,12 +2187,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/seo-company-in-bangalore",
 
       ogTitle:
-        "SEO Company in Bangalore | Top SEO Services for Business Growth",
+        "SEO Company in Bangalore | Improve Your Search Visibility",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for the best SEO company in Bangalore? Explore expert SEO services, including on-page SEO, technical SEO, local SEO, link building, and content optimization, to boost rankings and drive organic traffic.",
+        "Discover what an SEO company in Bangalore can do for your business. Explore technical SEO, keyword research, content optimisation, and organic traffic growth strategies.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/seo-company-in-bangalore",
@@ -2208,10 +2208,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "SEO Company in Bangalore | Top SEO Services for Business Growth",
+        "Best SEO Company in Bangalore | Enhance Your Search Visibility",
 
       twitterDescription:
-        "Looking for the best SEO company in Bangalore? Explore expert SEO services, including on-page SEO, technical SEO, local SEO, link building, and content optimization, to boost rankings and drive organic traffic.",
+        "SEO Company in Bangalore. Understand how SEO helps businesses grow online. Explore keyword research, website optimisation, and content strategies that improve search visibility and attract relevant visitors.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -2314,16 +2314,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/top-digital-marketing-agency-in-bangalore",
-      ogTitle: "Top Digital Marketing Agency in Bangalore | SEO Experts",
+      ogTitle: "Top Digital Marketing Agency in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Looking for the top digital marketing agency in Bangalore? Get result-driven SEO, PPC, social media, and digital marketing services to grow your business online.",
+      ogDescription: "Explore a top digital marketing agency in Bangalore to help businesses thrive online. Focus on SEO, paid advertising, social media, and content strategies for brands in Bangalore.",
       ogUrl: "https://worexatechnologies.com/articles/top-digital-marketing-agency-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/top-digital-marketing-agency-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Top Digital Marketing Agency in Bangalore | SEO Experts",
-      twitterDescription: "Looking for the top digital marketing agency in Bangalore? Get result-driven SEO, PPC, social media, and digital marketing services to grow your business online.",
+      twitterTitle: "Top Digital Marketing Agency in Bangalore | Worexa Technologies",
+      twitterDescription: "Explore the top digital marketing agency in Bangalore and strategies for Bangalore businesses. Learn how SEO, social media, and online advertising can help brands reach more customers.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -2487,16 +2487,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/how-to-choose-digital-marketing-agency",
-      ogTitle: "How to Choose a Digital Marketing Agency | Expert Guide",
+      ogTitle: "How to Choose a Digital Marketing Agency | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Learn how to choose a digital marketing agency that fits your business goals. Discover key factors like expertise, services, experience, pricing, and results.",
+      ogDescription: "How to choose a digital marketing agency is an important business decision. Learn how to evaluate marketing expertise, review portfolios, compare pricing, and find the right partner.",
       ogUrl: "https://worexatechnologies.com/articles/how-to-choose-digital-marketing-agency",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/how-to-choose-a-digital-marketing-agency.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "How to Choose a Digital Marketing Agency | Expert Guide",
-      twitterDescription: "Learn how to choose a digital marketing agency that fits your business goals. Discover key factors like expertise, services, experience, pricing, and results.",
+      twitterTitle: "How to Choose a Digital Marketing Agency | Best Agency in Bangalore",
+      twitterDescription: "How to choose a Digital Marketing Agency.Unsure which agency to hire? Learn how to evaluate portfolios, services, experience, pricing, and reporting before choosing a digital marketing partner for your business.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -2682,16 +2682,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/advantages-of-hiring-a-digital-marketing-agency",
-      ogTitle: "Advantages of Hiring a Digital Marketing Agency | Benefits",
+      ogTitle: "Advantages of Hiring a Digital Marketing Agency | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Discover the advantages of hiring a digital marketing agency, from expert strategies and better online visibility to higher leads, conversions, and business growth.",
+      ogDescription: "Want to grow your business online? Discover how the advantages of hiring a digital marketing agency can save time, improve marketing performance, and help you reach the right audience.",
       ogUrl: "https://worexatechnologies.com/articles/advantages-of-hiring-a-digital-marketing-agency",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/advantages-of-hiring-a-digital-marketing-agency.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Advantages of Hiring a Digital Marketing Agency | Benefits",
-      twitterDescription: "Discover the advantages of hiring a digital marketing agency, from expert strategies and better online visibility to higher leads, conversions, and business growth.",
+      twitterTitle: "Advantages of Hiring a Digital Marketing Agency in Bangalore | Worexa",
+      twitterDescription: "Discover the advantages of hiring a digital marketing agency, such as expert guidance, SEO optimization, social media management, paid advertising campaigns, and measurable business growth.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -2897,16 +2897,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/best-advertising-agency-in-bangalore",
-      ogTitle: "Best Advertising Agency in Bangalore | Creative Ad Experts",
+      ogTitle: "Best Advertising Agency in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Looking for the best advertising agency in Bangalore? Get creative advertising, digital campaigns, branding, and performance marketing solutions to grow your business.",
+      ogDescription: "Best Advertising Agency in Bangalore: Discover what makes an advertising agency effective. Explore innovative campaigns, brand communication, and advertising strategies tailored for your businesses.",
       ogUrl: "https://worexatechnologies.com/articles/best-advertising-agency-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/best-advertising-agency-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Best Advertising Agency in Bangalore | Creative Ad Experts",
-      twitterDescription: "Looking for the best advertising agency in Bangalore? Get creative advertising, digital campaigns, branding, and performance marketing solutions to grow your business.",
+      twitterTitle: "Leading Best Advertising Agency in Bangalore | Worexa Technologies",
+      twitterDescription: "Best Advertising Agency in Bangalore. Explore advertising strategies, creative campaigns, and brand promotion ideas for Bangalore businesses. Learn what to consider when choosing an advertising agency",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -3086,16 +3086,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/top-10-digital-marketing-agencies-in-bangalore",
-      ogTitle: "Top 10 Digital Marketing Agencies in Bangalore | Best Agencies",
+      ogTitle: "Top 10 Digital Marketing Agencies in Bangalore | Agency Guide",
       ogType: "article",
-      ogDescription: "Explore the top 10 digital marketing agencies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
+      ogDescription: "Searching for top 10 digital marketing agencies in Bangalore? Explore an informative comparison of agency services, specialisations, and factors to consider before choosing one.",
       ogUrl: "https://worexatechnologies.com/articles/top-10-digital-marketing-agencies-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/top-10-digital-marketing-agencies-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Top 10 Digital Marketing Agencies in Bangalore | Best Agencies",
-      twitterDescription: "Explore the top 10 digital marketing agencies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
+      twitterTitle: "Top 10 Digital Marketing Agencies in Bangalore | Worexa Technologies",
+      twitterDescription: "Looking for the top 10 digital marketing agencies in Bangalore? Explore 10 agencies in Bangalore, compare their services, and understand what makes each agency suitable for different business goals.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -3280,16 +3280,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/list-of-digital-marketing-companies-in-bangalore",
-      ogTitle: "List of Digital Marketing Companies in Bangalore | Best Agencies",
+      ogTitle: "List of Digital Marketing Companies in Bangalore | Worexa",
       ogType: "article",
-      ogDescription: "Explore the comprehensive list of digital marketing companies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
+      ogDescription: "Find a useful list of digital marketing companies in Bangalore. Explore their services, marketing expertise, and important factors for selecting the right agency.",
       ogUrl: "https://worexatechnologies.com/articles/list-of-digital-marketing-companies-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/list-of-digital-marketing-companies-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "List of Digital Marketing Companies in Bangalore | Best Agencies",
-      twitterDescription: "Explore the comprehensive list of digital marketing companies in Bangalore. Compare their services, expertise, and capabilities to find the right agency for your business growth.",
+      twitterTitle: "List of Digital Marketing Companies in Bangalore | Worexa Guide",
+      twitterDescription: "Evaluate a list of digital marketing companies in Bangalore to compare their SEO, social media, advertising, and branding services, in order to find a suitable marketing partner in Bangalore.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -3446,16 +3446,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/seo-services-in-bangalore",
-      ogTitle: "Top SEO Services in Bangalore | Drive Traffic & Organic Growth",
+      ogTitle: "Professional SEO Services in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Scale your business online with top SEO services in Bangalore. We specialize in local SEO, technical audits, and link building to drive rankings and ROI. Get a free proposal",
+      ogDescription: "Want better search visibility? Discover how SEO services in Bangalore can help businesses improve website performance, attract organic traffic, and reach potential customers.",
       ogUrl: "https://worexatechnologies.com/articles/seo-services-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/seo-services-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Top SEO Services in Bangalore | Drive Traffic & Organic Growth",
-      twitterDescription: "Scale your business online with top SEO services in Bangalore. We specialize in local SEO, technical audits, and link building to drive rankings and ROI. Get a free proposal",
+      twitterTitle: "Leading SEO Services in Bangalore | Improve Your Google Rankings",
+      twitterDescription: "Explore SEO Services in Bangalore & strategies for better online visibility. Learn about keyword research, technical SEO, on-page optimisation & content strategies for sustainable growth for your business.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -3649,16 +3649,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/how-long-does-seo-take-to-show-results",
-      ogTitle: "How Long Does SEO Take to Show Results? | SEO Timeline",
+      ogTitle: "How Long Does SEO Take to Show Results? | Worexa Technologies",
       ogType: "article",
-      ogDescription: "How long does SEO take to show results? Learn about the typical SEO timeline, factors affecting rankings, when to expect traffic, and how to measure SEO performance.",
+      ogDescription: "How Long Does SEO Take to Show Results? SEO requires time, consistency, and an effective strategy. Learn what influences search rankings, when improvements may become noticeable, and how to assess SEO performance.",
       ogUrl: "https://worexatechnologies.com/articles/how-long-does-seo-take-to-show-results",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/how-long-does-seo-take-to-show-results.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "How Long Does SEO Take to Show Results? | SEO Timeline",
-      twitterDescription: "How long does SEO take to show results? Learn about the typical SEO timeline, factors affecting rankings, when to expect traffic, and how to measure SEO performance.",
+      twitterTitle: "How Long Does SEO Take to Show Results? | SEO Timeline Guide",
+      twitterDescription: "How Long Does SEO Take to Show Results? Want to understand SEO timelines. Explore the factors affecting Google rankings, organic traffic, and website performance, and learn what to expect from SEO efforts.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -3827,16 +3827,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/performance-marketing-agency-in-bangalore",
-      ogTitle: "Performance Marketing Agency in Bangalore | Grow Your Business",
+      ogTitle: "Performance Marketing Agency in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Looking for a performance marketing agency in Bangalore? Learn how performance marketing works, key services, benefits, costs, and how to choose the right agency.",
+      ogDescription: "Discover how a performance marketing agency in Bangalore helps businesses generate leads and improve campaign results through Google Ads, paid social media, audience targeting, and data analysis.",
       ogUrl: "https://worexatechnologies.com/articles/performance-marketing-agency-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/performance-marketing-agency-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Performance Marketing Agency in Bangalore | Grow Your Business",
-      twitterDescription: "Looking for a performance marketing agency in Bangalore? Learn how performance marketing works, key services, benefits, costs, and how to choose the right agency.",
+      twitterTitle: "Performance Marketing Agency in Bangalore | Worexa Technologies",
+      twitterDescription: "Learn how performance marketing agency in Bangalore campaigns use data, paid advertising, and audience targeting to generate quality leads, improve conversions, and support business growth.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -4028,16 +4028,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/common-seo-mistakes",
-      ogTitle: "Most Common SEO Mistakes to Avoid in 2026 | Expert Guide",
+      ogTitle: "Common SEO Mistakes to Avoid for Better Google Rankings",
       ogType: "article",
-      ogDescription: "Stay ahead of search updates. Learn the top common SEO mistakes impacting organic traffic today and follow our proven guide to fix your technical SEO.",
+      ogDescription: "Common SEO mistakes can affect website performance. Discover common issues such as duplicate content, poor keyword targeting, technical errors, and weak internal linking.",
       ogUrl: "https://worexatechnologies.com/articles/common-seo-mistakes",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/common-seo-mistakes.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Most Common SEO Mistakes to Avoid in 2026 | Expert Guide",
-      twitterDescription: "Stay ahead of search updates. Learn the top common SEO mistakes impacting organic traffic today and follow our proven guide to fix your technical SEO.",
+      twitterTitle: "Common SEO Mistakes That Can Hurt Your Website Rankings | worexa",
+      twitterDescription: "Is your website struggling to rank? Discover common SEO mistakes, understand why they happen, and learn practical ways to improve search visibility and organic traffic to your website & grow your business",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -4183,16 +4183,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/web-development-company-in-bangalore",
-      ogTitle: "Web Development Company in Bangalore | Custom Web Solutions",
+      ogTitle: "Web Development Company in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Top web development company in Bangalore crafting fast, secure, and scalable websites. From UI/UX design to custom web applications, get a free consultation today!",
+      ogDescription: "Build a stronger online presence with a professional web development company in Bangalore. Discover how responsive design, website functionality, and user experience support business growth.",
       ogUrl: "https://worexatechnologies.com/articles/web-development-company-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/web-development-company-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Web Development Company in Bangalore | Custom Web Solutions",
-      twitterDescription: "Top web development company in Bangalore crafting fast, secure, and scalable websites. From UI/UX design to custom web applications, get a free consultation today!",
+      twitterTitle: "Leading Web Development Company in Bangalore | Worexa Technologies",
+      twitterDescription: "Best Web Development Company in Bangalore. Need a website for your business? Explore website development solutions focused on responsive design, smooth navigation, functionality, and better user experiences",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -4392,16 +4392,16 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       publisher:
         "https://www.facebook.com/people/Worexa-Technologies/61586485404277/",
       canonical: "https://worexatechnologies.com/articles/branding-agency-in-bangalore",
-      ogTitle: "Creative Branding Agency in Bangalore | Logo & Brand Identity",
+      ogTitle: "Creative Branding Agency in Bangalore | Worexa Technologies",
       ogType: "article",
-      ogDescription: "Looking for a branding agency in Bangalore? Explore branding services, brand strategy, identity design, costs, process, and tips to choose the right branding company.",
+      ogDescription: "Branding Agency in Bangalore. Make your business stand out with a strong brand identity. Discover branding strategies, creative direction, and visual communication that help businesses build recognition.",
       ogUrl: "https://worexatechnologies.com/articles/branding-agency-in-bangalore",
       ogSiteName: "Worexa Technologies",
       ogImage: "https://worexatechnologies.com/assets/branding-agency-in-bangalore.webp",
       ogLocale: "en_US",
       twitterSite: "https://twitter.com/",
-      twitterTitle: "Creative Branding Agency in Bangalore | Logo & Brand Identity",
-      twitterDescription: "Looking for a branding agency in Bangalore? Explore branding services, brand strategy, identity design, costs, process, and tips to choose the right branding company.",
+      twitterTitle: "Branding Agency in Bangalore | Build a Strong Brand with Worexa",
+      twitterDescription: "Branding Agency in Bangalore. Your brand is more than a logo. Explore how branding strategy, visual identity, and consistent communication help businesses create recognition and customer trust.",
       robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     },
     content: `
@@ -4631,12 +4631,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/social-media-marketing-agency-in-bangalore",
 
       ogTitle:
-        "Social Media Marketing Agency in Bangalore | Expert SMM",
+        "Social Media Marketing Agency in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a social media marketing agency in Bangalore? Grow your brand with expert SMM strategies, engaging content, paid campaigns & measurable results.",
+        "Social Media Marketing Agency in Bangalore. Connect with your audience through effective social media marketing. Discover content strategies, creative campaigns, and paid promotions for your business.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/social-media-marketing-agency-in-bangalore",
@@ -4652,10 +4652,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Social Media Marketing Agency in Bangalore | Expert SMM",
+        "Best Social Media Marketing Agency in Bangalore | Worexa Technologies",
 
       twitterDescription:
-        "Looking for a social media marketing agency in Bangalore? Grow your brand with expert SMM strategies, engaging content, paid campaigns & measurable results.",
+        "Social Media Marketing Agency in Bangalore. Build your brand on social media with creative content, audience engagement, and targeted campaigns. Explore social media marketing strategies for business growth.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -4974,12 +4974,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/ppc-agency-in-bangalore",
 
       ogTitle:
-        "PPC Agency in Bangalore | Google Ads Services, Cost & Benefits",
+        "Top leading PPC Agency in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a PPC agency in Bangalore? Drive targeted traffic, generate quality leads, and maximize ROI with expert Google Ads and PPC management services.",
+        "PPC Agency in Bangalore. Make your advertising budget work smarter. Discover how PPC campaigns use keyword targeting, audience insights, and performance optimisation to reach potential customers.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/ppc-agency-in-bangalore",
@@ -4995,10 +4995,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "PPC Agency in Bangalore | Google Ads Services, Cost & Benefits",
+        "Top leading PPC Agency in Bangalore | Paid Advertising Solutions",
 
       twitterDescription:
-        "Looking for a PPC agency in Bangalore? Drive targeted traffic, generate quality leads, and maximize ROI with expert Google Ads and PPC management services.",
+        "PPC Agency in Bangalore. Learn how PPC advertising can help businesses reach potential customers faster. Explore paid search campaigns, keyword targeting, budget management, and optimisation.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -5324,12 +5324,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/best-creative-agencies",
 
       ogTitle:
-        "Best Creative Agencies in Bangalore for Branding & Design",
+        "Best Creative Agencies: Branding, Design & Marketing Ideas",
 
       ogType: "article",
 
       ogDescription:
-        "Discover the best creative agencies offering innovative branding, design, content, and digital marketing solutions to build a memorable brand and drive growth.",
+        "Best Creative Agencies. Creativity helps brands stand out in competitive markets. Explore how creative agencies combine design, storytelling, and marketing strategies to build memorable brand experiences.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/best-creative-agencies",
@@ -5345,10 +5345,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Best Creative Agencies in Bangalore for Branding & Design",
+        "Best Creative Agencies for Branding, Design & Marketing Ideas",
 
       twitterDescription:
-        "Discover the best creative agencies offering innovative branding, design, content, and digital marketing solutions to build a memorable brand and drive growth.",
+        "Best Creative Agencies: Discover how creative agencies turn ideas into impactful brand experiences through graphic design, storytelling, branding, advertising, and innovative marketing campaigns.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -5686,12 +5686,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/google-ads-agency-in-bangalore",
 
       ogTitle:
-        "Google Ads Agency in Bangalore | Expert PPC Services",
+        "Best Google Ads Agency in Bangalore | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Looking for a trusted Google Ads Agency in Bangalore? Get expert PPC management, targeted campaigns, quality leads, and higher ROI with our Google Ads services.",
+        "Top Google Ads Agency in Bangalore. Reach potential customers through targeted Google Ads campaigns. Discover how keyword research, audience targeting, and campaign optimisation help businesses generate leads.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/google-ads-agency-in-bangalore",
@@ -5707,10 +5707,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Google Ads Agency in Bangalore | Expert PPC Services",
+        "Top leading Google Ads Agency in Bangalore | Worexa Technologies",
 
       twitterDescription:
-        "Looking for a trusted Google Ads Agency in Bangalore? Get expert PPC management, targeted campaigns, quality leads, and higher ROI with our Google Ads services.",
+        "Best Google Ads Agency in Bangalore. Want better results from Google Ads? Explore paid search strategies, keyword targeting, campaign management, and optimisation techniques to improve your advertising performance.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -5882,12 +5882,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/b2b-content-strategy",
 
       ogTitle:
-        "B2B Content Strategy: Build a Winning Strategy for Business Growth",
+        "B2B Content Strategy for Better Business Growth | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Build a powerful B2B Content Strategy to attract the right audience, generate quality leads, boost brand authority, and drive sustainable business growth.",
+        "Learn how a strong B2B content strategy helps businesses connect with decision-makers, build trust, share valuable insights, and generate meaningful business opportunities.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/b2b-content-strategy",
@@ -5903,10 +5903,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "B2B Content Strategy: Build a Winning Strategy for Business Growth",
+        "Best B2B Content Strategy for Business Growth | Worexa Technologies",
 
       twitterDescription:
-        "Build a powerful B2B Content Strategy to attract the right audience, generate quality leads, boost brand authority, and drive sustainable business growth.",
+        "Reach the right business audience with a smart B2B content strategy. Explore content planning, audience targeting and lead generation ideas that support long-term for your business growth.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -6221,12 +6221,12 @@ Companies leverage the power of email marketing for nurturing leads, informing a
         "https://worexatechnologies.com/articles/landing-page-optimization",
 
       ogTitle:
-        "Landing Page Optimization: Improve Conversion Rates",
+        "Landing Page Optimization for Better Conversions | Worexa Technologies",
 
       ogType: "article",
 
       ogDescription:
-        "Improve your results with expert Landing Page Optimization. Enhance user experience, reduce bounce rates, increase conversions, and generate more quality leads.",
+        "Turn more website visitors into customers with effective landing page optimization. Explore better layouts, compelling content, clear CTAs, and user-friendly experiences.",
 
       ogUrl:
         "https://worexatechnologies.com/articles/landing-page-optimization",
@@ -6242,10 +6242,10 @@ Companies leverage the power of email marketing for nurturing leads, informing a
       twitterSite: "https://twitter.com/",
 
       twitterTitle:
-        "Landing Page Optimization: Improve Conversion Rates",
+        "Landing Page Optimization for Better Conversions | Worexa Technologies",
 
       twitterDescription:
-        "Improve your results with expert Landing Page Optimization. Enhance user experience, reduce bounce rates, increase conversions, and generate more quality leads.",
+        "Is your landing page optimization converting visitors into customers? Discover optimization strategies involving design, content, user experience, and compelling calls to action for your business.",
 
       robots:
         "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"

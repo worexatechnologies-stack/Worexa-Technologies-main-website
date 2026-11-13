@@ -1,7 +1,8 @@
 # .htaccess for PHP and SPA routing
 # - Disables directory listing
 # - Ensures PHP files are handled
-# - Provides a fallback to index.html for frontend routes (preserves existing files like .php)
+# - Canonical redirects (HTTPS, non-www, and old domain worexa.in)
+# - Provides a fallback to index.html for frontend routes (preserves existing files like .php, .xml, .txt)
 
 Options -Indexes
 
@@ -9,10 +10,9 @@ Options -Indexes
 DirectoryIndex index.php index.html
 
 <IfModule mod_mime.c>
-  # Ensure .php files are handled by PHP (common handler)
+  # Ensure .php files are handled by PHP
   AddHandler application/x-httpd-php .php
   AddType application/xml .xml
-  AddType text/xml .xml
   AddCharset UTF-8 .xml
   AddType text/plain .txt
   AddCharset UTF-8 .txt
@@ -22,25 +22,38 @@ DirectoryIndex index.php index.html
   RewriteEngine On
   RewriteBase /
 
-  # Allow direct access to sitemaps and robots.txt without rewriting
+  # 1. Canonical Redirect: Old domain (worexa.in / www.worexa.in) to worexatechnologies.com
+  RewriteCond %{HTTP_HOST} ^(www\.)?worexa\.in$ [NC]
+  RewriteRule ^(.*)$ https://worexatechnologies.com/$1 [R=301,L]
+
+  # 2. Canonical Redirect: www to non-www
+  RewriteCond %{HTTP_HOST} ^www\.worexatechnologies\.com$ [NC]
+  RewriteRule ^(.*)$ https://worexatechnologies.com/$1 [R=301,L]
+
+  # 3. Canonical Redirect: Force HTTPS (avoids loop when behind reverse proxy/CDN)
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://worexatechnologies.com/$1 [R=301,L]
+
+  # 4. Allow direct static access to sitemaps and robots.txt without rewriting
   RewriteRule ^(sitemap.*\.xml|blogs\.xml|robots\.txt)$ - [L]
 
-  # Block access to hidden files and directories (like .git, .env)
+  # 5. Block access to hidden files and directories (like .git, .env)
   RewriteRule "(^|/)\.(?!well-known)" - [F]
 
-  # Block direct access to smtp-config
+  # 6. Block direct access to smtp-config
   RewriteRule "(^|/)smtp-config.*\.php$" - [F]
 
-  # Serve landing subdirectories without trailing slash
+  # 7. Serve landing subdirectories without trailing slash
   RewriteRule ^best-marketing-company-in-bangalore/?$ best-marketing-company-in-bangalore/index.html [L]
   RewriteRule ^best-application-development-in-bangalore/?$ best-application-development-in-bangalore/index.html [L]
 
-  # If the request matches an existing file or directory, serve it directly
+  # 8. If the request matches an existing file or directory, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Otherwise, route to the SPA entry (index.html)
+  # 9. Otherwise, route to the SPA entry (index.html)
   RewriteRule ^ index.html [L]
 </IfModule>
 
@@ -91,7 +104,13 @@ DirectoryIndex index.php index.html
   </FilesMatch>
 
   # XML sitemaps and robots headers
-  <FilesMatch "\.(xml|txt)$">
+  <FilesMatch "\.xml$">
+    Header set Content-Type "application/xml; charset=UTF-8"
+    Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+    Header set X-Robots-Tag "all"
+  </FilesMatch>
+  <FilesMatch "robots\.txt$">
+    Header set Content-Type "text/plain; charset=UTF-8"
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
     Header set X-Robots-Tag "all"
   </FilesMatch>

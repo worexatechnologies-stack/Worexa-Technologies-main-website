@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "node scripts/dev.mjs --host",
     "dev:backend": "\"C:\\xampp\\php\\php.exe\" -S 127.0.0.1:8000",
-    "build": "vite build",
+    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/validate-sitemap.mjs",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "test:sitemap": "node scripts/validate-sitemap.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.0.3",

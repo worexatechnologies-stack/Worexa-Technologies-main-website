@@ -65,6 +65,45 @@ export const jobs = [
     }
   },
   {
+    slug: "software-testing",
+    aliases: ["software-tester-qa-engineer", "software-tester-website-mobile-testing", "software-tester"],
+    title: "Software Testing",
+    role: "Software Tester / QA Engineer",
+    department: "IT",
+    category: "Engineering",
+    jobType: "Full-Time",
+    location: "Bengaluru",
+    experience: "2 Years",
+    company: "Worexa Technologies",
+    mainGoal: "Ensure the quality, functionality, performance, and usability of websites and mobile applications through comprehensive manual and functional testing.",
+    summary: "Worexa Technologies is looking for a detail-oriented Software Tester with 2 years of experience in website and mobile application testing. The candidate will be responsible for ensuring the quality, functionality, performance, and usability of websites and mobile applications.",
+    description: [
+      "Perform manual testing of websites and mobile applications.",
+      "Identify, document, and report software bugs and defects.",
+      "Conduct functional, regression, usability, and compatibility testing.",
+      "Test applications across different browsers, devices, and operating systems.",
+      "Verify UI/UX elements, navigation, forms, links, and overall functionality.",
+      "Prepare and execute test cases and test scenarios.",
+      "Collaborate with developers to resolve reported issues.",
+      "Perform retesting and ensure bugs are successfully fixed.",
+      "Maintain test reports and quality assurance documentation."
+    ],
+    requiredSkills: [
+      "2 years of experience in Software Testing / Quality Assurance.",
+      "Good understanding of manual testing concepts.",
+      "Knowledge of website and mobile application testing.",
+      "Familiarity with test case creation and bug-tracking tools.",
+      "Understanding of SDLC and STLC.",
+      "Basic knowledge of API testing and database testing is an advantage.",
+      "Strong analytical, problem-solving, and communication skills."
+    ],
+    seo: {
+      title: "Software Testing Job in Bangalore | Worexa Technologies Careers",
+      description: "Apply for Software Testing role at Worexa Technologies in Bengaluru. 2 years of experience in website and mobile application testing required.",
+      keywords: "software testing job bangalore, software tester job bangalore, qa engineer job bangalore, manual testing job bangalore, mobile app testing job bangalore, website testing job bangalore, worexa technologies careers"
+    }
+  },
+  {
     slug: "business-development-executive-bde",
     title: "Business Development Executive (BDE)",
     department: "Sales & Growth",
@@ -423,6 +462,7 @@ export function getJobBySlug(slug) {
   const normalizedSlug = slug.toLowerCase().trim();
   return (
     jobs.find((j) => j.slug === normalizedSlug) ||
+    jobs.find((j) => j.aliases && j.aliases.includes(normalizedSlug)) ||
     jobs.find((j) => j.slug.replace(/-/g, "") === normalizedSlug.replace(/-/g, "")) ||
     null
   );

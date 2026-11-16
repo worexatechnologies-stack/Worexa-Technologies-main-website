@@ -26,6 +26,7 @@ const SUBMIT_TIMEOUT_MS = 30000;
 const openRoles = [
   { title: "Application Developer / Android & iOS", slug: "application-developer-android-ios", category: "Engineering", icon: <Code size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Full-Stack Application Developer", slug: "full-stack-application-developer", category: "Engineering", icon: <MonitorPlay size={20} />, type: "Full-Time", loc: "Bengaluru" },
+  { title: "Software Testing", slug: "software-testing", category: "Engineering", icon: <CheckCircle2 size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Business Development Executive (BDE)", slug: "business-development-executive-bde", category: "Sales & Growth", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Performance Marketing Lead", slug: "performance-marketing-lead", category: "Marketing", icon: <TrendingUp size={20} />, type: "Full-Time", loc: "Bengaluru" },
   { title: "Social Media Strategist", slug: "social-media-strategist", category: "Marketing", icon: <Megaphone size={20} />, type: "Full-Time", loc: "Bengaluru" },
